@@ -11,25 +11,31 @@
   <title>Document</title>
 </head>
 <body>
-  <header class="bg-primary text-white py-3">
+  <header class="bg-header text-white py-3">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3 order-1 order-lg-1 col-6">
-          <img src="../IMG/logo.svg" alt="" class="img-fluid h-100">
+      <div class="row align-items-center">
+        <div class="col-lg-3 order-1 order-lg-1 col-md-6 col-8">
+          <a href="../HTML/home.html"><img src="../IMG/logo.svg" alt="" class="w-75"></a>
         </div>
 
-        <div class="col-lg-6 order-3 order-lg-2 col-12 search">
-          <input class="search-input" type="text" name="q" placeholder="Tìm kiếm sản phẩm...">
-          <a href="search.html" class="search-btn">
-            <i class="search-btn-icon fa-solid fa-magnifying-glass"></i>
-          </a>
+        <div class="col-lg-6 order-3 order-lg-2 col-md12 col-12">
+          <form>
+            <div class="input-group bg-white rounded-2 overflow-hidden">
+              <input type="text" class="form-control py-0" placeholder="Tìm kiếm...">
+              <div class="input-group-append btn-timkiem">
+                <button class="btn btn-header py-0 px-3 my-1 mx-2 bg-header btn-hover border-0" type="button">
+                  <i class="fa-solid fa-magnifying-glass p-0"></i>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-  
-        <div class="col-lg-3 order-2 order-lg-3 col-6 justify-content-end header__right">
+
+        <div class="col-lg-3 order-2 order-lg-3 col-md-6 col-4 justify-content-end header__right">
           <div class="header__right-icon thong-bao">
             <i class="fa-solid fa-bell"></i>
           </div>
-    
+
           <div class="header__right-icon icon-link-hover">
             <a href="../HTML/shopping-cart.html"><i class="fa-solid fa-shopping-cart"></i></a>
             <div class="tooltip-giohang hover-tooltip">
@@ -37,7 +43,7 @@
                 Giỏ hàng của bạn
               </div>
               <ul class="giohang-list-items">
-    
+
                 <li class="giohang-item">
                   <a href="../HTML/book-detail.html">
                     <div class="giohang-img">
@@ -55,33 +61,33 @@
                     </div>
                   </a>
                 </li>
-    
+
               </ul>
             </div>
           </div>
-    
+
           <div class="header__right-icon icon-link-hover" id="none-hover">
-            <a href="../HTML/login-register.html" class="login-link"><i class="fa-solid fa-user"></i></a>
+            <a href="../HTML/login-register.html" class="col-lg col login-link"><i class="fa-solid fa-user"></i></a>
             <div class="tooltip-taikhoan hover-tooltip">
               <div class="taikhoan-avatar">
                 <i class="fa-regular fa-user"></i>
               </div>
-              <h5>Bạn chưa có tài khoản</h5>
-              <div class="go-acount">
-                <div>
-                  <a href="../HTML/login-register.html?action=login" id="login-link">
-                    Đăng nhập
-                  </a>
+              <h5 class="text-dark">Bạn chưa có tài khoản</h5>
+              <div class="d-flex flex-column w-100">
+
+                <div class="col-12 bg-maunhat my-1 btn-hover">
+                  <a href="../HTML/login-register.html?action=login" id="login-link"
+                    class="d-block w-100 text-center">Đăng nhập</a>
                 </div>
-                <div>
-                  <a href="../HTML/login-register.html?action=register" id="register-link">
-                    Đăng ký
-                  </a>
+                <div class="col-12 bg-maunhat my-1 btn-hover">
+                  <a href="../HTML/login-register.html?action=register" id="register-link"
+                    class="d-block w-100 text-center">Đăng ký</a>
                 </div>
+
               </div>
             </div>
           </div>
-    
+
         </div>
       </div>
     </div>
@@ -91,21 +97,64 @@
 
 
   <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-8">
-            <h2>Nội dung trang web</h2>
-            <p>
-                Đây là nơi bạn có thể đặt nội dung chính của trang web của mình. Sử dụng lớp "container" để bọc nội dung này và "col-md-8" để xác định phần nội dung chiếm 8/12 chiều rộng trên màn hình máy tính.
-            </p>
+    <div class="row ">
+
+      <div class="col-md-6 col-12 d-flex pe-md-0">
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon1.png" alt=""></a>
+          <span>Siêu Sinh Nhật Siêu Wòaaa</span>
         </div>
-        <div class="col-md-4">
-            <h2>Cột phụ</h2>
-            <p>
-                Đây là nơi bạn có thể đặt nội dung phụ, ví dụ như menu hoặc nội dung quảng cáo. Sử dụng "col-md-4" để xác định phần này chiếm 4/12 chiều rộng.
-            </p>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon2.png" alt=""></a>
+          <span>Trở lại trường học</span>
         </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon3.png" alt=""></a>
+          <span>Flash Sale</span>
+        </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon4.png" alt=""></a>
+          <span>Mã Giảm Giá</span>
+        </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon5.png" alt=""></a>
+          <span>Sale Thứ 3</span>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12 d-flex ps-md-0">
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon6.png" alt=""></a>
+          <span>Nhã Nam</span>
+        </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon7.png" alt=""></a>
+          <span>Galaxy Education</span>
+        </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon8.png" alt=""></a>
+          <span>Sản Phẩm Mới</span>
+        </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon9.png" alt=""></a>
+          <span>Manga</span>
+        </div>
+
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon10.png" alt=""></a>
+          <span>Phiên chợ sách cũ</span>
+        </div>
+      </div>
+
     </div>
-</div>
+  </div>
 
   <!-- <script src="../JS/index.js"></script> -->
   <script src="../JS/main.js"></script>
