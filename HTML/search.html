@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <title>Tìm kiếm</title>
+</head>
+<body>
+  <div class="app transition-opacity">
+
+    <div class="header"></div>
+
+    <div class="container">
+      <div class="grid">
+
+        <div class="search-mb">
+
+          <div class="row">
+
+            <div class="col-3">
+              <div class="mb--left">
+                <div class="mb--left--title">
+                  <strong>
+                    <span>Lọc theo</span>
+                  </strong>
+                </div>
+                <div class="mb--left--content--list">
+                  <dl class="narow-by-list" id="narow-by-list-cat_1">
+                    <dt class="even" data-id="m_left_book_layout_filter">Danh Mục Chính</dt>
+                    <ul class="m-filter-checkbox max-height">
+                      <li>
+                        <input type="checkbox" value="Sách Tiếng Việt">Sách Tiếng Việt
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Sách Văn Học">Sách Văn Học
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Sách Kĩ Năng Sống">Sách Kĩ Năng Sống
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Tiểu Thuyết">Tiểu Thuyết
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Sách Kinh Tế">Sách Kinh Tế
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Sách Tâm Lí">Sách Tâm Lí
+                      </li>
+                    </ul>
+                  </dl>
+                  <dl class="narow-by-list" id="narow-by-list-price">
+                    <dt class="even" data-id="m_left_book_layout_filter">Giá</dt>
+                    <ul class="m-filter-checkbox max-height">
+                      <li>
+                        <input type="Checkbox" value="Giá_1">0đ - 150,000đ
+                      </li>
+                      <li>
+                        <input type="Checkbox" value="Giá_2">150,000đ - 300,000đ
+                      </li>
+                      <li>
+                        <input type="Checkbox" value="Giá_3">300,000đ - 500,000đ
+                      </li>
+                      <li>
+                        <input type="Checkbox" value="Giá_4">500,000đ - 700,000đ
+                      </li>
+                      <li>
+                        <input type="Checkbox" value="Giá5">700,000đ trở lên
+                      </li>
+                    </ul>
+                  </dl>
+                  <dl class="narow-by-list" id="narow-by-list-manufacturer">
+                    <dt class="even" data-id="m_left_book_layout_filter">Thương Hiệu</dt>
+                    <ul class="m-filter-checkbox max-height">
+                      <li>
+                        <input type="checkbox" value="Nhã Nam">Nhã Nam
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Thái Hà">Thái Hà
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Phương Nam">Phương Nam
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Hồng Hà">Hồng Hà
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Thiên Long">Thiên Long
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Shine Novel">Shine Novel
+                      </li>
+                    </ul>
+                  </dl>
+                  <dl class="narow-by-list" id="narow-by-list-age">
+                    <dt class="even" data-id="m_left_book_layout_filter">Lứa Tuổi</dt>
+                    <ul class="m-filter-checkbox max-height">
+                      <li>
+                        <input type="checkbox" value="3+">3+
+                      </li>
+                      <li>
+                        <input type="checkbox" value="5+">5+
+                      </li>
+                      <li>
+                        <input type="checkbox" value="7+">7+
+                      </li>
+                      <li>
+                        <input type="checkbox" value="12+">12+
+                      </li>
+                      <li>
+                        <input type="checkbox" value="16+">16+
+                      </li>
+                      <li>
+                        <input type="checkbox" value="18+">18+
+                      </li>
+                      <li>
+                        <input type="checkbox" value="30+">30+
+                      </li>
+                    </ul>
+                  </dl>
+                  <dl class="narow-by-list" id="narow-by-list-noi-san-xuat">
+                    <dt class="even" data-id="m_left_book_layout_filter">Nơi Sản Xuất</dt>
+                    <ul class="m-filter-checkbox max-height">
+                      <li>
+                        <input type="checkbox" value="Việt Nam">Việt Nam
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Nhật Bản">Nhật Bản
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Hàn Quốc">Hàn Quốc
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Trung Quốc">Trung Quốc
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Thái Lan">Thái Lan
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Ấn Độ">Ấn Độ
+                      </li>
+                    </ul>
+                  </dl>
+                  <dl class="narow-by-list" id="narow-by-list-pulisher">
+                    <dt class="even" data-id="m_left_book_layout_filter">Nhà Phát Hành</dt>
+                    <ul class="m-filter-checkbox max-height">
+                      <li>
+                        <input type="checkbox" value="NXB Kim Đồng">NXB Kim Đồng
+                      </li>
+                      <li>
+                        <input type="checkbox" value="Kim Đồng">Kim Đồng
+                      </li>
+                      <li>
+                        <input type="checkbox" value="NXB Hồng Đức">NXB Hồng Đức
+                      </li>
+                      <li>
+                        <input type="checkbox" value="NXB Dân Trí">NXB Dân Trí
+                      </li>
+                      <li>
+                        <input type="checkbox" value="NXB Mỹ Thuật">NXB Mỹ Thuật
+                      </li>
+                      <li>
+                        <input type="checkbox" value="NXB Trẻ">NXB Trẻ
+                      </li>
+                      <li>
+                        <input type="checkbox" value="NXB Thanh Niên">NXB Thanh Niên
+                      </li>
+                      <li>
+                        <input type="checkbox" value="NXB Đại Học Quốc Gia Hà Nội">NXB Đại Học Quốc Gia Hà Nội
+                      </li>
+                    </ul>
+                  </dl>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-9">
+              <div class="grid">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                  <div class="col-3">
+                    <div class="item"></div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="pages">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer"></div>
+
+  </div>
+
+  <script src="../JS/index.js"></script>
+</body>
+</html>
