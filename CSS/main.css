@@ -176,6 +176,10 @@ a {
   justify-content: start;
 }
 
+.list-menu-item>a {
+  text-align: center;
+}
+
 .list-menu-item>a>img {
   width: 50px;
 }
@@ -184,4 +188,15 @@ a {
   width: 90px;
   font-size: .8rem;
   text-align: center;
+}
+
+@media (max-width: 992px) {
+  .list-menu-item>a>img {
+    width: 50%;
+  }
+  .list-menu-item>span {
+    width: 65px;
+    font-size: .6rem;
+  }
+
 }
