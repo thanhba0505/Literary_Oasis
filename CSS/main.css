@@ -7,6 +7,7 @@
   --fhs-price: rgb(247, 148, 30);
   --fhs-shopping-trends: rgb(252, 221, 239);
   --fhs-backgroud-container: rgb(240, 240, 240);
+  --fhs-flashsale: rgb(252, 218, 176);
 }
 
 .btn-hover {
@@ -14,19 +15,27 @@
 }
 
 .btn-hover:hover {
- box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.1); 
+  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.1);
 }
 
 a {
-  text-decoration: none!important;
+  text-decoration: none !important;
 }
 
 .bg-header {
   background-image: linear-gradient(0, var(--fhs-red), var(--fhs-green));
 }
 
+.color-price {
+  color: var(--fhs-price)!important;
+}
+
 .bg-maunhat {
   background-color: var(--fhs-backgroud-container);
+}
+
+.bg-flashsale {
+  background-color: var(--fhs-flashsale);
 }
 
 .header__right {
@@ -94,7 +103,7 @@ a {
   overflow: auto;
 }
 
-.giohang-item a{
+.giohang-item a {
   width: 100%;
   display: flex;
   color: var(--fhs-back);
@@ -138,7 +147,7 @@ a {
   font-size: 1.2rem;
 }
 
-.taikhoan-icon{
+.taikhoan-icon {
   padding: 1px 6px;
   width: 100%;
 }
@@ -190,13 +199,74 @@ a {
   text-align: center;
 }
 
-@media (max-width: 992px) {
+/* -------------flash sale------------------ */
+
+.flashsale-head a {
+  height: 75%;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.flashsale-head a span {
+  font-size: 1.25rem;
+}
+
+.product-item div > a:nth-child(1) div {
+  font-size: .9rem;
+
+}
+
+.product-item div > div:nth-child(2) {
+  font-size: .7rem;
+}
+
+.product-item div > div:nth-child(3) {
+  font-size: 1.2em;
+}
+
+.product-item div > div:nth-child(4) {
+  font-size: .7rem;
+}
+
+.draggable-row {
+  overflow-x: auto;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap!important;
+}
+
+@media (max-width: 768px) {
   .list-menu-item>a>img {
     width: 50%;
   }
+
   .list-menu-item>span {
     width: 65px;
     font-size: .6rem;
   }
 
+  .flashsale-head a {
+    height: 50%;
+  }
+
+  .flashsale-head a span {
+    width: 90px;
+    font-size: .9rem;
+    text-align: center;
+  }
+  
+  .flashsale-head span {
+    font-size: .8rem;
+  }
+
+  .flashsale-head div span {
+    font-size: .7rem;
+  }
+
+  .product-item div del {
+    font-size: .5rem;
+  }
 }
+
