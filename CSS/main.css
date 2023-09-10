@@ -15,7 +15,7 @@
 }
 
 .btn-hover:hover {
-  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.2);
 }
 
 a {
@@ -28,6 +28,14 @@ a {
 
 .color-price {
   color: var(--fhs-price)!important;
+}
+
+.border-color-price {
+  border-color: var(--fhs-price)!important;
+}
+
+.bg-price {
+  background-color: var(--fhs-price)!important;
 }
 
 .bg-maunhat {

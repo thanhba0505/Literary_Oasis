@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addHTML() {
-    fetch("../HTML/repeat/header.html")
+    fetch("../HTML-/--header.html")
       .then((response) => response.text())
       .then((data) => {
         const headerElements = document.querySelectorAll(".header");
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     console.log("add html");
-    fetch("../HTML/repeat/footer.html")
+    fetch("../HTML-/--footer.html")
       .then((response) => response.text())
       .then((data) => {
         const footerElements = document.querySelectorAll(".footer");
