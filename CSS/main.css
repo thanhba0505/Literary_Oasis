@@ -88,6 +88,14 @@ a {
 
 /* -------------flash sale------------------ */
 
+.fs-sm-7 {
+  font-size: .8rem;
+}
+
+.fs-sm-8 {
+  font-size: .6rem;
+}
+
 .flashsale-head a {
   height: 75%;
   font-weight: 500;
