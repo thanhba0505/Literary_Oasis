@@ -191,58 +191,79 @@ document.addEventListener("DOMContentLoaded", function () {
     const pathname = url.pathname;
   }
 
-  let isMouseDown = false;
-let isTouchStart = false;
-let startX, scrollLeft;
+  let isDragging = false;
+let startX, startY, scrollLeft, scrollTop;
+let isHorizontalScroll = false;
 
 const draggableRow = document.querySelector(".draggable-row");
 
-// Sự kiện mousedown hoặc touchstart
 draggableRow.addEventListener("mousedown", (e) => {
-  isMouseDown = true;
+  isDragging = true;
   startX = e.pageX - draggableRow.offsetLeft;
+  startY = e.pageY - draggableRow.offsetTop;
   scrollLeft = draggableRow.scrollLeft;
+  scrollTop = draggableRow.scrollTop;
+  isHorizontalScroll = false;
 });
 
 draggableRow.addEventListener("touchstart", (e) => {
-  isTouchStart = true;
+  isDragging = true;
   startX = e.touches[0].pageX - draggableRow.offsetLeft;
+  startY = e.touches[0].pageY - draggableRow.offsetTop;
   scrollLeft = draggableRow.scrollLeft;
+  scrollTop = draggableRow.scrollTop;
+  isHorizontalScroll = false;
 });
 
-// Sự kiện mouseleave hoặc touchend
-draggableRow.addEventListener("mouseleave", () => {
-  isMouseDown = false;
+document.addEventListener("mouseup", () => {
+  isDragging = false;
 });
 
-draggableRow.addEventListener("touchend", () => {
-  isTouchStart = false;
+document.addEventListener("touchend", () => {
+  isDragging = false;
 });
 
-// Sự kiện mouseup hoặc touchend
-draggableRow.addEventListener("mouseup", () => {
-  isMouseDown = false;
-});
-
-draggableRow.addEventListener("touchend", () => {
-  isTouchStart = false;
-});
-
-// Sự kiện mousemove hoặc touchmove
-draggableRow.addEventListener("mousemove", (e) => {
-  if (!isMouseDown) return;
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
   e.preventDefault();
   const x = e.pageX - draggableRow.offsetLeft;
-  const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
-  draggableRow.scrollLeft = scrollLeft - walk;
+  const y = e.pageY - draggableRow.offsetTop;
+
+  // Xác định hướng của cuộc di chuyển
+  if (!isHorizontalScroll) {
+    if (Math.abs(y - startY) > 10) {
+      isHorizontalScroll = false; // Di chuyển dọc
+    } else {
+      isHorizontalScroll = true; // Di chuyển ngang
+    }
+  }
+
+  if (isHorizontalScroll) {
+    const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy cho kéo ngang
+    draggableRow.scrollLeft = scrollLeft - walk;
+  }
 });
 
-draggableRow.addEventListener("touchmove", (e) => {
-  if (!isTouchStart) return;
+document.addEventListener("touchmove", (e) => {
+  if (!isDragging) return;
   e.preventDefault();
   const x = e.touches[0].pageX - draggableRow.offsetLeft;
-  const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
-  draggableRow.scrollLeft = scrollLeft - walk;
+  const y = e.touches[0].pageY - draggableRow.offsetTop;
+
+  // Xác định hướng của cuộc di chuyển
+  if (!isHorizontalScroll) {
+    if (Math.abs(y - startY) > 10) {
+      isHorizontalScroll = false; // Di chuyển dọc
+    } else {
+      isHorizontalScroll = true; // Di chuyển ngang
+    }
+  }
+
+  if (isHorizontalScroll) {
+    const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy cho kéo ngang
+    draggableRow.scrollLeft = scrollLeft - walk;
+  }
 });
+
 
 });
