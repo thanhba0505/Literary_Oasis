@@ -192,34 +192,57 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   let isMouseDown = false;
-  let startX, scrollLeft;
+let isTouchStart = false;
+let startX, scrollLeft;
 
-  document
-    .querySelector(".draggable-row")
-    .addEventListener("mousedown", (e) => {
-      isMouseDown = true;
-      startX = e.pageX - document.querySelector(".draggable-row").offsetLeft;
-      scrollLeft = document.querySelector(".draggable-row").scrollLeft;
-    });
+const draggableRow = document.querySelector(".draggable-row");
 
-  document
-    .querySelector(".draggable-row")
-    .addEventListener("mouseleave", () => {
-      isMouseDown = false;
-    });
+// Sự kiện mousedown hoặc touchstart
+draggableRow.addEventListener("mousedown", (e) => {
+  isMouseDown = true;
+  startX = e.pageX - draggableRow.offsetLeft;
+  scrollLeft = draggableRow.scrollLeft;
+});
 
-  document.querySelector(".draggable-row").addEventListener("mouseup", () => {
-    isMouseDown = false;
-  });
+draggableRow.addEventListener("touchstart", (e) => {
+  isTouchStart = true;
+  startX = e.touches[0].pageX - draggableRow.offsetLeft;
+  scrollLeft = draggableRow.scrollLeft;
+});
 
-  document
-    .querySelector(".draggable-row")
-    .addEventListener("mousemove", (e) => {
-      if (!isMouseDown) return;
-      e.preventDefault();
-      const x = e.pageX - document.querySelector(".draggable-row").offsetLeft;
-      const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
-      document.querySelector(".draggable-row").scrollLeft = scrollLeft - walk;
-    });
-  
+// Sự kiện mouseleave hoặc touchend
+draggableRow.addEventListener("mouseleave", () => {
+  isMouseDown = false;
+});
+
+draggableRow.addEventListener("touchend", () => {
+  isTouchStart = false;
+});
+
+// Sự kiện mouseup hoặc touchend
+draggableRow.addEventListener("mouseup", () => {
+  isMouseDown = false;
+});
+
+draggableRow.addEventListener("touchend", () => {
+  isTouchStart = false;
+});
+
+// Sự kiện mousemove hoặc touchmove
+draggableRow.addEventListener("mousemove", (e) => {
+  if (!isMouseDown) return;
+  e.preventDefault();
+  const x = e.pageX - draggableRow.offsetLeft;
+  const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
+  draggableRow.scrollLeft = scrollLeft - walk;
+});
+
+draggableRow.addEventListener("touchmove", (e) => {
+  if (!isTouchStart) return;
+  e.preventDefault();
+  const x = e.touches[0].pageX - draggableRow.offsetLeft;
+  const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
+  draggableRow.scrollLeft = scrollLeft - walk;
+});
+
 });
