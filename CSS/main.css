@@ -88,14 +88,6 @@ a {
 
 /* -------------flash sale------------------ */
 
-.fs-sm-7 {
-  font-size: .8rem;
-}
-
-.fs-sm-8 {
-  font-size: .6rem;
-}
-
 .flashsale-head a {
   height: 75%;
   font-weight: 500;
@@ -130,6 +122,16 @@ a {
   user-select: none;
   scroll-behavior: smooth;
   flex-wrap: nowrap!important;
+}
+
+@media (min-width: 768px) {
+  .fs-sm-7 {
+    font-size: .8rem;
+  }
+  
+  .fs-sm-8 {
+    font-size: .6rem;
+  }
 }
 
 @media (max-width: 768px) {
