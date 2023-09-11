@@ -79,17 +79,32 @@
           </div>
         </div>
 
-        <div class="py-1 d-flex">
-          <div class="col-3">Số lượng:</div>
-          <div class="col-3 input-group">
-            <span class="input-group-prepend">
-              <button class="btn btn-outline-secondary" id="decrement">-</button>
+        <div class="row mt-3 py-1 d-flex justify-content-between">
+          <div class="col-6">Số lượng:</div>
+          <div class="col-6 px-3 input-group w-50">
+
+            <span class="input-group-prepend btn-hover-bg border border-1 border-black rounded-start-2">
+              <button class="py-1 btn border-0" id="decrement">-</button>
             </span>
-            <input type="text" class="form-control text-center" id="num" value="0" readonly>
-            <span class="input-group-append">
-              <button class="btn btn-outline-secondary" id="increment">+</button>
+
+            <input type="text" class="py-1 px-0 form-control shadow-none text-center border-top border-2" id="num" value="0" readonly>
+
+            <span class="input-group-append btn-hover-bg">
+              <button class="py-1 btn border-0" id="increment">+</button>
             </span>
+
           </div>
+        </div>
+
+        <div class="row mt-2">
+          <span class="col-6">
+            <button class="btn btn-danger w-100">
+              Mua ngay
+            </button>
+          </span>
+          <span class="col-6 input-group-append">
+            <button class="btn btn-outline-danger w-100" id="addCart">Thêm vào giỏ hàng</button>
+          </span>
         </div>
       </div>
     </div>

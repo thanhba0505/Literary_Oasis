@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   acount();
 
   // ---------------------
-  scrollX();
+  // scrollX();
+
+  num();
 
   // Các chức năng khác
   // other();
@@ -197,29 +199,29 @@ document.addEventListener("DOMContentLoaded", function () {
   function scrollX() {
     let isDragging = false;
     let startX, scrollLeft;
-    
+
     const draggableRow = document.querySelector(".draggable-row");
-    
+
     draggableRow.addEventListener("mousedown", (e) => {
       isDragging = true;
       startX = e.pageX - draggableRow.offsetLeft;
       scrollLeft = draggableRow.scrollLeft;
     });
-    
+
     draggableRow.addEventListener("touchstart", (e) => {
       isDragging = true;
       startX = e.touches[0].pageX - draggableRow.offsetLeft;
       scrollLeft = draggableRow.scrollLeft;
     });
-    
+
     document.addEventListener("mouseup", () => {
       isDragging = false;
     });
-    
+
     document.addEventListener("touchend", () => {
       isDragging = false;
     });
-    
+
     document.addEventListener("mousemove", (e) => {
       if (!isDragging) return;
       e.preventDefault();
@@ -227,13 +229,33 @@ document.addEventListener("DOMContentLoaded", function () {
       const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
       draggableRow.scrollLeft = scrollLeft - walk;
     });
-    
+
     document.addEventListener("touchmove", (e) => {
       if (!isDragging) return;
       e.preventDefault();
       const x = e.touches[0].pageX - draggableRow.offsetLeft;
       const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
       draggableRow.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+  function num() {
+    const numInput = document.getElementById("num");
+    const incrementButton = document.getElementById("increment");
+    const decrementButton = document.getElementById("decrement");
+
+    incrementButton.addEventListener("click", () => {
+      let num = parseInt(numInput.value);
+      num = isNaN(num) ? 0 : num;
+      numInput.value = num + 1;
+    });
+console.log(numInput);
+    decrementButton.addEventListener("click", () => {
+      let num = parseInt(numInput.value);
+      num = isNaN(num) ? 0 : num;
+      if (num > 0) {
+        numInput.value = num - 1;
+      }
     });
   }
 });
