@@ -23,11 +23,11 @@
 }
 
 .btn-hover {
-  transition: box-shadow 0.2s linear;
+  transition: box-shadow 0.2s linear!important;
 }
 
 .btn-hover:hover {
-  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.2)!important;
 }
 
 a {
