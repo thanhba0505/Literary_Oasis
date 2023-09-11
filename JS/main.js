@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   addHTML();
 
   // Form dang ky dang nhap -----------------------------------------
-  // acount();
+  acount();
 
   // ---------------------
   scrollX();
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function acount() {
     const formButtonsDangnhap = document.querySelectorAll(".dangnhap");
     const formButtonsDangky = document.querySelectorAll(".dangky");
-    const formGroup = document.querySelectorAll(".form-group");
+    const formGroup = document.querySelectorAll(".dangnhap-dangky");
 
     formButtonsDangnhap.forEach((button) => {
       button.addEventListener("click", changeContentDangnhap);
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function changeContentDangnhap() {
-      fetch("../HTML/repeat/login.html")
+      fetch("../HTML-/--login.html")
         .then((response) => response.text())
         .then((data) => {
           formGroup.forEach((element) => {
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function changeContentDangky() {
-      fetch("../HTML/repeat/register.html")
+      fetch("../HTML-/--register.html")
         .then((response) => response.text())
         .then((data) => {
           formGroup.forEach((element) => {
