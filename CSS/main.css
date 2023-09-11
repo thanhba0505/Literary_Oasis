@@ -125,16 +125,20 @@ a {
 }
 
 @media (min-width: 768px) {
-  .fs-sm-6 {
+  .fs-md-6 {
     font-size: 1rem!important;
   }
 
-  .fs-sm-7 {
+  .fs-md-7 {
     font-size: .8rem!important;
   }
   
-  .fs-sm-8 {
+  .fs-md-8 {
     font-size: .6rem!important;
+  }
+
+  .w-md-100 {
+    width: 100%!important;
   }
 }
 
