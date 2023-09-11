@@ -130,14 +130,14 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
               element.classList.add("transition-opacity");
             }, 10);
-            element.classList.add("hidden");
+            element.classList.add("opacity-0");
 
             // Đặt nội dung mới
             element.innerHTML = data;
 
             // Loại bỏ lớp "hidden" để hiển thị nội dung với hiệu ứng mượt
             setTimeout(() => {
-              element.classList.remove("hidden");
+              element.classList.remove("opacity-0");
             }, 10);
             element.classList.remove("transition-opacity");
           });
@@ -163,14 +163,14 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
               element.classList.add("transition-opacity");
             }, 10);
-            element.classList.add("hidden");
+            element.classList.add("opacity-0");
 
             // Đặt nội dung mới
             element.innerHTML = data;
 
             // Loại bỏ lớp "hidden" để hiển thị nội dung với hiệu ứng mượt
             setTimeout(() => {
-              element.classList.remove("hidden");
+              element.classList.remove("opacity-0");
             }, 10);
             element.classList.remove("transition-opacity");
           });

@@ -141,6 +141,14 @@ a {
   font-size: .6rem;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.transition-opacity {
+  transition: opacity .3s linear;
+}
+
 @media (min-width: 768px) {
   .fs-md-6 {
     font-size: 1rem!important;
@@ -172,6 +180,10 @@ a {
 
   .d-md-block {
     display: block!important;
+  }
+
+  .dangnhap-dangky {
+    height: 320px;
   }
 }
 
@@ -206,6 +218,10 @@ a {
 
   .product-item div del {
     font-size: .5rem;
+  }
+
+  .dangnhap-dangky {
+    height: 380px;
   }
 }
 
