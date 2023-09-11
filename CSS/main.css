@@ -124,6 +124,23 @@ a {
   flex-wrap: nowrap!important;
 }
 
+.h7, .h8,
+.h6-md, .h7-md, .h8-md {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--bs-heading-color);
+}
+
+.h7 {
+  font-size: .8rem;
+}
+
+.h8 {
+  font-size: .6rem;
+}
+
 @media (min-width: 768px) {
   .fs-md-6 {
     font-size: 1rem!important;
@@ -139,6 +156,22 @@ a {
 
   .w-md-100 {
     width: 100%!important;
+  }
+
+  .h6-md {
+    font-size: 1rem!important;
+  }
+
+  .h7-md {
+    font-size: .8rem!important;
+  }
+
+  .h8-md {
+    font-size: .6rem!important;
+  }
+
+  .d-md-block {
+    display: block!important;
   }
 }
 
