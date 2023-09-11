@@ -235,6 +235,5 @@ document.addEventListener("DOMContentLoaded", function () {
       const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
       draggableRow.scrollLeft = scrollLeft - walk;
     });
-    
   }
 });
