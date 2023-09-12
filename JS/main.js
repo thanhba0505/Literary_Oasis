@@ -28,10 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Cuộn ngang----------------------------------
-  if (
-    pathname == "/HTML/home.html" ||
-    pathname == "/HTML/book-detail.html"
-  ) {
+  if (pathname == "/HTML/home.html" || pathname == "/HTML/book-detail.html") {
     scrollX();
   }
 
@@ -207,20 +204,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollX() {
     let isDragging = false;
-    let startX, scrollLeft;
+    let startX, startY, scrollLeft, scrollTop;
 
     const draggableRow = document.querySelector(".draggable-row");
 
     draggableRow.addEventListener("mousedown", (e) => {
       isDragging = true;
       startX = e.pageX - draggableRow.offsetLeft;
+      startY = e.pageY - draggableRow.offsetTop;
       scrollLeft = draggableRow.scrollLeft;
+      scrollTop = draggableRow.scrollTop;
     });
 
     draggableRow.addEventListener("touchstart", (e) => {
       isDragging = true;
       startX = e.touches[0].pageX - draggableRow.offsetLeft;
+      startY = e.touches[0].pageY - draggableRow.offsetTop;
       scrollLeft = draggableRow.scrollLeft;
+      scrollTop = draggableRow.scrollTop;
     });
 
     document.addEventListener("mouseup", () => {
@@ -235,16 +236,34 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!isDragging) return;
       e.preventDefault();
       const x = e.pageX - draggableRow.offsetLeft;
-      const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
-      draggableRow.scrollLeft = scrollLeft - walk;
+      const y = e.pageY - draggableRow.offsetTop;
+      const walkX = (x - startX) * 3; // Tùy chỉnh độ nhạy
+      const walkY = (y - startY) * 3; // Tùy chỉnh độ nhạy
+
+      // Nếu di chuyển theo trục X nhiều hơn
+      if (Math.abs(walkX) > Math.abs(walkY)) {
+        draggableRow.scrollLeft = scrollLeft - walkX;
+      } else {
+        // Di chuyển theo trục Y nhiều hơn, cho phép trình duyệt xử lý sự kiện
+        isDragging = false;
+      }
     });
 
     document.addEventListener("touchmove", (e) => {
       if (!isDragging) return;
       e.preventDefault();
       const x = e.touches[0].pageX - draggableRow.offsetLeft;
-      const walk = (x - startX) * 3; // Tùy chỉnh độ nhạy
-      draggableRow.scrollLeft = scrollLeft - walk;
+      const y = e.touches[0].pageY - draggableRow.offsetTop;
+      const walkX = (x - startX) * 3; // Tùy chỉnh độ nhạy
+      const walkY = (y - startY) * 3; // Tùy chỉnh độ nhạy
+
+      // Nếu di chuyển theo trục X nhiều hơn
+      if (Math.abs(walkX) > Math.abs(walkY)) {
+        draggableRow.scrollLeft = scrollLeft - walkX;
+      } else {
+        // Di chuyển theo trục Y nhiều hơn, cho phép trình duyệt xử lý sự kiện
+        isDragging = false;
+      }
     });
   }
 
