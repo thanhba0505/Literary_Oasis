@@ -18,7 +18,8 @@
 
   <!-- BODY -->
   <div class="container mt-4">
-    <div class="row bg-white py-3">
+    <!-- product img -->
+    <div class="row bg-white py-4">
       <div class="col-md-5 col-12 ps-4">
         <div class="row">
           <div class="col-3 d-flex flex-column">
@@ -79,7 +80,7 @@
           </div>
         </div>
 
-        <div class="row mt-3 py-1 d-flex justify-content-between">
+        <div class="row mt-4 py-1 d-flex justify-content-between">
           <div class="col-6">Số lượng:</div>
           <div class="col-6 px-3 input-group w-50">
 
@@ -87,25 +88,148 @@
               <button class="py-1 btn border-0" id="decrement">-</button>
             </span>
 
-            <input type="text" class="py-1 px-0 form-control shadow-none text-center border-top border-2" id="num" value="0" readonly>
+            <input type="text"
+              class="py-1 px-0 form-control input-focus-none text-center border-bottom border-top border-black border-1"
+              id="num" value="0" readonly>
 
-            <span class="input-group-append btn-hover-bg">
+            <span class="input-group-append btn-hover-bg border border-1 border-black rounded-end-2">
               <button class="py-1 btn border-0" id="increment">+</button>
             </span>
 
           </div>
         </div>
 
-        <div class="row mt-2">
+        <div class="row mt-3">
           <span class="col-6">
-            <button class="btn btn-danger w-100">
+            <button class="px-3 btn btn-danger w-100">
               Mua ngay
             </button>
           </span>
-          <span class="col-6 input-group-append">
+          <span class="col-6 px-3 input-group-append">
             <button class="btn btn-outline-danger w-100" id="addCart">Thêm vào giỏ hàng</button>
           </span>
         </div>
+      </div>
+    </div>
+
+    <!-- san pham tuong tu -->
+    <div class="row bg-white mt-3 p">
+      <div class="d-flex align-items-center pb-1 pt-3 pb-md-1 py-2">
+        <i class="fa-solid fa-bars  ps-md-2"></i>
+        <span class="ms-2 text-nowrap h5 mb-0">Sản phẩm tương tự</span>
+      </div>
+    </div>
+
+    <div class="row bg-white p-3 draggable-row">
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+
+
+    </div>
+
+    <!-- product detail -->
+    <div class="row bg-white mt-3">
+      <div class="d-flex align-items-center pb-1 pt-3 pb-md-1 py-2">
+        <i class="fa-solid fa-bars  ps-md-2"></i>
+        <span class="ms-2 text-nowrap h5 mb-0">Thông tin chi tiết</span>
+      </div>
+    </div>
+
+    <div class="row bg-white">
+      <table class="table table-borderless table-sm my-1">
+        <tbody>
+          <tr>
+            <th scope="row" class="ps-3">Mã hàng</th>
+            <td>23456JKS623G3</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Tên nhà cung cấp</th>
+            <td>Penguin Books</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Tác giả</th>
+            <td>Hajime Isayama</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">NXB</th>
+            <td>Kodansha Comics</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Năm XB</th>
+            <td>2022</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Ngôn Ngữ</th>
+            <td>Tiếng Anh</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Trọng lượng (gr)</th>
+            <td>788</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Kích Thước Bao Bì</th>
+            <td>24.9 x 16.7 x 2.2 cm</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Số trang</th>
+            <td>336</td>
+          </tr>
+          <tr>
+            <th scope="row" class="ps-3">Hình thức</th>
+            <td>Bìa Cứng</td>
+          </tr>
+          <!-- Thêm các hàng dữ liệu khác tại đây -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row bg-white pb-4">
+      <div class="col-12">
+        Giá sản phẩm trên Literary Oasis đã bao gồm thuế theo luật hiện hành. Bên cạnh đó, tuỳ vào loại sản phẩm, hình thức và địa chỉ giao hàng mà có thể phát sinh thêm chi phí khác như Phụ phí đóng gói, phí vận chuyển, phụ phí hàng cồng
+        kềnh,...
+      </div>
+      <div class="col-12 text-danger">
+        Chính sách khuyến mãi trên Literary Oasis không áp dụng cho Hệ thống Nhà sách Fahasa trên toàn quốc.
+      </div>
+
+      <div class="col-12">
+        <hr>
+      </div>
+
+      <div class="col-12 h6">
+        The Best Of Attack On Titan: In Color Vol. 2
+      </div>
+
+      <div class="col-12">
+        Own six of the most explosive chapters from Attack on Titan’s 12-year run, selected by readers, editors, and creator Hajime Isayama himself, retouched and rendered in spectacular color! This collectible hardcover also includes the original draft of Attack on Titan Episode 2, never before published in English. Experience the moments that defined Levi, Historia, Reiner, Eren, and more of your favorite characters—and then read chapter 2 of Attack on Titan story that wasn’t told!
+      </div>
+
+      <div class="col-12 h6 mt-2">
+        THE COLORS OF FEAR AND FREEDOM
+      </div>
+
+      <div class="col-12">
+        Blast beyond the bounds of black and white, and revisit six of the most consequential episodes of Attack on Titan, remastered in full color. This premium volume also includes the originally-submitted draft of Episode 2—an intriguingly divergent story that has never been published in English before. Curated by the editors, fans, and creator Hajime Isayama himself, this is the capstone of any Titan manga collection!
       </div>
     </div>
   </div>

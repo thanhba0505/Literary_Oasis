@@ -66,6 +66,11 @@ a {
   background-color: rgba(0,0,0,0.1);
 }
 
+.input-focus-none {
+  box-shadow: none!important;
+  border: none!important;
+}
+
 /* List menu */
 
 .list-menu-item {
