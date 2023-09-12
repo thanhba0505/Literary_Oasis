@@ -3,270 +3,292 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../CSS/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/main.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <title>Trang chủ</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
+  <title>Document</title>
 </head>
-<body>
-  <div class="app transition-opacity">
+<body class="body transition-opacity opacity-0 bg-maunhat overflow-x-hidden">
 
-    <div class="header"></div>
+  <!-- HEADER -->
+  <header class="header bg-header text-white pb-3 pt-md-3 pt-2"></header>
 
-    <div class="container">
-      <div class="grid">
+  <!-- BODY -->
+  <div class="container mt-md-4 mt-0">
 
-        <!-- MENU -->
-        <div class="list-menu">
+    <!-- MENU LIST -->
+    <div class="row bg-white py-3">
 
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon1.png" alt=""></a>
-            <span>Siêu Sinh Nhật Siêu Wòaaa</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon2.png" alt=""></a>
-            <span>Trở lại trường học</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon3.png" alt=""></a>
-            <span>Flash Sale</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon4.png" alt=""></a>
-            <span>Mã Giảm Giá</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon5.png" alt=""></a>
-            <span>Sale Thứ 3</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon6.png" alt=""></a>
-            <span>Nhã Nam</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon7.png" alt=""></a>
-            <span>Galaxy Education</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon8.png" alt=""></a>
-            <span>Sản Phẩm Mới</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon9.png" alt=""></a>
-            <span>Manga</span>
-          </div>
-
-          <div class="list-menu-item">
-            <a href=""><img src="../IMG/menu-icon10.png" alt=""></a>
-            <span>Phiên chợ sách cũ</span>
-          </div>
-
+      <div class="col-md-6 col-12 d-flex pe-md-0 mb-md-0 mb-2">
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon1.png" alt=""></a>
+          <span>Siêu Sinh Nhật Siêu Wòaaa</span>
         </div>
 
-        <!-- FLASH SALE -->
-        <div class="flashsale">
-          <div class="flashsale-header">
-            <a class="flashsale-logo" href="">
-              <img src="../IMG/flashsale-icon.png" alt="">
-              <span>FLASH SALE</span>
-            </a>
-            <span class="split">
-              <div class="split-div"></div>
-            </span>
-            <span class="flashsale-label">Kết Thúc Trong</span>
-            <div class="flashsale-countdown">
-              <span class="flashsale-countdown-number number-h"></span>
-              <span>:</span>
-              <span class="flashsale-countdown-number number-m"></span>
-              <span>:</span>
-              <span class="flashsale-countdown-number number-s"></span>
-            </div>
-          </div>
-
-          <div class="flashsale-container grid">
-            <div class="row">
-
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-
-            </div>
-          </div>
-
-          <a href="../HTML/flash-sale.html" class="flashsale-see-more">
-            <span>Xem thêm</span>
-          </a>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon2.png" alt=""></a>
+          <span>Trở lại trường học</span>
         </div>
 
-        <!-- DANH MUC -->
-        <div class="product-portfolio">
-          <div class="product-portfolio-header">
-            <i class="fa-solid fa-bars"></i>
-            <span>Danh mục sản phẩm</span>
-          </div>
-
-          <div class="product-portfolio-list list-menu">
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon1.jpg" alt=""></a>
-              <span>Đam Mỹ</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon2.jpg" alt=""></a>
-              <span>Manga - Comic</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon3.jpg" alt=""></a>
-              <span>Ngôn Tình</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon4.jpg" alt=""></a>
-              <span>Trinh Thám</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon5.jpg" alt=""></a>
-              <span>Huyền Bí Giả Tưởng</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon6.jpg" alt=""></a>
-              <span>Kinh Tế</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon7.jpg" alt=""></a>
-              <span>Khoa Học</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon8.jpg" alt=""></a>
-              <span>Sách Giáo Khoa</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon9.jpg" alt=""></a>
-              <span>Văn Học</span>
-            </div>
-
-            <div class="product-portfolio-list-item list-menu-item">
-              <a href=""><img src="../IMG/pp-icon10.jpg" alt=""></a>
-              <span>Ngoại Ngữ</span>
-            </div>
-
-          </div>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon3.png" alt=""></a>
+          <span>Flash Sale</span>
         </div>
 
-        <!-- XU HUONG MUA SAM -->
-        <div class="shopping-trends flashsale">
-          <div class="shopping-trends-header flashsale-header">
-            <a class="flashsale-logo" href="">
-              <img src="../IMG/shopping-trends.png" alt="">
-              <span>XU HƯỚNG MUA SẮM</span>
-            </a>
-          </div>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon4.png" alt=""></a>
+          <span>Mã Giảm Giá</span>
+        </div>
 
-          <div class="shopping-trends-tabslider">
-            <span class="shopping-trends-tabslider--active">Xu Hướng Theo Ngày</span>
-            <span>Sách HOT - Giảm Sốc</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-            <span>Săn Limited Edition</span>
-          </div>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon5.png" alt=""></a>
+          <span>Sale Thứ 3</span>
+        </div>
+      </div>
 
-          <div class="shopping-trends-container grid">
-            <div class="row">
+      <div class="col-md-6 col-12 d-flex ps-md-0">
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon6.png" alt=""></a>
+          <span>Nhã Nam</span>
+        </div>
 
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon7.png" alt=""></a>
+          <span>Galaxy Education</span>
+        </div>
 
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
-              <div class="col-2">
-                <div class="item"></div>
-              </div>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon8.png" alt=""></a>
+          <span>Sản Phẩm Mới</span>
+        </div>
 
-            </div>
-          </div>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon9.png" alt=""></a>
+          <span>Manga</span>
+        </div>
 
-          <div class="flashsale-see-more">
-            <span>Xem thêm</span>
-          </div>
+        <div class="col-lg col list-menu-item">
+          <a href=""><img src="../IMG/menu-icon10.png" alt=""></a>
+          <span>Phiên chợ sách cũ</span>
+        </div>
+      </div>
 
+    </div>
+
+    <!-- FLASH SALE -->
+    <div class="row bg-white mt-3">
+      <div class="d-flex align-items-center bg-flashsale py-md-1 flashsale-head">
+
+        <a class="d-flex align-items-center" href="">
+          <img src="../IMG/flashsale-icon.png" alt="" class="h-100 me-2 ms-md-2">
+          <span class="text-black m-0 pe-2 border-end border-1 border-danger text-nowrap">FLASH SALE</span>
+        </a>
+
+        <span class="mx-2 flashsale-time">Kết Thúc Trong</span>
+
+        <div class="d-flex align-items-center">
+          <span class="px-1 border-2 border-light rounded-1 bg-white number-h"></span>
+          <span class="mx-1">:</span>
+          <span class="px-1 border-2 border-light rounded-1 bg-white number-m"></span>
+          <span class="mx-1">:</span>
+          <span class="px-1 border-2 border-light rounded-1 bg-white number-s"></span>
         </div>
 
       </div>
     </div>
 
-    <div class="footer"></div>
+    <div class="row bg-white p-3 draggable-row">
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+      <div class="product-item col-md-2 col-6 px-2 d-flex flex-column draggable-item"></div>
+
+
+    </div>
+
+    <div class="row bg-white pt-2 pb-4">
+      <div class="col-12 d-flex justify-content-center">
+        <a href="../HTML/flash-sale.html" class="h-100 d-flex">
+          <span class="bg-price text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- DANH MUC SAN PHAM -->
+    <div class="row bg-white mt-3">
+      <div class="d-flex align-items-center pb-3 pt-3 pb-md-1 py-2">
+        <i class="fa-solid fa-bars  ps-md-2"></i>
+        <span class="ms-2 text-nowrap h5 mb-0">Danh mục sản phẩm</span>
+      </div>
+    </div>
+
+    <div class="row bg-white py-1">
+
+      <div class="col-md-6 col-12 d-flex pe-md-0 my-md-3 mb-2">
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon1.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Đam Mỹ</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon2.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Manga - Comic</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon3.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Ngôn Tình</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon4.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Trinh Thám</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon5.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Huyền Bí Giả Tưởng</div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-12 d-flex ps-md-0 my-md-3 mb-2">
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon6.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Kinh Tế</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon7.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Khoa Học</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon8.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Sách Giáo Khoa</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon9.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Văn Học</div>
+        </div>
+
+        <div class="col">
+          <a href="" class="d-block w-100 d-flex justify-content-center"><img src="../IMG/pp-icon10.jpg" alt="" class="img-fluid w-75"></a>
+          <div class="fs-md-6 fs-8 text-center pt-1">Ngoại Ngữ</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SHOPPING TRENDING -->
+    <div class="row bg-white mt-3">
+      <div class="d-flex align-items-center bg-flashsale py-md-3 py-2">
+        <a class="d-block d-flex align-items-center" href="">
+          <img src="../IMG/shopping-trends.png" alt="" class="img-fluid mx-2">
+          <span class="text-black m-0 pe-2 text-nowrap h6">XU HƯỚNG MUA SẮM</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="row bg-white pt-3 pb-1">
+      <ul class="list-unstyled d-flex m-0 draggable-row d-block">
+        <li class="ps-2 draggable-item d-block"><button class="bg-white border-2 border-color-price py-1 rounded-3 fs-7 text-nowrap">Xu Hướng Theo Ngày</button>
+        </li>
+        <li class="ps-2 draggable-item d-block"><button class="bg-white border-2 border-color-price py-1 rounded-3 fs-7 text-nowrap">Sách HOT - Giảm
+            Sốc</button></li>
+        <li class="ps-2 draggable-item d-block"><button class="bg-white border-2 border-color-price py-1 rounded-3 fs-7 text-nowrap">Săn Limited
+            Edition</button></li>
+      </ul>
+    </div>
+
+    <div class="row p-3 pt3 bg-white draggable-row">
+
+      <div class="col-md-2 col-6 draggable-item">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-md-2 col-6 draggable-item">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-md-2 col-6 draggable-item">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-md-2 col-6 draggable-item">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-md-2 col-6 draggable-item">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-md-2 col-6 draggable-item">
+        <div class="product-item"></div>
+      </div>
+
+    </div>
+
+    <div class="row px-3 pb-3 bg-white d-md-flex d-none">
+
+      <div class="col-2">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-2">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-2">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-2">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-2">
+        <div class="product-item"></div>
+      </div>
+      <div class="col-2">
+        <div class="product-item"></div>
+      </div>
+
+    </div>
+
+    <div class="row bg-white pt-2 pb-4">
+      <div class="col-12 d-flex justify-content-center">
+        <a href="../HTML/flash-sale.html" class="h-100 d-flex">
+          <span class="bg-price text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+        </a>
+      </div>
+    </div>
 
   </div>
 
-  <script src="../JS/index.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer"></footer>
+
+
+  <!-- <script src="../JS/index.js"></script> -->
   <script src="../JS/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+
 </body>
 </html>

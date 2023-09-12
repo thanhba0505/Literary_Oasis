@@ -9,16 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Gọi hàm cập nhật thời gian một lần ngay khi trang được tải
   updateClock();
 
-  // Nạp html---------------------------------------------------------
+  // Nạp html--------------------------------------------------------
   addHTML();
 
   // Form dang ky dang nhap -----------------------------------------
   acount();
 
-  // ---------------------
-  // scrollX();
+  // Cộng trừ số lượng---------------------
 
   num();
+
+  // Cuộn ngang----------------------------------
+  scrollX();
 
   // Các chức năng khác
   // other();
@@ -26,10 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // FUNCTION -------------------------------------------------
 
   function repeatApp() {
-    const app = document.querySelectorAll(".app");
+    const app = document.querySelectorAll(".body");
     app.forEach((element) => {
       setTimeout(() => {
-        element.classList.add("visible");
+        element.classList.add("opacity-100");
       }, 0);
       setTimeout(() => {
         element.classList.remove("transition-opacity");
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addHTML() {
-    fetch("../HTML-/--header.html")
+    fetch("../HTML/--header.html")
       .then((response) => response.text())
       .then((data) => {
         const headerElements = document.querySelectorAll(".header");
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     console.log("add html");
-    fetch("../HTML-/--footer.html")
+    fetch("../HTML/--footer.html")
       .then((response) => response.text())
       .then((data) => {
         const footerElements = document.querySelectorAll(".footer");
@@ -81,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
 
-    fetch("../HTML-/--item.html")
+    fetch("../HTML/--item.html")
       .then((response) => response.text())
       .then((data) => {
         const itemElements = document.querySelectorAll(".product-item");
@@ -124,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function changeContentDangnhap() {
-      fetch("../HTML-/--login.html")
+      fetch("../HTML/--login.html")
         .then((response) => response.text())
         .then((data) => {
           formGroup.forEach((element) => {
@@ -157,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function changeContentDangky() {
-      fetch("../HTML-/--register.html")
+      fetch("../HTML/--register.html")
         .then((response) => response.text())
         .then((data) => {
           formGroup.forEach((element) => {
@@ -188,12 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
     }
-  }
-
-  function other() {
-    const urlString = window.location.href;
-    const url = new URL(urlString);
-    const pathname = url.pathname;
   }
 
   function scrollX() {
@@ -249,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
       num = isNaN(num) ? 0 : num;
       numInput.value = num + 1;
     });
-console.log(numInput);
+
     decrementButton.addEventListener("click", () => {
       let num = parseInt(numInput.value);
       num = isNaN(num) ? 0 : num;
@@ -257,5 +253,11 @@ console.log(numInput);
         numInput.value = num - 1;
       }
     });
+  }
+
+  function other() {
+    const urlString = window.location.href;
+    const url = new URL(urlString);
+    const pathname = url.pathname;
   }
 });

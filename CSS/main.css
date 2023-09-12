@@ -63,7 +63,7 @@ a {
 }
 
 .btn-hover-bg:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.1)!important;
 }
 
 .input-focus-none {
@@ -193,6 +193,10 @@ a {
 
   .dangnhap-dangky {
     height: 320px;
+  }
+
+  .w-md-25 {
+    width: 25%!important;
   }
 }
 
