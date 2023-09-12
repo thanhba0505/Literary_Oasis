@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const urlString = window.location.href;
+  const url = new URL(urlString);
+  const pathname = url.pathname;
+
   // Load trang -------------------------------------------------
   repeatApp();
 
@@ -13,14 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
   addHTML();
 
   // Form dang ky dang nhap -----------------------------------------
-  acount();
+  if (pathname == "/HTML/login-register.html") {
+    acount();
+  }
 
   // Cộng trừ số lượng---------------------
 
-  num();
+  if (pathname == "/HTML/book-detail.html") {
+    num();
+  }
 
   // Cuộn ngang----------------------------------
-  scrollX();
+  if (
+    pathname == "/HTML/home.html" ||
+    pathname == "/HTML/book-detail.html"
+  ) {
+    scrollX();
+  }
 
   // Các chức năng khác
   // other();
@@ -73,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
           element.innerHTML = data;
         });
       });
-    console.log("add html");
+
     fetch("../HTML/--footer.html")
       .then((response) => response.text())
       .then((data) => {
