@@ -16,21 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Nạp html--------------------------------------------------------
   addHTML();
 
-  // Form dang ky dang nhap -----------------------------------------
-  if (pathname == "/HTML/login-register.html") {
-    acount();
-  }
+  // Form dang ky dang nhap -----------------------------------------ac
+  acount();
 
   // Cộng trừ số lượng---------------------
-
-  if (pathname == "/HTML/book-detail.html") {
-    num();
-  }
+  // num();
 
   // Cuộn ngang----------------------------------
-  if (pathname == "/HTML/home.html" || pathname == "/HTML/book-detail.html") {
-    scrollX();
-  }
+  scrollX();
 
   // Các chức năng khác
   // other();
@@ -291,5 +284,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const urlString = window.location.href;
     const url = new URL(urlString);
     const pathname = url.pathname;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  num();
+  function num() {
+    const numInput = document.getElementById("num");
+    const incrementButton = document.getElementById("increment");
+    const decrementButton = document.getElementById("decrement");
+
+    incrementButton.addEventListener("click", () => {
+      let num = parseInt(numInput.value);
+      num = isNaN(num) ? 0 : num;
+      numInput.value = num + 1;
+    });
+
+    decrementButton.addEventListener("click", () => {
+      let num = parseInt(numInput.value);
+      num = isNaN(num) ? 0 : num;
+      if (num > 0) {
+        numInput.value = num - 1;
+      }
+    });
   }
 });
