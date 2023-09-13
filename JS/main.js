@@ -320,11 +320,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (sidebar.style.right === "100%") {
         sidebar.style.right = "50%";
         sidebar.style.opacity = "1";
-        sidebarToggle.style.left = "34px";
+        sidebarToggle.style.boxShadow = "0 0 4px 3px rgb(0, 0, 0, 0.2)";
       } else {
         sidebar.style.right = "100%";
         sidebar.style.opacity = "0";
-        sidebarToggle.style.left = "0";
+        sidebarToggle.style.boxShadow = "0 0 4px 0px rgb(0, 0, 0, 0.2)";
       }
     });
   }

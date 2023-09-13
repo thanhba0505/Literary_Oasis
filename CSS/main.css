@@ -169,7 +169,7 @@ a {
 #sidebar-toggle {
   /* left: 100px; */
   box-shadow: 0 0 4px 0px rgb(0, 0, 0, 0.2);
-  transition: left .3s ease-out;
+  transition: left .3s ease-out, box-shadow .3s ease-out;
 }
 
 @media (min-width: 768px) {
