@@ -124,6 +124,8 @@ a {
   font-size: .7rem;
 }
 
+/*  */
+
 .draggable-row {
   overflow-x: auto;
   overflow: hidden;
@@ -156,6 +158,18 @@ a {
 
 .transition-opacity {
   transition: opacity .3s linear;
+}
+
+#sidebar {
+  position: absolute;
+  box-shadow: 2px 1px 4px 4px rgb(0, 0, 0, 0.2);
+  transition: right 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#sidebar-toggle {
+  /* left: 100px; */
+  box-shadow: 0 0 4px 0px rgb(0, 0, 0, 0.2);
+  transition: left .3s ease-out;
 }
 
 @media (min-width: 768px) {

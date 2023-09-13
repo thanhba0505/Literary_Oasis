@@ -309,3 +309,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  sidebar();
+  function sidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+    // Sự kiện click cho nút toggle
+    sidebarToggle.addEventListener("click", () => {
+      if (sidebar.style.right === "100%") {
+        sidebar.style.right = "50%";
+        sidebar.style.opacity = "1";
+        sidebarToggle.style.left = "34px";
+      } else {
+        sidebar.style.right = "100%";
+        sidebar.style.opacity = "0";
+        sidebarToggle.style.left = "0";
+      }
+    });
+  }
+});
