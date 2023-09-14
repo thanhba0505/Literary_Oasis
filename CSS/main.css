@@ -161,16 +161,31 @@ a {
 }
 
 #sidebar {
-  position: absolute;
   box-shadow: 2px 1px 4px 4px rgb(0, 0, 0, 0.2);
   transition: right 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: 200;
 }
 
 #sidebar-toggle {
   /* left: 100px; */
   box-shadow: 0 0 4px 0px rgb(0, 0, 0, 0.2);
   transition: left .3s ease-out, box-shadow .3s ease-out;
+  z-index: 200;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ mờ (alpha) */
+  transition: opacity .3s linear;
+  opacity: 0;
+  z-index: 100; /* Đảm bảo nó hiển thị trên các phần tử khác */
+  display: none;
+}
+
 
 @media (min-width: 768px) {
   .fs-md-6 {
@@ -212,9 +227,19 @@ a {
   .w-md-100 {
     width: 100%!important;
   }
+
+  #sidebar {
+    position: static;
+    box-shadow: none;
+    opacity: 1!important;
+  }
 }
 
 @media (max-width: 768px) {
+
+  #sidebar {
+    position: absolute;
+  }
   
   .list-menu-item>a>img {
     width: 50%;
