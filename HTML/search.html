@@ -19,7 +19,7 @@
   <!-- BODY -->
   <div class="container mt-4">
     <div class="row bg-white position-relative">
-      <div class="col-md-3 col-8 ps-md-4 pb-3 bg-white" id="sidebar" style="right: 100%; opacity: 1;">
+      <div class="col-md-3 col-8 ps-md-4 pb-3 bg-white" id="sidebar" style="right: 100%; opacity: 0;">
         <div class="h4 pt-3 pb-3 border-bottom border-2 mb-2 position-relative">
           LỌC THEO
         </div>
@@ -121,12 +121,37 @@
 
       </div>
 
-      <div class="d-md-none col-12 h4 pt-3 pb-3 ps-3 border-bottom border-2 mb-2 text-danger d-flex justify-content-between align-items-center">
-        <span>DANH SÁCH LỌC</span>
-        <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"><i class="fa-solid fa-filter"></i></span>
-      </div>
+      
+<!-- 
+      <div class="col-md-9 col-12">
+        <div class="h3"></div>
+      </div> -->
 
       <div class="col-md-9 col-12">
+        <div class="col-12 h4 pt-3 pb-3 ps-3 border-bottom border-2 mb-2 text-danger d-flex justify-content-between align-items-center">
+          <span>DANH SÁCH LỌC</span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"><i class="fa-solid fa-filter"></i></span>
+        </div>
+
+        <div class="row mt-3 d-flex">
+          <span class="ps-4 h4 w-md-100">Kết quả tìm kiếm: (999 kết quả)</span>
+
+          <select class="form-select input-focus-none w-md-25 w-50" aria-label="Default select example">
+            <option selected>Sắp xếp theo</option>
+            <option value="1">Từ thấp đến cao</option>
+            <option value="2">Từ cao đến thấp</option>
+            <option value="3">Bán chạy</option>
+            <option value="4">Giảm giá</option>
+            <option value="3">Mới nhất</option>
+          </select>
+          
+          <select class="form-select input-focus-none w-md-25 w-50" aria-label="Default select example">
+            <option selected>Loại sách</option>
+            <option value="1">Sách mới</option>
+            <option value="2">Sách cũ</option>
+          </select>
+        </div>
+
         <div class="row mt-4">
           <div class="product-item col-md-3 col-6 px-2 d-flex flex-column"></div>
           <div class="product-item col-md-3 col-6 px-2 d-flex flex-column"></div>
@@ -153,7 +178,35 @@
           <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
           <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
         </div>
+
+        <div class="row mt-3">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link text-danger" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-danger" href="#">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-danger" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-danger" href="#">3</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link text-danger" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
+
+
     </div>
 
   </div>
