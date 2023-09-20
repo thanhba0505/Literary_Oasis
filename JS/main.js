@@ -316,36 +316,42 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const sidebarToggle = document.getElementById("sidebar-toggle");
     const overlay = document.getElementById("overlay");
-    // Sự kiện click cho nút toggle
-    sidebarToggle.addEventListener("click", () => {
-      if (sidebar.style.right === "100%") {
-        sidebar.style.right = "33.33%";
-        sidebar.style.opacity = "1";
-        sidebarToggle.style.boxShadow = "0 0 4px 3px rgb(0, 0, 0, 0.2)";
-        setTimeout(() => {
-          overlay.style.display = "block";
-        }, 10);
-        overlay.style.opacity = "1";
-      } else {
-        sidebar.style.right = "100%";
-        sidebar.style.opacity = "0";
-        sidebarToggle.style.boxShadow = "0 0 4px 0px rgb(0, 0, 0, 0.2)";
-        overlay.style.opacity = "0";
-        setTimeout(() => {
-          overlay.style.display = "none";
-        }, 300);
-      }
-    });
-    overlay.addEventListener("click", () => {
-      if (sidebar.style.right !== "100%") {
-        sidebar.style.right = "100%";
-        sidebar.style.opacity = "0";
-        sidebarToggle.style.boxShadow = "0 0 4px 0px rgb(0, 0, 0, 0.2)";
-        overlay.style.opacity = "0";
-        setTimeout(() => {
-          overlay.style.display = "none";
-        }, 300);
-      }
-    })
+  
+    // Kiểm tra kích thước màn hình
+    if (window.innerWidth < 768) { // Kiểm tra nếu màn hình nhỏ hơn sm (576px)
+      // Sự kiện click cho nút toggle
+      sidebarToggle.addEventListener("click", () => {
+        if (sidebar.style.right === "100%") {
+          sidebar.style.right = "33.33%";
+          sidebar.style.opacity = "1";
+          sidebarToggle.style.boxShadow = "0 0 4px 3px rgb(0, 0, 0, 0.2)";
+          setTimeout(() => {
+            overlay.style.display = "block";
+          }, 10);
+          overlay.style.opacity = "1";
+        } else {
+          sidebar.style.right = "100%";
+          sidebar.style.opacity = "0";
+          sidebarToggle.style.boxShadow = "0 0 4px 0px rgb(0, 0, 0, 0.2)";
+          overlay.style.opacity = "0";
+          setTimeout(() => {
+            overlay.style.display = "none";
+          }, 300);
+        }
+      });
+      
+      overlay.addEventListener("click", () => {
+        if (sidebar.style.right !== "100%") {
+          sidebar.style.right = "100%";
+          sidebar.style.opacity = "0";
+          sidebarToggle.style.boxShadow = "0 0 4px 0px rgb(0, 0, 0, 0.2)";
+          overlay.style.opacity = "0";
+          setTimeout(() => {
+            overlay.style.display = "none";
+          }, 300);
+        }
+      });
+    }
   }
+  
 });

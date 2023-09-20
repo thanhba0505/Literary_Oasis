@@ -208,9 +208,6 @@ a {
   height: 36px;
 }
 
-tbl-htr *{
-  text-wrap: nowrap;
-}
 
 @media (min-width: 768px) {
   .fs-md-6 {
@@ -257,6 +254,14 @@ tbl-htr *{
     position: static;
     box-shadow: none;
     opacity: 1 !important;
+  }
+
+  .border-md-end {
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+
+  border-md-2 {
+    border-width: 2px !important;
   }
 }
 
