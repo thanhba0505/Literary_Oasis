@@ -8,6 +8,11 @@
   --fhs-shopping-trends: rgb(252, 221, 239);
   --fhs-backgroud-container: rgb(240, 240, 240);
   --fhs-flashsale: rgb(252, 218, 176);
+  --fhs-account: rgb(255, 246, 227);
+}
+
+.bg-account {
+  background-color: var(--fhs-account);
 }
 
 .cursor-pointer {
@@ -15,19 +20,27 @@
 }
 
 .fs-7 {
-  font-size: .8rem!important;
+  font-size: .8rem !important;
 }
 
 .fs-8 {
-  font-size: .6rem!important;
+  font-size: .6rem !important;
+}
+
+.text-hover {
+  transition: transform .2s linear;
+}
+
+.text-hover:hover {
+  transform: translateX(4px);
 }
 
 .btn-hover {
-  transition: box-shadow 0.2s linear!important;
+  transition: box-shadow 0.2s linear !important;
 }
 
 .btn-hover:hover {
-  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.2)!important;
+  box-shadow: 0 0 4px 2px rgb(0, 0, 0, 0.2) !important;
 }
 
 a {
@@ -39,15 +52,15 @@ a {
 }
 
 .color-price {
-  color: var(--fhs-price)!important;
+  color: var(--fhs-price) !important;
 }
 
 .border-color-price {
-  border-color: var(--fhs-price)!important;
+  border-color: var(--fhs-price) !important;
 }
 
 .bg-price {
-  background-color: var(--fhs-price)!important;
+  background-color: var(--fhs-price) !important;
 }
 
 .bg-maunhat {
@@ -59,16 +72,16 @@ a {
 }
 
 .btn-hover-bg {
-  transition: background-color .3s linear!important;
+  transition: background-color .3s linear !important;
 }
 
 .btn-hover-bg:hover {
-  background-color: rgba(0,0,0,0.1)!important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
 }
 
 .input-focus-none {
-  box-shadow: none!important;
-  border: none!important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* List menu */
@@ -107,20 +120,20 @@ a {
   font-size: 1.25rem;
 }
 
-.product-item div > a:nth-child(1) div {
+.product-item div>a:nth-child(1) div {
   font-size: .9rem;
 
 }
 
-.product-item div > div:nth-child(2) {
+.product-item div>div:nth-child(2) {
   font-size: .7rem;
 }
 
-.product-item div > div:nth-child(3) {
+.product-item div>div:nth-child(3) {
   font-size: 1.2em;
 }
 
-.product-item div > div:nth-child(4) {
+.product-item div>div:nth-child(4) {
   font-size: .7rem;
 }
 
@@ -132,11 +145,14 @@ a {
   cursor: grab;
   user-select: none;
   scroll-behavior: smooth;
-  flex-wrap: nowrap!important;
+  flex-wrap: nowrap !important;
 }
 
-.h7, .h8,
-.h6-md, .h7-md, .h8-md {
+.h7,
+.h8,
+.h6-md,
+.h7-md,
+.h8-md {
   margin-top: 0;
   margin-bottom: .5rem;
   font-weight: 500;
@@ -179,41 +195,50 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ mờ (alpha) */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Màu nền với độ mờ (alpha) */
   transition: opacity .3s linear;
   opacity: 0;
-  z-index: 100; /* Đảm bảo nó hiển thị trên các phần tử khác */
+  z-index: 100;
+  /* Đảm bảo nó hiển thị trên các phần tử khác */
   display: none;
 }
 
+.tbl-acc tr {
+  height: 36px;
+}
+
+tbl-htr *{
+  text-wrap: nowrap;
+}
 
 @media (min-width: 768px) {
   .fs-md-6 {
-    font-size: 1rem!important;
+    font-size: 1rem !important;
   }
 
   .fs-md-7 {
-    font-size: .8rem!important;
+    font-size: .8rem !important;
   }
-  
+
   .fs-md-8 {
-    font-size: .6rem!important;
+    font-size: .6rem !important;
   }
 
   .h6-md {
-    font-size: 1rem!important;
+    font-size: 1rem !important;
   }
 
   .h7-md {
-    font-size: .8rem!important;
+    font-size: .8rem !important;
   }
 
   .h8-md {
-    font-size: .6rem!important;
+    font-size: .6rem !important;
   }
 
   .d-md-block {
-    display: block!important;
+    display: block !important;
   }
 
   .dangnhap-dangky {
@@ -221,17 +246,17 @@ a {
   }
 
   .w-md-25 {
-    width: 25%!important;
+    width: 25% !important;
   }
 
   .w-md-100 {
-    width: 100%!important;
+    width: 100% !important;
   }
 
   #sidebar {
     position: static;
     box-shadow: none;
-    opacity: 1!important;
+    opacity: 1 !important;
   }
 }
 
@@ -240,7 +265,7 @@ a {
   #sidebar {
     position: absolute;
   }
-  
+
   .list-menu-item>a>img {
     width: 50%;
   }
@@ -259,7 +284,7 @@ a {
     font-size: .9rem;
     text-align: center;
   }
-  
+
   .flashsale-head span {
     font-size: .8rem;
   }
@@ -276,4 +301,3 @@ a {
     height: 380px;
   }
 }
-
