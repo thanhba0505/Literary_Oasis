@@ -267,6 +267,10 @@ a {
   border-md-2 {
     border-width: 2px !important;
   }
+
+  #sidebar-toggle {
+    box-shadow: none;
+  }
 }
 
 @media (max-width: 768px) {
