@@ -9,26 +9,480 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
-  <title>Document</title>
+  <title>Dịch vụ</title>
 </head>
 <body class="body transition-opacity opacity-0 bg-maunhat overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="header bg-header text-white pb-3 pt-md-3 pt-2"></header>
+  <header class="header bg-header text-white pb-3 pt-md-3 pt-2" id="page-top"></header>
 
   <!-- BODY -->
-  <div class="container mt-md-4 mt-0">
+  <div class="container mt-4">
+    <div class="row bg-white position-relative py-3">
+      <div class="col-md-3 col-8 ps-md-4 pe-md-3 py-3 bg-white border-end border-2" id="sidebar"
+        style="right: 100%; opacity: 0;">
+        <div class="h4 pb-3 border-bottom border-2 mb-2 position-relative">
+          DỊCH VỤ
+        </div>
+
+        <div class="">
+          <ul class="list-unstyled">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContentInFile('f-dksd')">
+              <span>Điều khoản sử dụng</span>
+            </li>
+            <li class="py-3 border-bottom text-hover cursor-pointer"
+              onclick="javascrip: showContentInFile('f-csbmttcn')">
+              <span>Chính sách bảo mật thông tin cá nhân</span>
+            </li>
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContentInFile('f-csbmtt')">
+              <span>Chính sách bảo mật thanh toán</span>
+            </li>
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContentInFile('f-gtlo')">
+              <span>Giới thiệu Literary Oasis</span>
+            </li>
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContentInFile('f-htttns')">
+              <span>Hệ thống trung tâm nhà sách</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Nội dung cho Điều khoản sử dụng -->
+      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="f-dksd">
+        <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
+          <span>ĐIỀU KHOẢN SỬ DỤNG</span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
+            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+        </div>
+
+        <div class="col-12 px-3" style="text-align: justify;">
+          <p>
+            Chào mừng quý khách đến mua sắm tại LITERARY OASIS. Sau khi truy cập vào
+            website LITERARY OASIS để tham khảo hoặc mua sắm, quý
+            khách đã đồng ý tuân thủ và ràng buộc với những quy định của <span class="text-danger h6">LITERARY
+              OASIS</span>. Vui lòng xem kỹ các quy định và hợp tác
+            với chúng tôi để xây dựng 1 website LITERARY OASIS ngày càng thân thiện
+            và
+            phục vụ tốt những yêu cầu của chính quý
+            khách. Ngoài ra, nếu có bất cứ câu hỏi nào về những thỏa thuận trên đây, vui lòng email cho chúng tôi qua
+            địa
+            chỉ support@literaryoasis.com.
+          </p>
+
+          <h5>Tài khoản của khách hàng</h5>
+
+          <p>
+            Khi sử dụng dịch vụ LITERARY OASIS, quý khách sẽ cung cấp cho chúng tôi
+            thông tin về địa chỉ email, mật khẩu và họ tên
+            để có được 1 tài khoản tại đây. Việc sử dụng và bảo mật thông tin tài khoản là trách nhiệm và quyền lợi của
+            quý khách khi sử dụng LITERARY OASIS. Ngoài ra, những thông tin khác
+            trong
+            tài khoản như tên tuổi, địa chỉ.... là
+            những thông tin sẽ giúp LITERARY OASIS phục vụ quý khách tốt nhất. Trong
+            trường hợp thông tin do quý khách cung cấp
+            không đầy đủ hoặc sai dẫn đến việc không thể giao hàng cho quý khách, chúng tôi có quyền đình chỉ hoặc từ
+            chối
+            phục vụ, giao hàng mà không phải chịu bất cứ trách nhiệm nào đối với quý khách. Khi có những thay đổi thông
+            tin của quý khách, vui lòng cập nhật lại thông tin trong tài khoản tại LITERARY OASIS. Quý khách phải giữ
+            kín mật khẩu
+            và tài khoản, hoàn toàn chịu trách nhiệm đối với tất cả các hoạt động diễn ra thông qua việc sử dụng mật
+            khẩu
+            hoặc tài khoản của mình. Quý khách nên đảm bảo thoát khỏi tài khoản tại LITERARY OASIS sau mỗi lần sử dụng
+            để bảo mật
+            thông tin của mình.
+          </p>
+
+          <h5>Quyền lợi bảo mật thông tin của khách hàng</h5>
+
+          <p>
+            Khi sử dụng dịch vụ tại website LITERARY OASIS, quý khách được đảm bảo
+            rằng
+            những thông tin cung cấp cho chúng tôi sẽ
+            chỉ được dùng để nâng cao chất lượng dịch vụ dành cho khách hàng của LITERARY OASIS và sẽ không được chuyển
+            giao cho 1
+            bên thứ ba nào khác vì mục đích thương mại. Thông tin của quý khách tại LITERARY OASIS sẽ được chúng tôi bảo
+            mật và
+            chỉ trong trường hợp pháp luật yêu cầu, chúng tôi sẽ buộc phải cung cấp những thông tin này cho các cơ quan
+            pháp luật.
+          </p>
+
+          <h5>Trách nhiệm của khách hàng khi sử dụng dịch vụ của LITERARY OASIS</h5>
+
+          <p>
+            Quý khách tuyệt đối không được sử dụng bất kỳ công cụ, phương pháp nào để can thiệp, xâm nhập bất hợp pháp
+            vào
+            hệ thống hay làm thay đổi cấu trúc dữ liệu tại website LITERARY OASIS.
+            Quý
+            khách không được có những hành động ( thực
+            hiện, cổ vũ) việc can thiệp, xâm nhập dữ liệu của LITERARY OASIS cũng
+            như
+            hệ
+            thống máy chủ của chúng tôi. Ngoài ra,
+            xin vui lòng thông báo cho quản trị web của LITERARY OASIS ngay khi quý
+            khách phát hiện ra lỗi hệ thống theo số điện
+            thoại (84.08) 38388832 - (84-08) 36026700 hoặc email support@literaryoasis.com
+          </p>
+
+          <p>
+            Quý khách không được đưa ra những nhận xét, đánh giá có ý xúc phạm, quấy rối, làm phiền hoặc có bất cứ hành
+            vi
+            nào thiếu văn hóa đối với người khác. Không nêu ra những nhận xét có tính chính trị (tuyên truyền, chống
+            phá,
+            xuyên tạc chính quyền), kỳ thị tôn giáo, giới tính, sắc tộc....Tuyệt đối cấm mọi hành vi mạo nhận, cố ý tạo
+            sự
+            nhầm lẫn mình là một khách hàng khác hoặc là thành viên Ban Quản Trị LITERARY OASIS
+          </p>
+
+          <h5>Trách nhiệm và quyền lợi của LITERARY OASIS</h5>
+
+          <p>
+            Trong trường hợp có những phát sinh ngoài ý muốn hoặc trách nhiệm của mình, LITERARY OASIS sẽ không chịu
+            trách nhiệm
+            về mọi tổn thất phát sinh. Ngoài ra, chúng tôi không cho phép các tổ chức, cá nhân khác quảng bá sản phẩm
+            tại
+            website LITERARY OASIS mà chưa có sự đồng ý bằng văn bản từ LITERARY OASIS Corporation. Các thỏa thuận và
+            quy định trong Điều
+            khoản sử dụng có thể thay đổi vào bất cứ lúc nào nhưng sẽ được LITERARY
+            OASIS Corporation thông báo cụ thể trên
+            website LITERARY OASIS.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nội dung cho Chính sách bảo mật thông tin cá nhân -->
+      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="f-csbmttcn">
+        <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
+          <span>CHÍNH SÁCH BẢO MẬT THÔNG TIN CÁ NHÂN CỦA KHÁCH HÀNG</span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
+            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+        </div>
+
+        <div class="col-12 px-3" style="text-align: justify;">
+          <p>
+            LITERARY OASIS mong muốn đem lại một tiện ích mua hàng trực tuyến tin cậy, tiết kiệm và thấu hiểu người
+            dùng. Chúng
+            tôi nhận thấy khách hàng sử dụng website literaryoasis.com để mua sắm nhưng không phải ai cũng mong muốn
+            chia sẻ
+            thông tin cá nhân của mình. Chúng tôi, Công ty LITERARY OASIS, tôn trọng quyền riêng tư của khách hàng và
+            cam kết
+            bảo
+            mật thông tin cá nhân của khách hàng khi khách hàng tin vào chúng tôi cung cấp thông tin cá nhân của khách
+            hàng cho chúng tôi khi mua sắm tại website literaryoasis.com. Đây là nguyên tắc khi tiếp cận quyền riêng tư,
+            thông
+            tin cá nhân tại website literaryoasis.com.
+          </p>
+
+          Chính Sách Bảo Mật Thông Tin Cá Nhân này bao gồm các nội dung:
+
+          <ol>
+            <li>Sự Chấp Thuận</li>
+            <li>Mục Đích Thu Thập</li>
+            <li>Phạm Vi Thu Thập</li>
+            <li>Thời Gian Lưu Trữ</li>
+            <li>Không Chia Sẻ Thông Tin Cá Nhân Khách Hàng</li>
+            <li>An Toàn Dữ Liệu</li>
+            <li>Quyền Của Khách Hàng Đối Với Thông Tin Cá Nhân</li>
+            <li>Thông Tin Liên Hệ</li>
+            <li>Đơn Vị Thu Thập và Quản Lý Thông Tin</li>
+            <li>Hiệu lực</li>
+          </ol>
+
+
+          <h5>1. Sự Chấp Thuận</h5>
+          Bằng việc trao cho chúng tôi thông tin cá nhân của bạn, LITERARY OASIS đồng ý rằng thông tin cá nhân của bạn
+          sẽ được
+          thu thập, sử dụng như được nêu trong Chính Sách này. Nếu bạn không đồng ý với Chính Sách này, bạn dừng cung
+          cấp cho chúng tôi bất cứ thông tin cá nhân nào và/hoặc sử dụng các quyền như được nêu tại Mục 7 dưới đây.
+          Chúng tôi bảo lưu quyền sửa đổi, bổ sung nhằm hoàn thiện đối với Chính Sách này vào bất kỳ thời điểm nào.
+          Chúng tôi khuyến khích bạn thường xuyên xem lại Chính Sách Bảo Mật Thông Tin Cá Nhân này để có được những cập
+          nhật mới nhất đảm bảo bạn biết và thực hiện quyền quản lý thông tin cá nhân của bạn.
+
+          <h5>2. Mục Đích Thu Thập</h5>
+          Chúng tôi thu thập thông tin cá nhân chỉ cần thiết nhằm phục vụ cho các mục đích:
+          <ul>
+            <li>Đơn Hàng: để xử lý các vấn đề liên quan đến đơn đặt hàng của bạn;</li>
+            <li>Duy Trì Tài Khoản: để tạo và duy trình tài khoản của bạn với chúng tôi, bao gồm cả các chương trình
+              khách hàng
+              thân thiết hoặc các chương trình thưởng đi kèm với tài khoản của bạn;</li>
+            <li>Dịch Vụ Người Tiêu Dùng, Dịch Vụ Chăm Sóc Khách Hàng: bao gồm các phản hồi cho các yêu cầu, khiếu nại và
+              phản
+              hồi của bạn;</li>
+            <li>Cá Nhân Hóa: Chúng tôi có thể tổ hợp dữ liệu được thu thập để có một cái nhìn hoàn chỉnh hơn về một
+              người tiêu
+              dùng và từ đó cho phép chúng tôi phục vụ tốt hơn với sự cá nhân hóa mạnh hơn ở các khía cạnh, bao gồm
+              nhưng
+              không giới hạn: (i) để cải thiện và cá nhân hóa trải nghiệm của bạn trên literaryoasis.com (ii) để cải
+              thiện các tiện
+              ích, dịch vụ, điều chỉnh chúng phù hợp với các nhu cầu được cá thể hóa và đi đến những ý tưởng dịch vụ mới
+              (iii) để phục vụ bạn với những giới thiệu, quảng cáo được điều chỉnh phù hợp với sự quan tâm của bạn.</li>
+            <li>An Ninh: cho các mục đích ngăn ngừa các hoạt động phá hủy tài khoản người dùng của khách hàng hoặc các
+              hoạt
+              động giả mạo khách hàng.</li>
+            <li>Theo yêu cầu của pháp luật: tùy quy định của pháp luật vào từng thời điểm, chúng tôi có thể thu thập,
+              lưu trữ
+              và cung cấp theo yêu cầu của cơ quan nhà nước có thẩm quyền.</li>
+          </ul>
+
+          <h5>3. Phạm Vi Thu Thập</h5>
+          Chúng tôi thu thập thông tin cá nhân của bạn khi:
+          <ul>
+            <li>Bạn trực tiếp cung cấp cho chúng tôi.</li>
+          </ul>
+
+          Đó là các thông tin cá nhân bạn cung cấp cho chúng tôi được thực hiện chủ yếu trên website literaryoasis.com
+          bao gồm: họ tên, địa chỉ thư điện tử (email), số điện thoại, địa chỉ, thông tin đăng nhập tài khoản bao gồm
+          thông
+          tin
+          bất kỳ cần thiết để thiết lập tài khoản ví dụ như tên đăng nhập, mật khẩu đăng nhập, ID/địa chỉ đăng nhập
+          và
+          câu hỏi/trả lời an ninh.
+          <ul>
+            <li>Bạn tương tác với chúng tôi.</li>
+          </ul>
+
+
+          Chúng tôi sử dụng cookies và công nghệ theo dấu khác để thu thập một số thông tin khi bạn tương tác trên
+          website literaryoasis.com.
+          <ul>
+            <li>Từ những nguồn hợp pháp khác.</li>
+          </ul>
+
+          <p>Chúng tôi có thể sẽ thu thập thông tin cá nhân từ các nguồn hợp pháp khác.</p>
+
+
+
+          <h5>4. Thời Gian Lưu Trữ</h5>
+
+          <p>Thông tin cá nhân của khách hàng sẽ được lưu trữ cho đến khi khách hàng có yêu cầu hủy bỏ hoặc khách hàng
+            tự
+            đăng nhập và thực hiện hủy bỏ. Trong mọi trường hợp thông tin cá nhân của khách hàng sẽ được
+
+            bảo mật trên máy chủ của LITERARY OASIS.</p>
+
+          <h5>5. Không Chia Sẻ Thông Tin Cá Nhân Khách Hàng</h5>
+
+          Chúng tôi sẽ không cung cấp thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào, trừ một số hoạt động cần
+          thiết dưới đây:
+
+          <ul>
+            <li>Các đối tác là bên cung cấp dịch vụ cho chúng tôi liên quan đến thực hiện đơn hàng và chỉ giới hạn trong
+              phạm
+              vi thông tin cần thiết cũng như áp dụng các quy định đảm bảo an ninh, bảo mật các thông tin cá nhân.</li>
+            <li>Chúng tôi có thể sử dụng dịch vụ từ một nhà cung cấp dịch vụ là bên thứ ba để thực hiện một số hoạt động
+              liên
+              quan đến website literaryoasis.com và khi đó bên thứ ba này có thể truy cập hoặc xử lý các thông tin cá
+              nhân
+              trong
+              quá trình cung cấp các dịch vụ đó. Chúng tôi yêu cầu các bên thứ ba này tuân thủ mọi luật lệ về bảo vệ
+              thông
+              tin cá nhân liên quan và các yêu cầu về an ninh liên quan đến thông tin cá nhân.</li>
+            <li>Các chương trình có tính liên kết, đồng thực hiện, thuê ngoài cho các mục địch được nêu tại Mục 2 và
+              luôn áp
+              dụng các yêu cầu bảo mật thông tin cá nhân.</li>
+            <li>Yêu cầu pháp lý: Chúng tôi có thể tiết lộ các thông tin cá nhân nếu điều đó do luật pháp yêu cầu và việc
+              tiết
+              lộ như vậy là cần thiết một cách hợp lý để tuân thủ các quy trình pháp lý.</li>
+            <li>Chuyển giao kinh doanh (nếu có): trong trường hợp sáp nhập, hợp nhất toàn bộ hoặc một phần với công ty
+              khác,
+              người mua sẽ có quyền truy cập thông tin được chúng tôi lưu trữ, duy trì trong đó bao gồm cả thông tin cá
+              nhân.</li>
+          </ul>
+
+          <h5>6. An Toàn Dữ Liệu</h5>
+
+          Chúng tôi luôn nỗ lực để giữ an toàn thông tin cá nhân của khách hàng, chúng tôi đã và đang thực hiện nhiều
+          biện pháp an toàn, bao gồm:
+
+          <ul>
+            <li>Bảo đảm an toàn trong môi trường vận hành: chúng tôi lưu trữ không tin cá nhân khách hàng trong môi
+              trường vận
+              hành an toàn và chỉ có nhân viên, đại diện và nhà cung cấp dịch vụ có thể truy cập trên cơ sở cần phải
+              biết.
+              Chúng tôi tuân theo các tiêu chuẩn ngành, pháp luật trong việc bảo mật thông tin cá nhân khách hàng.</li>
+            <li>Trong trường hợp máy chủ lưu trữ thông tin bị hacker tấn công dẫn đến mất mát dữ liệu cá nhân khách
+              hàng,
+              chúng tôi sẽ có trách nhiệm thông báo vụ việc cho cơ quan chức năng để điều tra xử lý kịp thời và thông
+              báo
+              cho khách hàng được biết.</li>
+            <li>Các thông tin thanh toán: được bảo mật theo tiêu chuẩn ngành.</li>
+          </ul>
+
+
+
+
+
+
+          <h5>7. Quyền Của Khách Hàng Đối Với Thông Tin Cá Nhân</h5>
+
+          <p>
+            Khách hàng có quyền cung cấp thông tin cá nhân cho chúng tôi và có thể thay đổi quyết định đó vào bất cứ lúc
+            nào. Khách hàng có quyền tự kiểm tra, cập nhật, điều chỉnh thông tin cá nhân của mình bằng cách đăng nhập
+            vào
+            tài khoản và chỉnh sửa thông tin cá nhân hoặc yêu cầu chúng tôi thực hiện việc này.
+          </p>
+
+          <h5>8. Thông Tin Liên Hệ</h5>
+
+          Nếu bạn có câu hỏi hoặc bất kỳ thắc mắc nào về Chính Sách này hoặc thực tế việc thu thập, quản lý thông tin cá
+          nhân của chúng tôi, xin vui
+
+          lòng liên hệ với chúng tôi bằng cách:
+          <ul>
+            <li>Gọi điện thoại đến hotline: 1900636467
+            </li>
+            <li>Gửi thư điện tử đến địa chỉ email: cskh@literaryoasis.com.vn</li>
+          </ul>
+
+
+
+          <h5>9. Đơn Vị Thu Thập và Quản Lý Thông Tin</h5>
+
+          Công ty Cổ phần Phát Hành Sách TP HCM - LITERARY OASIS
+          <ul>
+            <li>Thành lập và hoạt động theo Giấy chứng nhận đăng ký doanh nghiệp số: 0304132047 do Sở Kế hoạch và Đầu tư
+              thành
+              phố Hồ Chí Minh cấp, đăng ký lần đầu ngày 20 tháng 12 năm 2005.</li>
+            <li>Trụ sở chính: 60 - 62 Lê Lợi, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh.</li>
+            <li>Địa chỉ liên hệ: 387 - 389 Hai bà Trưng, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ Chí Minh.</li>
+          </ul>
+          <h5>10. Hiệu lực Chính Sách Bảo Mật Thông Tin Cá Nhân này có hiệu lực từ ngày 01/07/2022.</h5>
+
+          ĐẠI DIỆN CÔNG TY CỔ PHẦN PHÁT HÀNH SÁCH TP HCM - LITERARY OASIS. <br> <br>
+
+          [Đã ký và đóng dấu] <br> <br>
+
+
+
+          LÊ THANH BÁ <br>
+
+          Tổng Giám Đốc
+        </div>
+      </div>
+
+      <!-- Nội dung cho Chính sách bảo mật thanh toán -->
+      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="f-csbmtt">
+        <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
+          <span>CHÍNH SÁCH BẢO MẬT THANH TOÁN</span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
+            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+        </div>
+
+        <div class="col-12 px-3" style="text-align: justify;">
+          <h5>1. Cam kết bảo mật</h5>
+
+          Hệ thống thanh toán thẻ được cung cấp bởi các đối tác thanh toán (“Đối tác cổng thanh toán”) đã được cấp
+          phép hoạt động hợp pháp tại Việt Nam. Theo đó, các tiêu chuẩn bảo mật thanh toán thẻ tại FAHASA đảm bảo tuân
+          thủ theo các tiêu chuẩn bảo mật ngành
+
+          <h5>2. Quy định bảo mật:</h5>
+
+          Chính sách giao dịch thanh toán bằng thẻ quốc tế và thẻ nội địa (internet banking) đảm bảo tuân thủ các tiêu
+          chuẩn của các Đối tác cổng thanh toán gồm:
+
+          <ul>
+            <li>Thông tin tài chính của Khách hàng sẽ được bảo vệ trong suốt quá trình giao dịch bằng giao thức SSL
+              (Secure Sockets Layer) bằng cách mã hóa tất cả các thông tin Khách hàng nhập vào.</li>
+            <li>Chứng nhận tiêu chuẩn bảo mật dữ liệu thông tin thanh toán (PCI DSS) do Trustwave cung cấp.</li>
+            <li>Mật khẩu sử dụng một lần (OTP) được gửi qua SMS để đảm bảo việc truy cập tài khoản được xác thực.</li>
+            <li>Tiêu chuản mã hóa MD5 12 bit.</li>
+            <li>Các nguyên tắc và quy định bảo mật thông tin trong ngành tài chính ngân hàng theo quy định của Ngân hàng
+              Nhà
+              nước Việt Nam.</li>
+          </ul>
+
+          Chính sách bảo mật giao dịch trong thanh toán của FAHASA áp dụng với Khách hàng:
+
+          FAHASA cung cấp tiện ích lưu giữ Token – chỉ lưu giữ chuối đã được mã hóa bởi Đối Tác Cổng Thanh Toán cung cấp
+          cho FAHASA. FAHASA không trực tiếp lưu giữ thông tin thẻ Khách hàng. Việc bảo mật thông tin thẻ thanh toán
+          Khách hàng được thực hiện bởi Đối Tác Cổng Thanh Toán đã được cấp phép.
+          Đối với thẻ quốc tế: thông tin thẻ thanh toán của Khách hàng mà có khả năng sử dụng để xác lập giao dịch không
+          được lưu trên hệ thống của FAHASA. Đối Tác Cổng Thanh Toán sẽ lưu trữ và bảo mật.
+          Đối với thẻ nội địa (internet banking), FAHASA chỉ lưu trữ mã đơn hàng, mã giao dịch và tên Ngân hàng.
+          Trong trường hợp nếu Khách hàng thông báo/khiếu nại tình trạng thông tin thanh toán của Khách hàng khi mua
+          hàng qua website/ứng dụng của FAHASA bị thay đổi, xóa, hủy, sao chép, tiết lộ, di chuyển trái phép hoặc bị
+          chiếm đoạt gây thiệt hại cho Khách hàng thì FAHASA sẽ nỗ lực phối hợp với Đối Tác Cổng Thanh Toán để tìm hiểu
+          vấn đề và hỗ trợ xử lý cho đến hoàn tất vấn đề Khách hàng đang đang gặp phải.
+
+          FAHASA cam kết đảm bảo thực hiện nghiêm túc các biện pháp bảo mật cần thiết cho mọi hoạt động thanh toán thực
+          hiện qua website/ứng dụng của FAHASA.
+        </div>
+      </div>
+
+      <!-- Nội dung cho Giới thiệt LITERARY OASIS -->
+      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="f-gtlo">
+        <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
+          <span>GIỚI THIỆU LITERARY OASIS</span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
+            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+        </div>
+
+        <div class="col-12 px-3" style="text-align: justify;">
+        </div>
+      </div>
+
+      <!-- Nội dung cho Hệ thống trung tâm nhà sách-->
+      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="f-htttns">
+        <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
+          <span>HỆ THỐNG TRUNG TÂM - NHÀ SÁCH</span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
+            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+        </div>
+
+        <div class="col-12 px-3" style="text-align: justify;">
+
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- FOOTER -->
   <footer class="footer"></footer>
 
+  <div class="overlay" id="overlay"></div>
 
   <!-- <script src="../JS/index.js"></script> -->
+
   <script src="../JS/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 
+  <script>
+    // document.addEventListener("DOMContentLoaded", function () {
+    const x = String(sessionStorage.getItem('bienX'));
+    setTimeout(() => {
+      if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
+        showContentInFile(x);
+        console.log(x)
+        console.log("skhdgj")
+        sessionStorage.setItem('bienX', "");
+      }
+    }, 100);
+    // });
+  </script>
+
+  <script>
+    showContentInFile(contentId = 'f-dksd');
+    function showContentInFile(contentId) {
+      showContent(contentId);
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(() => {
+        const dichvu = document.querySelectorAll('.dichvu');
+
+        dichvu.forEach(function (element) {
+          element.addEventListener('click', function (event) {
+            event.preventDefault();
+            showContentInFile(this.id);
+            scrollToElement('page-top');
+          });
+        });
+      }, 100);
+    });
+  </script>
 </body>
 </html>

@@ -139,6 +139,10 @@ a {
 
 /*  */
 
+.set-h h5 {
+  margin: 12px 0 12px 0;
+}
+
 .draggable-row {
   overflow-x: auto;
   overflow: hidden;
@@ -269,7 +273,7 @@ a {
   }
 
   #sidebar-toggle {
-    box-shadow: none;
+    display: none;
   }
 }
 
