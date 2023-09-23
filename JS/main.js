@@ -423,5 +423,11 @@ function slideScroll() {
     ],
   });
 
-
+  $(".slide-navbar").slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 1,
+    variableWidth: true,
+    arrows: false,
+  });
 }
