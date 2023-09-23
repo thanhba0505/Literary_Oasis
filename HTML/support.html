@@ -14,12 +14,12 @@
 <body class="body transition-opacity opacity-0 bg-maunhat overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="header bg-header text-white pb-3 pt-md-3 pt-2"></header>
+  <header class="header bg-header text-white pb-3 pt-md-3 pt-2" id="page-top"></header>
 
   <!-- BODY -->
   <div class="container mt-4">
-    <div class="row bg-white position-relative py-3">
-      <div class="col-md-3 col-8 ps-md-4 pe-md-3 py-3 bg-white border-end border-2" id="sidebar"
+    <div class="row bg-white position-relative pb-3">
+      <div class="col-md-3 col-8 ps-md-4 pe-md-3 py-3 my-md-3 bg-white border-end border-2" id="sidebar"
         style="right: 100%; opacity: 0;">
         <div class="h4 pb-3 border-bottom border-2 mb-2 position-relative">
           HỖ TRỢ
@@ -27,19 +27,19 @@
 
         <div class="">
           <ul class="list-unstyled">
-            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('dksd')">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csdtht'); showSidebar();">
               <span>Điều khoản sử dụng</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('csbmttcn')">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csbhbh'); showSidebar();">
               <span>Chính sách bảo mật thông tin cá nhân</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('csbmtt')">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csvc'); showSidebar();">
               <span>Chính sách bảo mật thanh toán</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('gtlo')">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csks'); showSidebar();">
               <span>Giới thiệu Literary Oasis</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('htttns')">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-ptttvxhd'); showSidebar();">
               <span>Hệ thống trung tâm nhà sách</span>
             </li>
           </ul>
@@ -48,7 +48,7 @@
       </div>
 
       <!-- Nội dung cho Điều khoản sử dụng -->
-      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="dksd">
+      <div class="col-md-9 col-12 my-md-3 show-content d-none transition-opacity set-h" id="f-csdtht">
         <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>ĐIỀU KHOẢN SỬ DỤNG</span>
           <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
@@ -150,7 +150,7 @@
       </div>
 
       <!-- Nội dung cho Chính sách bảo mật thông tin cá nhân -->
-      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="csbmttcn">
+      <div class="col-md-9 col-12 my-md-3 show-content d-none transition-opacity set-h" id="f-csbhbh">
         <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>CHÍNH SÁCH BẢO MẬT THÔNG TIN CÁ NHÂN CỦA KHÁCH HÀNG</span>
           <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
@@ -360,7 +360,7 @@
       </div>
 
       <!-- Nội dung cho Chính sách bảo mật thanh toán -->
-      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="csbmtt">
+      <div class="col-md-9 col-12 my-md-3 show-content d-none transition-opacity set-h" id="f-csvc">
         <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>CHÍNH SÁCH BẢO MẬT THANH TOÁN</span>
           <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
@@ -409,7 +409,7 @@
       </div>
 
       <!-- Nội dung cho Giới thiệt LITERARY OASIS -->
-      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="gtlo">
+      <div class="col-md-9 col-12 my-md-3 show-content d-none transition-opacity set-h" id="f-csks">
         <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>GIỚI THIỆU LITERARY OASIS</span>
           <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
@@ -421,7 +421,7 @@
       </div>
 
       <!-- Nội dung cho Hệ thống trung tâm nhà sách-->
-      <div class="col-md-9 col-12 show-content d-none transition-opacity set-h" id="htttns">
+      <div class="col-md-9 col-12 my-md-3 show-content d-none transition-opacity set-h" id="f-ptttvxhd">
         <div class=" col-12 h4 pt-3 pb-3 ps-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>HỆ THỐNG TRUNG TÂM - NHÀ SÁCH</span>
           <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
@@ -446,10 +446,7 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script>
-    showContent("csbmtt");
-    function showContentInfile(contentID) {
-      showContent(contentID);
-    }
+    nhanBien_hotro();
   </script>
 </body>
 </html>

@@ -259,7 +259,7 @@ function acount() {
 function showSidebar() {
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
-  
+
   if (window.innerWidth < 768) {
     if (sidebar.style.right === "100%") {
       sidebar.style.right = "33.33%";
@@ -316,7 +316,142 @@ function showContent(contentId) {
 function scrollToElement(elementId) {
   const element = document.getElementById(elementId);
   if (element) {
-      // Sử dụng phương thức scrollIntoView để cuộn trang đến phần tử
-      element.scrollIntoView({ behavior: "smooth" });
+    // Sử dụng phương thức scrollIntoView để cuộn trang đến phần tử
+    element.scrollIntoView({ behavior: "smooth" });
   }
+}
+
+function truyenBien() {
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      const dichvu = document.querySelectorAll(".f-link");
+
+      dichvu.forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          sessionStorage.setItem("bienX", this.id);
+        });
+      });
+    }, 100);
+  });
+}
+
+function nhanBien_dichvu() {
+  const x = String(sessionStorage.getItem("bienX"));
+  setTimeout(() => {
+    if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
+      showContent(x);
+      sessionStorage.setItem("bienX", "");
+    }
+  }, 100);
+
+  showContent((contentId = "f-dksd"));
+
+  // Sự kiện click
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      const dichvu = document.querySelectorAll(".f-link");
+
+      dichvu.forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          if (
+            this.id == "f-dksd" ||
+            this.id == "f-csbmttcn" ||
+            this.id == "f-csbmtt" ||
+            this.id == "f-gtlo" ||
+            this.id == "f-htttns"
+          ) {
+            event.preventDefault();
+            showContent(this.id);
+            setTimeout(() => {
+              scrollToElement("page-top");
+            }, 200);
+          } else {
+            sessionStorage.setItem("bienX", this.id);
+          }
+        });
+      });
+    }, 100);
+  });
+}
+
+function nhanBien_hotro() {
+  const x = String(sessionStorage.getItem("bienX"));
+  setTimeout(() => {
+    if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
+      showContent(x);
+      sessionStorage.setItem("bienX", "");
+    }
+  }, 100);
+
+  showContent((contentId = "f-csdtht"));
+
+  // Sự kiện click
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      const dichvu = document.querySelectorAll(".f-link");
+
+      dichvu.forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          if (
+            this.id == "f-csdtht" ||
+            this.id == "f-csbhbh" ||
+            this.id == "f-csvc" ||
+            this.id == "f-csks" ||
+            this.id == "f-ptttvxhd"
+          ) {
+            event.preventDefault();
+            showContent(this.id);
+            setTimeout(() => {
+              scrollToElement("page-top");
+            }, 200);
+          } else {
+            sessionStorage.setItem("bienX", this.id);
+          }
+        });
+      });
+    }, 100);
+  });
+}
+
+function nhanBien_taikhoan() {
+  const x = String(sessionStorage.getItem("bienX"));
+  setTimeout(() => {
+    if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
+      showContent(x);
+      sessionStorage.setItem("bienX", "");
+    }
+  }, 100);
+
+  showContent((contentId = "f-bdktk"));
+
+  // Sự kiện click
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      const dichvu = document.querySelectorAll(".f-link");
+
+      dichvu.forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          if (
+            this.id == "f-bdktk" ||
+            this.id == "f-tttk" ||
+            this.id == "f-sdc" ||
+            this.id == "f-dhct" ||
+            this.id == "f-vv" ||
+            this.id == "f-tkf" ||
+            this.id == "f-nxct" ||
+            this.id == "f-tb" ||
+            this.id == "f-dkntdt"
+          ) {
+            event.preventDefault();
+            showContent(this.id);
+            setTimeout(() => {
+              scrollToElement("page-top");
+            }, 200);
+          } else {
+            sessionStorage.setItem("bienX", this.id);
+          }
+        });
+      });
+    }, 100);
+  });
 }

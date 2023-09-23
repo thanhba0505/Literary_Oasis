@@ -304,20 +304,7 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(() => {
-        const dichvu = document.querySelectorAll('.dichvu');
-
-        dichvu.forEach(function (element) {
-          element.addEventListener('click', function (event) {
-            sessionStorage.setItem('bienX', this.id);
-          });
-        });
-      }, 100);
-    });
-  </script>
-
-  <script>
+    truyenBien();
     updateClock();
     setInterval(updateClock, 1000);
     scrollX();
