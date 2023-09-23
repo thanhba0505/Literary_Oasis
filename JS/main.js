@@ -67,71 +67,6 @@ function num() {
   });
 }
 
-function scrollX() {
-  let isDragging = false;
-  let startX, startY, scrollLeft, scrollTop;
-
-  const draggableRow = document.querySelector(".draggable-row");
-
-  draggableRow.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    startX = e.pageX - draggableRow.offsetLeft;
-    startY = e.pageY - draggableRow.offsetTop;
-    scrollLeft = draggableRow.scrollLeft;
-    scrollTop = draggableRow.scrollTop;
-  });
-
-  draggableRow.addEventListener("touchstart", (e) => {
-    isDragging = true;
-    startX = e.touches[0].pageX - draggableRow.offsetLeft;
-    startY = e.touches[0].pageY - draggableRow.offsetTop;
-    scrollLeft = draggableRow.scrollLeft;
-    scrollTop = draggableRow.scrollTop;
-  });
-
-  document.addEventListener("mouseup", () => {
-    isDragging = false;
-  });
-
-  document.addEventListener("touchend", () => {
-    isDragging = false;
-  });
-
-  document.addEventListener("mousemove", (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - draggableRow.offsetLeft;
-    const y = e.pageY - draggableRow.offsetTop;
-    const walkX = (x - startX) * 3; // Tùy chỉnh độ nhạy
-    const walkY = (y - startY) * 3; // Tùy chỉnh độ nhạy
-
-    // Nếu di chuyển theo trục X nhiều hơn
-    if (Math.abs(walkX) > Math.abs(walkY)) {
-      draggableRow.scrollLeft = scrollLeft - walkX;
-    } else {
-      // Di chuyển theo trục Y nhiều hơn, cho phép trình duyệt xử lý sự kiện
-      isDragging = false;
-    }
-  });
-
-  document.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - draggableRow.offsetLeft;
-    const y = e.touches[0].pageY - draggableRow.offsetTop;
-    const walkX = (x - startX) * 3; // Tùy chỉnh độ nhạy
-    const walkY = (y - startY) * 3; // Tùy chỉnh độ nhạy
-
-    // Nếu di chuyển theo trục X nhiều hơn
-    if (Math.abs(walkX) > Math.abs(walkY)) {
-      draggableRow.scrollLeft = scrollLeft - walkX;
-    } else {
-      // Di chuyển theo trục Y nhiều hơn, cho phép trình duyệt xử lý sự kiện
-      isDragging = false;
-    }
-  });
-}
-
 function updateClock() {
   const numHours = document.querySelectorAll(".number-h");
   const numMinutes = document.querySelectorAll(".number-m");
@@ -422,7 +357,7 @@ function nhanBien_taikhoan() {
     }
   }, 100);
 
-  showContent((contentId = "f-bdktk"));
+  showContent((contentId = "f-dhct"));
 
   // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
@@ -454,4 +389,39 @@ function nhanBien_taikhoan() {
       });
     }, 100);
   });
+}
+
+function slideScroll() {
+  $(".slide-product").slick({
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    arrows: true,
+    nextArrow: `<button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: inline-block;"><i class="fa-solid fa-chevron-right"></i></button>`,
+    prevArrow: `<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="display: inline-block;"><i class="fa-solid fa-chevron-left"></i></button>`,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+    ],
+  });
+
+
 }
