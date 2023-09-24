@@ -9,22 +9,23 @@
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 
-  <title>Document</title>
+  <title>Dịch vụ</title>
 </head>
 <body class="body transition-opacity opacity-0 bg-maunhat overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="header bg-header text-white pb-3 pt-md-3 pt-2"></header>
+  <header class="header bg-header text-white pb-3 pt-md-3 pt-2" id="page-top"></header>
 
   <!-- BODY -->
   <div class="container mt-4">
-    <div class="row bg-white position-relative">
-      <div class="col-md-3 col-8 ps-md-4 pb-3 bg-white border-end border-2" id="sidebar" style="right: 100%; opacity: 0;">
-        <div class="h4 pt-3 pb-3 border-bottom border-2 mb-2 position-relative">
+    <div class="row bg-white position-relative pb-3">
+      <div class="col-md-3 col-8 ps-md-4 pe-md-3 py-3 my-md-3 bg-white border-end border-2" id="sidebar"
+        style="right: 100%; opacity: 0;">
+        <div class="h4 pb-3 border-bottom border-2 mb-2 position-relative">
           LỌC THEO
         </div>
 
-        <div class="py-2">
+        <div class="py-2 mt-2">
           <div class="h6">DANH MỤC CHÍNH</div>
           <div class="text-black">
             <ol class="list-unstyled m-0">
@@ -67,23 +68,23 @@
               <li><input type="checkbox"><a href="#" class="text-black ps-2">Stacom</a></li>
               <li><input type="checkbox"><a href="#" class="text-black ps-2">Faber-Castell</a></li>
             </ol>
+          </div>
+        </div>
 
-            <div class="py-2">
-              <div class="h6">LỨA TUỔI</div>
-              <div class="text-black">
-                <ol class="list-unstyled m-0">
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 3 tuỏi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 6 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 10 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 14 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 16 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 18 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Từ 8 - 14 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Từ 14 -16 tuổi</a></li>
-                  <li><input type="checkbox"><a href="#" class="text-black ps-2">Từ 16 - 18 tuổi</a></li>
-                </ol>
-              </div>
-            </div>
+        <div class="py-2">
+          <div class="h6">LỨA TUỔI</div>
+          <div class="text-black">
+            <ol class="list-unstyled m-0">
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 3 tuỏi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 6 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 10 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 14 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 16 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Trên 18 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Từ 8 - 14 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Từ 14 -16 tuổi</a></li>
+              <li><input type="checkbox"><a href="#" class="text-black ps-2">Từ 16 - 18 tuổi</a></li>
+            </ol>
           </div>
         </div>
 
@@ -121,88 +122,88 @@
 
       </div>
 
-      <div class="col-md-9 col-12">
-        <div class="col-12 h4 pt-3 pb-3 ps-3 border-bottom border-2 mb-2 text-danger d-flex justify-content-between align-items-center">
+      <div class="col-md-9 col-12 my-md-3 transition-opacity set-h">
+        <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>DANH SÁCH LỌC</span>
-          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;" onclick="javascript: showSidebar(this);"><i class="fa-solid fa-filter"></i></span>
+          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
+            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
         </div>
 
-        <div class="row mt-3 d-flex">
-          <span class="ps-4 h4 w-md-100">Kết quả tìm kiếm: (999 kết quả)</span>
+        <div class="col-12 px-md-3" style="text-align: justify;">
+          <div class="row">
+            <span class="h4 w-md-100 mb-2">Kết quả tìm kiếm: (999 kết quả)</span>
+  
+            <select class="form-select w-md-25 px-4 mx-md-3" style="width: 45%; margin: 0 5%;" aria-label="Default select example">
+              <option selected>Sắp xếp theo</option>
+              <option value="1">Từ thấp đến cao</option>
+              <option value="2">Từ cao đến thấp</option>
+              <option value="3">Bán chạy</option>
+              <option value="4">Giảm giá</option>
+              <option value="3">Mới nhất</option>
+            </select>
+            
+            <select class="form-select w-md-25 px-4 mx-md-3" style="width: 35%; margin: 0 5%;" aria-label="Default select example">
+              <option selected>Loại sách</option>
+              <option value="1">Sách mới</option>
+              <option value="2">Sách cũ</option>
+            </select>
+          </div>
 
-          <select class="form-select w-md-25 w-50 px-4" aria-label="Default select example">
-            <option selected>Sắp xếp theo</option>
-            <option value="1">Từ thấp đến cao</option>
-            <option value="2">Từ cao đến thấp</option>
-            <option value="3">Bán chạy</option>
-            <option value="4">Giảm giá</option>
-            <option value="3">Mới nhất</option>
-          </select>
-          
-          <select class="form-select w-md-25 w-50 px-4" aria-label="Default select example">
-            <option selected>Loại sách</option>
-            <option value="1">Sách mới</option>
-            <option value="2">Sách cũ</option>
-          </select>
-        </div>
+          <div class="row mt-4">
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+            <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
+          </div>
 
-        <div class="row mt-4">
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-          <div class="product-item col-md-3 col-6 px-2 d-flex flex-column mt-md-0 mt-3"></div>
-        </div>
-
-        <div class="row mt-3">
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link text-danger" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a class="page-link text-danger" href="#">1</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link text-danger" href="#">2</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link text-danger" href="#">3</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link text-danger" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div class="row mt-4">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link text-danger" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-
-
     </div>
-
   </div>
 
   <!-- FOOTER -->
@@ -211,8 +212,14 @@
   <div class="overlay" id="overlay"></div>
 
   <!-- <script src="../JS/index.js"></script> -->
+
   <script src="../JS/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
+
+  <script>
+    truyenBien();
+  </script>
 </body>
+</html>

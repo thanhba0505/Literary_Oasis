@@ -213,7 +213,6 @@ a {
   box-shadow: 0 0 4px 0px rgb(0, 0, 0, 0.2);
   transition: left .3s ease-out, box-shadow .3s ease-out;
   z-index: 200;
-  margin-right: 16px;
 }
 
 .overlay {
@@ -232,6 +231,7 @@ a {
 }
 
 @media (min-width: 768px) {
+
   .fs-md-6 {
     font-size: 1rem !important;
   }
