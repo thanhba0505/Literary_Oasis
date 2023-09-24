@@ -305,14 +305,17 @@ a {
 }
 
 @media (max-width: 768px) {
+  [id^="f-"] table p {
+    margin-bottom: .6rem;
+  }
 
-  [id^="f-"] div:last-child p,
-  [id^="f-"] div:last-child li {
+  [id^="f-"] p,
+  [id^="f-"] li {
     /* CSS styles cho các class có ký tự đầu là "f-" */
     font-size: .9rem !important;
   }
 
-  [id^="f-"] div:last-child h5 {
+  [id^="f-"] h5 {
     font-size: 1.15rem!important;
   }
 
