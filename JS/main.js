@@ -47,23 +47,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // FUNCTION ----------------------------
 
-function num() {
-  const numInput = document.getElementById("num");
-  const incrementButton = document.getElementById("increment");
-  const decrementButton = document.getElementById("decrement");
+function setupCounter() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const quantityInputs = document.querySelectorAll(".input-number");
 
-  incrementButton.addEventListener("click", () => {
-    let num = parseInt(numInput.value);
-    num = isNaN(num) ? 0 : num;
-    numInput.value = num + 1;
-  });
+    quantityInputs.forEach(function (input) {
+      input.addEventListener("input", function () {
+        // Đảm bảo giá trị luôn dương và là số nguyên
+        const value = parseInt(this.value);
+        if (isNaN(value) || value < 0) {
+          this.value = 0;
+        }
+      });
+    });
 
-  decrementButton.addEventListener("click", () => {
-    let num = parseInt(numInput.value);
-    num = isNaN(num) ? 0 : num;
-    if (num > 0) {
-      numInput.value = num - 1;
-    }
+    const plusButtons = document.querySelectorAll(
+      ".btn-number[data-type='plus']"
+    );
+    const minusButtons = document.querySelectorAll(
+      ".btn-number[data-type='minus']"
+    );
+
+    plusButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const inputField =
+          this.closest(".input-group").querySelector(".input-number");
+        inputField.value = parseInt(inputField.value) + 1;
+      });
+    });
+
+    minusButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const inputField =
+          this.closest(".input-group").querySelector(".input-number");
+        const value = parseInt(inputField.value);
+        if (value > 0) {
+          inputField.value = value - 1;
+        }
+      });
+    });
   });
 }
 

@@ -76,7 +76,7 @@ a {
 }
 
 .btn-hover-bg:hover {
-  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .input-focus-none {
@@ -195,6 +195,11 @@ a {
 
 .transition-opacity {
   transition: opacity .3s linear;
+}
+
+.active {
+  color: red;
+  font-weight: 650;
 }
 
 #sidebar {
