@@ -45,6 +45,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("mousedown", function (e) {
+  if (e.target.nodeName === "HTML" || e.target.nodeName === "BODY") {
+    e.preventDefault();
+  }
+});
+
 // FUNCTION ----------------------------
 
 function setupCounter() {

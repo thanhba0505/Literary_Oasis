@@ -11,6 +11,15 @@
   --fhs-account: rgb(255, 246, 227);
 }
 
+*::selection {
+  background-color: rgba(52, 152, 219, 0.5); 
+  /* color: #333; */
+}
+
+.no-select {
+  user-select: none;
+}
+
 .bg-account {
   background-color: var(--fhs-account);
 }
@@ -296,6 +305,16 @@ a {
 }
 
 @media (max-width: 768px) {
+
+  [id^="f-"] div:last-child p,
+  [id^="f-"] div:last-child li {
+    /* CSS styles cho các class có ký tự đầu là "f-" */
+    font-size: .9rem !important;
+  }
+
+  [id^="f-"] div:last-child h5 {
+    font-size: 1.15rem!important;
+  }
 
   #sidebar {
     position: absolute;
