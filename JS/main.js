@@ -346,7 +346,7 @@ function nhanBien_hotro() {
     }
   }, 100);
 
-  showContent((contentId = "f-csvc"));
+  showContent((contentId = "f-csdtht"));
 
   // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
@@ -474,3 +474,4 @@ function slideScroll() {
     ],
   });
 }
+

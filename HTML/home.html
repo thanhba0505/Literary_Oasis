@@ -15,7 +15,7 @@
 <body class="body transition-opacity opacity-0 bg-maunhat overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="header bg-header text-white pb-3 pt-md-3 pt-2"></header>
+  <header class="header bg-header text-white pb-3 pt-md-3 pt-2" id="header"></header>
 
   <!-- BODY -->
   <div class="container mt-md-4 mt-0">
@@ -276,8 +276,12 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer"></footer>
+  <footer class="footer" id="footer"></footer>
 
+  <div class="btn-go position-fixed">
+    <div class="" onclick="scrollToElement('header')"><i class="fa-solid fa-chevron-up"></i></div>
+    <div class="" onclick="scrollToElement('footer')"><i class="fa-solid fa-chevron-down"></i></div>
+  </div>
 
   <!-- <script src="../JS/index.js"></script> -->
   <script src="../JS/main.js"></script>

@@ -224,6 +224,20 @@ a {
   z-index: 200;
 }
 
+.btn-go {
+  right: 10px;
+  bottom: 10px;
+}
+
+.btn-go div {
+  background-color: #fff;
+  box-shadow: 0 0 4px 1px rgb(0, 0, 0, 0.2);
+  padding: 2px 14px;
+  margin-top: 4px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -237,6 +251,10 @@ a {
   z-index: 100;
   /* Đảm bảo nó hiển thị trên các phần tử khác */
   display: none;
+}
+
+[id^="f-"] img {
+  margin-bottom: 16px!important;
 }
 
 @media (min-width: 768px) {
