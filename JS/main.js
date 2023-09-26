@@ -326,7 +326,7 @@ function nhanBien_dichvu() {
             event.preventDefault();
             showContent(this.id);
             setTimeout(() => {
-              scrollToElement("page-top");
+              scrollToElement("header");
             }, 200);
           } else {
             sessionStorage.setItem("bienX", this.id);
@@ -365,7 +365,7 @@ function nhanBien_hotro() {
             event.preventDefault();
             showContent(this.id);
             setTimeout(() => {
-              scrollToElement("page-top");
+              scrollToElement("header");
             }, 200);
           } else {
             sessionStorage.setItem("bienX", this.id);
@@ -408,7 +408,7 @@ function nhanBien_taikhoan() {
             event.preventDefault();
             showContent(this.id);
             setTimeout(() => {
-              scrollToElement("page-top");
+              scrollToElement("header");
             }, 200);
           } else {
             sessionStorage.setItem("bienX", this.id);
@@ -456,6 +456,7 @@ function slideScroll() {
     speed: 300,
     slidesToShow: 1,
     arrows: false,
+    variableWidth: true,
   });
 
   $(".slide-item").slick({
@@ -475,3 +476,63 @@ function slideScroll() {
   });
 }
 
+function btnGo() {
+  const html = `<div class="btn-go position-fixed" id="btn-go">
+  <div id="btn-go-up"><i class="fa-solid fa-chevron-up"></i></div>
+  <div id="btn-go-down"><i class="fa-solid fa-chevron-down"></i></div>
+</div>`;
+  innerHTML(html, "container", null);
+
+  const btnUp = document.getElementById("btn-go-up");
+  const btnDown = document.getElementById("btn-go-down");
+
+  btnUp.setAttribute("onclick", "scrollToElement('header')");
+  btnDown.setAttribute("onclick", "scrollToElement('footer')");
+
+  const backToTopBtn = document.getElementById("btn-go");
+  let isHidden = true; // Biến để kiểm tra xem nút đã ẩn hay chưa
+  let timeoutId = null; // Biến để lưu ID của setTimeout
+  let lastScrollY = window.scrollY;
+  // Lắng nghe sự kiện cuộn trang
+  window.addEventListener("scroll", () => {
+    // Kiểm tra hướng cuộn: cuộn lên (scrollY giảm) hoặc cuộn xuống (scrollY tăng)
+    const currentScrollY = window.scrollY;
+    // alert(currentScrollY.toString() + "----" + lastScrollY.toString())
+
+    if (currentScrollY < lastScrollY) {
+      if (isHidden) {
+        // Hiển thị nút khi cuộn lên và nút đang ẩn
+        backToTopBtn.style.opacity = "1";
+        isHidden = false;
+      }
+
+      // Reset timeout để ẩn nút sau 3 giây
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        backToTopBtn.style.opacity = "0";
+        isHidden = true;
+      }, 1000); // Thời gian ẩn sau 3 giây (3000ms)
+    } else {
+      backToTopBtn.style.opacity = "0";
+      isHidden = true;
+    }
+
+    lastScrollY = currentScrollY;
+  });
+}
+
+function innerHTML(html, contentID, contentClass) {
+  if (contentID) {
+    const content = document.getElementById(contentID);
+    if (content) {
+      content.innerHTML += html;
+    }
+  }
+
+  if (contentClass) {
+    const contents = document.querySelectorAll("." + contentClass);
+    contents.forEach((element) => {
+      element.innerHTML += html;
+    });
+  }
+}

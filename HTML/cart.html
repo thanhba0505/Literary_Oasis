@@ -14,10 +14,10 @@
 <body class="body transition-opacity opacity-0 bg-maunhat overflow-x-hidden">
 
   <!-- HEADER -->
-  <header class="header bg-header text-white pb-3 pt-md-3 pt-2"></header>
+  <header class="header bg-header text-white pb-3 pt-md-3 pt-2" id="header"></header>
 
   <!-- BODY -->
-  <div class="container mt-md-4 mt-4">
+  <div class="container mt-4" id="container">
 
     <div class="row bg-white pb-2">
       <div class="col-12">
@@ -65,8 +65,8 @@
                       </button>
                     </span>
 
-                    <input type="text" name="quantity" class="form-control input-number input-focus-none text-center fs-md-6 fs-7"
-                      value="1" min="0">
+                    <input type="text" name="quantity"
+                      class="form-control input-number input-focus-none text-center fs-md-6 fs-7" value="1" min="0">
 
                     <span class="input-group-btn">
                       <button type="button" class="btn btn-default btn-number fs-md-6 fs-7 px-2 py-1" data-type="plus"
@@ -118,8 +118,8 @@
                       </button>
                     </span>
 
-                    <input type="text" name="quantity" class="form-control input-number input-focus-none text-center fs-md-6 fs-7"
-                      value="1" min="0">
+                    <input type="text" name="quantity"
+                      class="form-control input-number input-focus-none text-center fs-md-6 fs-7" value="1" min="0">
 
                     <span class="input-group-btn">
                       <button type="button" class="btn btn-default btn-number fs-md-6 fs-7 px-2 py-1" data-type="plus"
@@ -171,8 +171,8 @@
                       </button>
                     </span>
 
-                    <input type="text" name="quantity" class="form-control input-number input-focus-none text-center fs-md-6 fs-7"
-                      value="1" min="0">
+                    <input type="text" name="quantity"
+                      class="form-control input-number input-focus-none text-center fs-md-6 fs-7" value="1" min="0">
 
                     <span class="input-group-btn">
                       <button type="button" class="btn btn-default btn-number fs-md-6 fs-7 px-2 py-1" data-type="plus"
@@ -290,7 +290,7 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer"></footer>
+  <footer class="footer" id="footer"></footer>
 
 
   <!-- <script src="../JS/index.js"></script> -->
@@ -299,6 +299,7 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script>
+    btnGo();
     setupCounter();
     truyenBien();
   </script>

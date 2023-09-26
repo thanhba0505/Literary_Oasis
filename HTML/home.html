@@ -18,7 +18,7 @@
   <header class="header bg-header text-white pb-3 pt-md-3 pt-2" id="header"></header>
 
   <!-- BODY -->
-  <div class="container mt-md-4 mt-0">
+  <div class="container mt-4" id="container">
 
     <!-- MENU LIST -->
     <div class="row bg-white py-3">
@@ -228,11 +228,16 @@
 
     <div class="row bg-white pt-4">
       <div class="slide-navbar px-4">
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer active">Xu hướng theo ngày</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Sách HOT - Giảm sốc</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Cũ nhưng chất</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Sách hay hàng đầu</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Phụ kiện giá tốt</div>
+        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer active">Xu
+          hướng theo ngày</div>
+        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Sách HOT -
+          Giảm sốc</div>
+        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Cũ nhưng
+          chất</div>
+        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Sách hay
+          hàng đầu</div>
+        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Phụ kiện giá
+          tốt</div>
       </div>
     </div>
 
@@ -278,11 +283,6 @@
   <!-- FOOTER -->
   <footer class="footer" id="footer"></footer>
 
-  <div class="btn-go position-fixed">
-    <div class="" onclick="scrollToElement('header')"><i class="fa-solid fa-chevron-up"></i></div>
-    <div class="" onclick="scrollToElement('footer')"><i class="fa-solid fa-chevron-down"></i></div>
-  </div>
-
   <!-- <script src="../JS/index.js"></script> -->
   <script src="../JS/main.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -292,6 +292,7 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script>
+    btnGo();
     truyenBien();
     updateClock();
     setInterval(updateClock, 1000);

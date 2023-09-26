@@ -220,13 +220,18 @@ a {
 #sidebar-toggle {
   /* left: 100px; */
   box-shadow: 0 0 4px 0px rgb(0, 0, 0, 0.2);
-  transition: left .3s ease-out, box-shadow .3s ease-out;
+  transition: left .2s ease-out, box-shadow .3s ease-out;
   z-index: 200;
 }
 
 .btn-go {
   right: 10px;
   bottom: 10px;
+}
+
+#btn-go {
+  opacity: 0;
+  transition: opacity .2s linear;
 }
 
 .btn-go div {
@@ -323,6 +328,17 @@ a {
 }
 
 @media (max-width: 768px) {
+  .btn-go {
+    right: 4px;
+    bottom: 4px;
+  }
+
+  .btn-go div {
+    padding: 2px 16px;
+    margin-top: 4px;
+    font-size: 12px;
+  }
+
   [id^="f-"] table p {
     margin-bottom: .6rem;
   }
