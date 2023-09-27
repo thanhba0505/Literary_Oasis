@@ -385,7 +385,7 @@ function nhanBien_taikhoan() {
     }
   }, 100);
 
-  showContent((contentId = "f-dhct"));
+  showContent((contentId = "f-nxct"));
 
   // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
@@ -400,7 +400,7 @@ function nhanBien_taikhoan() {
             this.id == "f-sdc" ||
             this.id == "f-dhct" ||
             this.id == "f-vv" ||
-            this.id == "f-tkf" ||
+            this.id == "f-tkl" ||
             this.id == "f-nxct" ||
             this.id == "f-tb" ||
             this.id == "f-dkntdt"
@@ -432,6 +432,7 @@ function slideScroll() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          swipeToSlide: true,
         },
       },
       {
@@ -439,6 +440,7 @@ function slideScroll() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          swipeToSlide: true,
         },
       },
       {
@@ -446,6 +448,7 @@ function slideScroll() {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
+          swipeToSlide: true,
         },
       },
     ],
@@ -457,6 +460,7 @@ function slideScroll() {
     slidesToShow: 1,
     arrows: false,
     variableWidth: true,
+    swipeToSlide: true,
   });
 
   $(".slide-item").slick({
@@ -470,6 +474,24 @@ function slideScroll() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          swipeToSlide: true,
+        },
+      },
+    ],
+  });
+
+  $(".slide-menu-card").slick({
+    infinite: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          swipeToSlide: true,
         },
       },
     ],

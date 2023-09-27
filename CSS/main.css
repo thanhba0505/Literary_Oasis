@@ -129,6 +129,10 @@ a {
   font-size: 1.25rem;
 }
 
+.slide-menu-card .slick-track {
+  margin: 0;
+}
+
 .slick-next {
   position: absolute;
   top: calc(50% - 15px);
