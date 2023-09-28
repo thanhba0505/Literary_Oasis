@@ -385,7 +385,7 @@ function nhanBien_taikhoan() {
     }
   }, 100);
 
-  showContent((contentId = "f-bdktk"));
+  showContent((contentId = "f-dhct"));
 
   // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
