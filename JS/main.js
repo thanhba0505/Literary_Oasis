@@ -385,7 +385,7 @@ function nhanBien_taikhoan() {
     }
   }, 100);
 
-  showContent((contentId = "f-nxct"));
+  showContent((contentId = "f-bdktk"));
 
   // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
@@ -401,9 +401,7 @@ function nhanBien_taikhoan() {
             this.id == "f-dhct" ||
             this.id == "f-vv" ||
             this.id == "f-tkl" ||
-            this.id == "f-nxct" ||
-            this.id == "f-tb" ||
-            this.id == "f-dkntdt"
+            this.id == "f-tb"
           ) {
             event.preventDefault();
             showContent(this.id);
