@@ -556,3 +556,12 @@ function innerHTML(html, contentID, contentClass) {
     });
   }
 }
+
+function inputCheckText(check, text) {
+  const enableInputCheckbox = document.getElementById(check);
+  const textInput = document.getElementById(text);
+  textInput.disabled = !this.checked;
+  enableInputCheckbox.addEventListener("change", function () {
+    textInput.disabled = !this.checked;
+  });
+}
