@@ -20,7 +20,8 @@
 
   <!-- BODY -->
   <div class="container mt-4" id="container">
-    <div class="row bg-white position-relative pb-3">
+    <div class="row bg-white position-relative pb-3 flex-nowrap w-100">
+
       <div class="col-md-3 col-8 ps-md-4 pe-md-3 py-3 my-md-3 bg-white border-end border-2" id="sidebar"
         style="right: 100%; opacity: 0;">
         <div class="h4 pb-3 border-bottom border-2 mb-2 position-relative">
@@ -54,7 +55,7 @@
         </div>
       </div>
 
-      <div class="test offcanvas offcanvas-start ps-md-4 pe-md-3 py-3 my-md-3 bg-white border-end border-2 d-md-none"
+      <div class="test offcanvas offcanvas-start ps-md-4 pe-md-3 py-3 my-md-3 bg-white border-end border-2"
         tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
           <h4 class="offcanvas-title" id="offcanvasExampleLabel">TÀI KHOẢN</h4>
@@ -90,13 +91,14 @@
         </div>
       </div>
 
+      <!-- <div class="col"> -->
       <!-- BẢNG ĐIỂU KHIỂN TÀI KHOẢN -->
       <div class="col-md-9 col-12 my-md-3 show-content d-none transition-opacity set-h" id="f-bdktk">
         <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>BẢNG ĐIỂU KHIỂN TÀI KHOẢN</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
 
@@ -214,7 +216,8 @@
 
           <div class="col-12 h5 mt-4 d-flex justify-content-between">
             <span>SỔ ĐỊA CHỈ</span>
-            <span class="fs-6 fw-semibold text-danger cursor-pointer" onclick="showContent('f-sdc')">Xem thêm >>></span>
+            <span class="fs-6 fw-semibold text-danger cursor-pointer" onclick="showContent('f-sdc')">Xem thêm
+              >>></span>
           </div>
           <div class="col-12 mt-2 overflow-x-auto">
             <table class="table table-borderless">
@@ -258,7 +261,7 @@
           <span>THÔNG TIN TÀI KHOẢN</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
 
@@ -376,7 +379,7 @@
           <span>SỔ ĐỊA CHỈ</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
 
@@ -407,10 +410,12 @@
                   <td>Số điện thoại: 01223526</td>
                 </tr>
                 <tr>
-                  <td><a href="#" class="link-danger">Sửa địa chỉ</a><br><a href="#" class="link-danger">Xóa địa chỉ</a>
+                  <td><a href="#" class="link-danger">Sửa địa chỉ</a><br><a href="#" class="link-danger">Xóa địa
+                      chỉ</a>
                   </td>
                   </td>
-                  <td><a href="#" class="link-danger">Sửa địa chỉ</a><br><a href="#" class="link-danger">Xóa địa chỉ</a>
+                  <td><a href="#" class="link-danger">Sửa địa chỉ</a><br><a href="#" class="link-danger">Xóa địa
+                      chỉ</a>
                   </td>
                 </tr>
               </tbody>
@@ -425,13 +430,11 @@
           <span>ĐƠN HÀNG CỦA TÔI</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
-
-        <div class="col-12 mt-2" style="text-align: justify;">
+        <div class="col-12 mt-2 px-3" style="text-align: justify;">
           <!-- Nav Tab -->
-
           <ul class="nav nav-underline px-3 slide-navbar" id="nav_tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link text-danger px-2 mx-2 fs-6 active" id="btn_tab_1" data-bs-toggle="tab"
@@ -441,17 +444,20 @@
 
             <li class="nav-item" role="presentation">
               <button class="nav-link text-danger px-2 mx-2 fs-6" id="btn_tab_2" data-bs-toggle="tab"
-                data-bs-target="#tab_2" type="button" role="tab" aria-controls="tab_2" aria-selected="false">Chờ thanh toán</button>
+                data-bs-target="#tab_2" type="button" role="tab" aria-controls="tab_2" aria-selected="false">Chờ thanh
+                toán</button>
             </li>
 
             <li class="nav-item" role="presentation">
               <button class="nav-link text-danger px-2 mx-2 fs-6" id="btn_tab_3" data-bs-toggle="tab"
-                data-bs-target="#tab_3" type="button" role="tab" aria-controls="tab_3" aria-selected="false">Chờ xác nhận</button>
+                data-bs-target="#tab_3" type="button" role="tab" aria-controls="tab_3" aria-selected="false">Chờ xác
+                nhận</button>
             </li>
 
             <li class="nav-item" role="presentation">
               <button class="nav-link text-danger px-2 mx-2 fs-6" id="btn_tab_4" data-bs-toggle="tab"
-                data-bs-target="#tab_4" type="button" role="tab" aria-controls="tab_4" aria-selected="false">Đang xử lý</button>
+                data-bs-target="#tab_4" type="button" role="tab" aria-controls="tab_4" aria-selected="false">Đang xử
+                lý</button>
             </li>
 
             <li class="nav-item" role="presentation">
@@ -1569,7 +1575,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- VÍ VOUCHER -->
@@ -1578,11 +1583,11 @@
           <span>VÍ VOUCHER</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
 
-        <div class="col-12 mt-2 px-md-3 px-2" style="text-align: justify;">
+        <div class="col-12 mt-2 px-3" style="text-align: justify;">
 
           <ul class="nav nav-underline slide-navbar" id="nav_tab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -1609,7 +1614,7 @@
             <div class="tab-pane fade show active" id="tab_vv_all" role="tabpanel" aria-labelledby="home-tab"
               tabindex="0">
               <div class="row">
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1629,7 +1634,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1649,7 +1654,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1669,7 +1674,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1693,7 +1698,7 @@
             </div>
             <div class="tab-pane fade" id="tab_vv_shop" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
               <div class="row">
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1713,7 +1718,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1733,7 +1738,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1753,7 +1758,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1777,7 +1782,7 @@
             </div>
             <div class="tab-pane fade" id="tab_vv_service" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
               <div class="row">
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1797,7 +1802,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1817,7 +1822,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1837,7 +1842,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 px-md-4 px-1 mt-3">
+                <div class="col-12 px-4 mt-3">
                   <div class="card mb-3 rounded-4 overflow-hidden">
                     <div class="row">
                       <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
@@ -1870,7 +1875,7 @@
           <span>TÀI KHOẢN L-POINT</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
 
@@ -2136,317 +2141,457 @@
           <span>Thông báo</span>
           <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <i class="fa-solid fa-user"></i>
+            <i class="fa-brands fa-servicestack"></i>
           </button>
         </div>
 
+        <!--  -->
         <div class="col-12 mt-2 px-3" style="text-align: justify;">
 
           <ul class="nav nav-underline slide-navbar" id="nav_tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link text-danger px-2 mx-2 fs-6 active" data-bs-toggle="tab"
-                data-bs-target="#tab_tb_all" type="button" role="tab" aria-controls="tab_tb_all"
-                aria-selected="true">Tất cả <br>999+</button>
+                data-bs-target="#tab_vv_all" type="button" role="tab" aria-controls="tab_vv_all"
+                aria-selected="true">Tất cả <br> 83</button>
             </li>
 
             <li class="nav-item" role="presentation">
-              <button class="nav-link text-danger px-2 mx-2 fs-6" data-bs-toggle="tab" data-bs-target="#tab_tb_donhang"
-                type="button" role="tab" aria-controls="tab_tb_donhang" aria-selected="false">Đơn hàng
+              <button class="nav-link text-danger px-2 mx-2 fs-6" data-bs-toggle="tab" data-bs-target="#tab_vv_shop"
+                type="button" role="tab" aria-controls="tab_vv_shop" aria-selected="false">Đ
                 <br>35</button>
             </li>
 
             <li class="nav-item" role="presentation">
-              <button class="nav-link text-danger px-2 mx-2 fs-6" data-bs-toggle="tab" data-bs-target="#tab_tb_sukien"
-                type="button" role="tab" aria-controls="tab_tb_sukien" aria-selected="false">Dịch vụ
+              <button class="nav-link text-danger px-2 mx-2 fs-6" data-bs-toggle="tab" data-bs-target="#tab_vv_service"
+                type="button" role="tab" aria-controls="tab_vv_service" aria-selected="false">Dịch vụ
                 <br>23</button>
             </li>
           </ul>
 
           <div class="tab-content" id="tab_content">
-            <div class="tab-pane fade show active" id="tab_tb_all" role="tabpanel" aria-labelledby="home-tab"
+            <div class="tab-pane fade show active" id="tab_vv_all" role="tabpanel" aria-labelledby="home-tab"
               tabindex="0">
-              <div class="col-12 mt-4 px-md-4 px-2" style="text-align: justify;">
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
+              <div class="row">
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
+                </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="tab_tb_donhang" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-              <div class="col-12 mt-4 px-md-4 px-2" style="text-align: justify;">
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
+            <div class="tab-pane fade" id="tab_vv_shop" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <div class="row">
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
+                </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="tab_tb_sukien" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-              <div class="col-12 mt-4 px-md-4 px-2" style="text-align: justify;">
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
+            <div class="tab-pane fade" id="tab_vv_service" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+              <div class="row">
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+                </div>
+                <div class="col-12 px-4 mt-3">
+                  <div class="card mb-3 rounded-4 overflow-hidden">
+                    <div class="row">
+                      <div class="col-3 bg-danger d-flex justify-content-center align-items-center">
+                        <img src="../IMG/ico_coupongreen.svg" class="img-fluid" alt="..." style="margin: 0!important;">
+                      </div>
+                      <div class="col-9 row">
+                        <div class="col-md-9 col-12 card-body p-md-3 py-2">
+                          <div class="card-title h5-md h6">Mã giảm 50k</div>
+                          <div class="card-text fs-md-6 fs-7">Giảm Toàn Sàn dành cho đơn hàng trên 1 triệu</div>
+                          <div class="card-text fs-md-6 fs-7">Mã voucher: LO50KT10</div>
+                          <div class="card-text fs-md-6 fs-7">Hạn sử dụng: 1/1/1024</div>
+                        </div>
+                        <div class="col-md-3 col-12 d-flex align-items-center justify-content-end">
+                          <button class="btn btn-primary fs-md-6 fs-7 m-md-0 mb-2">Copy mã</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
-                <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
-                  <div class="col-12 d-flex justify-content-between">
-                    <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
-                    <p class="m-0">12:34 01/01/2024</p>
-                  </div>
-                  <div class="col-12">
-                    <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
-                  </div>
-                </a>
+                </div>
               </div>
             </div>
 
           </div>
+
+          <div class="col-12 mt-2" style="text-align: justify;">
+            <div class="slide-menu-card px-3">
+
+              <div class="h-100 text-danger">
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">999+</div>
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">Tất Cả</div>
+              </div>
+
+              <div class="h-100 ">
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">378</div>
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">Đơn hàng</div>
+              </div>
+
+              <div class="h-100 ">
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">345</div>
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">Sự kiện</div>
+              </div>
+
+              <div class="h-100 ">
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">599</div>
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">Mã giảm giá</div>
+              </div>
+
+              <div class="h-100 ">
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">35</div>
+                <div style="width: 90%;"
+                  class="fs-6 text-center h6-md h5 m-0 pb-2 border-start border-end border-2 m-auto">Xác nhận</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-12 mt-4 px-md-4 px-2" style="text-align: justify;">
+
+
+
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+            <a href="" class="row d-block text-black rounded-3 bg-body-secondary py-2 mt-2">
+              <div class="col-12 d-flex justify-content-between">
+                <p class="m-0">Tặng bạn ưu đãi giảm 20k</p>
+                <p class="m-0">12:34 01/01/2024</p>
+              </div>
+              <div class="col-12">
+                <p class="m-0">Rinh ngay sản phẩm chính hãng</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="row bg-white pt-3">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center m-0 py-1">
+                <li class="page-item disabled">
+                  <a class="page-link text-danger" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link text-danger" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
+        <!-- </div> -->
 
-      <div class=" bg-white pt-3">
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center m-0 py-1">
-            <li class="page-item disabled">
-              <a class="page-link text-danger" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link text-danger" href="#">1</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link text-danger" href="#">2</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link text-danger" href="#">3</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link text-danger" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
-
     </div>
 
+    <!-- FOOTER -->
+    <footer class="footer" id="footer"></footer>
 
-  </div>
+    <!-- <script src="../JS/index.js"></script> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <!-- FOOTER -->
-  <footer class="footer" id="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
 
-  <div class="overlay" id="overlay"></div>
-
-  <!-- <script src="../JS/index.js"></script> -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-
-  <script src="../JS/main.js"></script>
-  <script>
-    btnGo();
-    slideScroll();
-    nhanBien_taikhoan();
-  </script>
+    <script src="../JS/main.js"></script>
+    <script>
+      btnGo();
+      slideScroll();
+      nhanBien_taikhoan();
+    </script>
 </body>
 </html>

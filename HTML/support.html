@@ -28,37 +28,64 @@
 
         <div class="">
           <ul class="list-unstyled">
-            <li class="py-3 border-bottom text-hover cursor-pointer"
-              onclick="javascrip: showContent('f-csdtht'); showSidebar();">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csdtht');">
               <span>Chính sách đổi - trả - hoàn tiền</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer"
-              onclick="javascrip: showContent('f-csbhbh'); showSidebar();">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csbhbh');">
               <span>Chính sách bảo hành bồi hoàn</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer"
-              onclick="javascrip: showContent('f-csvc'); showSidebar();">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csvc');">
               <span>Chính sách vận chuyển</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer"
-              onclick="javascrip: showContent('f-csks'); showSidebar();">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csks');">
               <span>Chính sách khách sỉ</span>
             </li>
-            <li class="py-3 border-bottom text-hover cursor-pointer"
-              onclick="javascrip: showContent('f-ptttvxhd'); showSidebar();">
+            <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-ptttvxhd');">
               <span>Phương thức thanh toán và xuất hóa đơn</span>
             </li>
           </ul>
         </div>
+      </div>
 
+      <div class="test offcanvas offcanvas-start ps-md-4 pe-md-3 py-3 my-md-3 bg-white border-end border-2 d-md-none"
+        tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title" id="offcanvasExampleLabel">TÀI KHOẢN</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body pt-0">
+          <div class="nav-tab">
+            <ul class="list-unstyled">
+              <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csdtht');">
+                <span>Chính sách đổi - trả - hoàn tiền</span>
+              </li>
+              <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csbhbh');">
+                <span>Chính sách bảo hành bồi hoàn</span>
+              </li>
+              <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csvc');">
+                <span>Chính sách vận chuyển</span>
+              </li>
+              <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-csks');">
+                <span>Chính sách khách sỉ</span>
+              </li>
+              <li class="py-3 border-bottom text-hover cursor-pointer" onclick="javascrip: showContent('f-ptttvxhd');">
+                <span>Phương thức thanh toán và xuất hóa đơn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!-- CHÍNH SÁCH ĐỔI - TRẢ - HOÀN TIỀN -->
       <div class="col-md-9 col-12 my-md-2 show-content d-none transition-opacity set-h" id="f-csdtht">
         <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>CHÍNH SÁCH ĐỔI - TRẢ - HOÀN TIỀN</span>
-          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
-            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+
+          <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </button>
         </div>
 
         <div class="col-12 px-md-2 row m-auto slide-item" style="text-align: justify;">
@@ -69,14 +96,17 @@
 
         <div class="col-12 px-md-2" style="text-align: justify;">
           <p class="mt-3">
-            Chúng tôi luôn trân trọng sự tin tưởng và ủng hộ của quý khách hàng khi trải nghiệm mua hàng tại LiteraryOasis.com.
+            Chúng tôi luôn trân trọng sự tin tưởng và ủng hộ của quý khách hàng khi trải nghiệm mua hàng tại
+            LiteraryOasis.com.
             Do đó chúng tôi luôn cố gắng hoàn thiện dịch vụ tốt nhất để phục vụ mọi nhu cầu mua sắm của quý khách.
           </p>
 
           <p>
-            LiteraryOasis.com chúng tôi luôn luôn cam kết tất cả các sản phẩm bán tại LiteraryOasis.com 100% là những sản phẩm chất
+            LiteraryOasis.com chúng tôi luôn luôn cam kết tất cả các sản phẩm bán tại LiteraryOasis.com 100% là những
+            sản phẩm chất
             lượng và xuất xứ nguồn gốc rõ ràng, hợp pháp cũng như an toàn cho người tiêu dùng. Để việc mua sắm của quý
-            khách tại LiteraryOasis.com là trải nghiệm dịch vụ thân thiện, chúng tôi hy vọng quý khách sẽ kiểm tra kỹ các nội
+            khách tại LiteraryOasis.com là trải nghiệm dịch vụ thân thiện, chúng tôi hy vọng quý khách sẽ kiểm tra kỹ
+            các nội
             dung sau trước khi nhận hàng:
           </p>
 
@@ -87,14 +117,17 @@
 
           <p>
             Trong trường hợp hiếm hoi sản phẩm quý khách nhận được có khiếm khuyết, hư hỏng hoặc không như mô tả,
-            LiteraryOasis.com cam kết bảo vệ khách hàng bằng chính sách đổi trả/ hoàn tiền trên tinh thần bảo vệ quyền lợi
+            LiteraryOasis.com cam kết bảo vệ khách hàng bằng chính sách đổi trả/ hoàn tiền trên tinh thần bảo vệ quyền
+            lợi
             người
             tiêu dùng nhằm cam kết với quý khách về chất lượng sản phẩm và dịch vụ của chúng tôi.
           </p>
 
           <p>
-            Khi quý khách hàng có hàng hóa mua tại LiteraryOasis.comcần đổi/ trả/bảo hành/hoàn tiền, xin quý khách hàng liên hệ
-            với chúng tôi qua hotline 1900636467 hoặc truy cập LiteraryOasis.com/chinh-sach-doi-tra-hang để tìm hiểu thêm về
+            Khi quý khách hàng có hàng hóa mua tại LiteraryOasis.comcần đổi/ trả/bảo hành/hoàn tiền, xin quý khách hàng
+            liên hệ
+            với chúng tôi qua hotline 1900636467 hoặc truy cập LiteraryOasis.com/chinh-sach-doi-tra-hang để tìm hiểu
+            thêm về
             chính sách đổi/trả:
           </p>
 
@@ -241,11 +274,14 @@
           </ul>
 
           <p>
-            Sau khi LiteraryOasis.com xác nhận mail tiếp nhận yêu cầu kiểm tra xử lý, LiteraryOasis.com sẽ liên hệ đến quý khách để
+            Sau khi LiteraryOasis.com xác nhận mail tiếp nhận yêu cầu kiểm tra xử lý, LiteraryOasis.com sẽ liên hệ đến
+            quý khách để
             xác
-            nhận thông tin hoặc nhờ bổ sung thông tin (nếu có). Trường hợp không liên hệ được LiteraryOasis.com rất tiếc xin
+            nhận thông tin hoặc nhờ bổ sung thông tin (nếu có). Trường hợp không liên hệ được LiteraryOasis.com rất tiếc
+            xin
             được
-            phép từ chối xử lý yêu cầu. Thời gian LiteraryOasis.com liên hệ trong giờ hành chính tối đa 3 lần trong vòng 7 ngày
+            phép từ chối xử lý yêu cầu. Thời gian LiteraryOasis.com liên hệ trong giờ hành chính tối đa 3 lần trong vòng
+            7 ngày
             sau khi nhận thông tin yêu cầu.
           </p>
 
@@ -275,7 +311,8 @@
           </p>
 
           <p>
-            Quý khách có thể trả lại sản phẩm đã mua tại LiteraryOasis.com trong vòng 30 ngày kể từ khi nhận hàng với đa số sản
+            Quý khách có thể trả lại sản phẩm đã mua tại LiteraryOasis.com trong vòng 30 ngày kể từ khi nhận hàng với đa
+            số sản
             phẩm khi thỏa mãn các điều kiện sau:
           </p>
 
@@ -327,7 +364,8 @@
             <li>Hình chụp tình trạng sản phẩm bên trong, nêu rõ lỗi kỹ thuật nếu có.</li>
           </ul>
 
-          <p>Để đảm bảo quyền lợi khách hàng và để LiteraryOasis.com có cơ sở làm việc với các bộ phận liên quan, tất cả yêu
+          <p>Để đảm bảo quyền lợi khách hàng và để LiteraryOasis.com có cơ sở làm việc với các bộ phận liên quan, tất cả
+            yêu
             cầu
             đổi/ trả/ bảo hành quý khách cần cung cấp hình ảnh/ clip sản phẩm lỗi. Quá thời gian đổi/ trả sản phẩm nếu
             chưa nhận được đủ hình ảnh/ clip từ quý khách, LiteraryOasis.com xin phép từ chối hỗ trợ.</p>
@@ -359,7 +397,8 @@
                 </td>
                 <td>
                   <p>LiteraryOasis.com c&oacute; sản phẩm&rarr; đổi mới c&ugrave;ng sản phẩm</p>
-                  <p>LiteraryOasis.com hết h&agrave;ng&rarr; Ho&agrave;n tiền hoặc qu&yacute; kh&aacute;ch c&oacute; thể chọn
+                  <p>LiteraryOasis.com hết h&agrave;ng&rarr; Ho&agrave;n tiền hoặc qu&yacute; kh&aacute;ch c&oacute; thể
+                    chọn
                     mặt h&agrave;ng kh&aacute;c tại website <span style="text-decoration: underline;"><a
                         href="https://thanhba0505.github.io/Literary_Oasis/HTML/home.html">www.literaryoasis.com</a></span>.
                   </p>
@@ -388,7 +427,8 @@
                   <p>&nbsp;</p>
                   <p>Hỗ trợ thu hồi v&agrave; ho&agrave;n tiền 100% gi&aacute; trị sản phẩm cho qu&yacute; kh&aacute;ch
                     h&agrave;ng.</p>
-                  <p>**Lưu &yacute;: LiteraryOasis.com rất tiếc sẽ kh&ocirc;ng hỗ trợ ho&agrave;n lại chi ph&iacute; vận chuyển
+                  <p>**Lưu &yacute;: LiteraryOasis.com rất tiếc sẽ kh&ocirc;ng hỗ trợ ho&agrave;n lại chi ph&iacute; vận
+                    chuyển
                     trong đơn h&agrave;ng cho trường hợp n&agrave;y.</p>
                   <p>Đổi /trả kh&ocirc;ng thu ph&iacute;</p>
                 </td>
@@ -457,9 +497,11 @@
             <li>Quý khách cần quay video clip đóng gói sản phẩm để làm bằng chứng đối chiếu/ khiếu nại liên quan đến đổi
               trả về sau (nếu cần).</li>
 
-            <li>Quý khách vui lòng chịu trách nhiệm về trạng thái nguyên vẹn của sản phẩm khi gửi về LiteraryOasis.com.</li>
+            <li>Quý khách vui lòng chịu trách nhiệm về trạng thái nguyên vẹn của sản phẩm khi gửi về LiteraryOasis.com.
+            </li>
 
-            <li>Sau khi nhận được sản phẩm quý khách gởi về, LiteraryOasis.com sẽ phản hồi và cập nhật thông tin trên từng giai
+            <li>Sau khi nhận được sản phẩm quý khách gởi về, LiteraryOasis.com sẽ phản hồi và cập nhật thông tin trên
+              từng giai
               đoạn xử lý đến quý khách qua điện thoại/email .</li>
           </ul>
 
@@ -557,19 +599,22 @@
 
           <ul>
             <li>Đối với những đơn hàng trả hàng hoàn tiền:</li>
-            <li>Thời gian hoàn tiền được bắt đầu tính kể từ thời điểm LiteraryOasis.com nhận được hàng hoàn trả và xác nhận với
+            <li>Thời gian hoàn tiền được bắt đầu tính kể từ thời điểm LiteraryOasis.com nhận được hàng hoàn trả và xác
+              nhận với
               quý
               khách về việc hàng hoàn trả đáp ứng các điều kiện trả hàng được quy định tại chính sách này. Thời gian
               hoàn
               tiền tuân thủ theo quy định tại Mục 6 này.</li>
-            <li>Đối với các đơn hàng hoàn tiền, hình thức thanh toán của quý khách là tiền mặt (COD): LiteraryOasis.com sẽ hoàn
+            <li>Đối với các đơn hàng hoàn tiền, hình thức thanh toán của quý khách là tiền mặt (COD): LiteraryOasis.com
+              sẽ hoàn
               tiền
               qua tài khoản Ngân hàng do quý khách chỉ định.</li>
           </ul>
           <p>Trong trường hợp đã quá thời gian trên quý khách chưa nhận được tiền hoàn, vui lòng liên hệ ngân hàng phát
             hành thẻ hoặc liên hệ bộ phận Chăm sóc khách hàng của LiteraryOasis.com.</p>
 
-          <p>Nếu cần hỗ trợ thêm bất kì thông tin nào, Literary Oasis nhờ quý khách liên hệ trực tiếp quahotline 1900636467để
+          <p>Nếu cần hỗ trợ thêm bất kì thông tin nào, Literary Oasis nhờ quý khách liên hệ trực tiếp quahotline
+            1900636467để
             được
             hỗ trợ nhanh chóng.</p>
           <p>Chính sách sẽ được áp dụng và có hiệu lực từ ngày01/08/2022</p>
@@ -580,8 +625,10 @@
       <div class="col-md-9 col-12 my-md-2 show-content d-none transition-opacity set-h" id="f-csbhbh">
         <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>CHÍNH SÁCH BẢO HÀNH - BỒI HOÀN</span>
-          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
-            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+          <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </button>
         </div>
 
         <div class="col-12 px-md-2" style="text-align: justify;">
@@ -589,7 +636,8 @@
           <h5>1. Tôi có thể bảo hành sản phẩm tại đâu?</h5>
 
           <p>Bảo hành chính hãng: Đối với các sản phẩm điện tử, đồ chơi điện tử,... có tem phiếu cam kết bảo hành từ
-            Hãng, khách hàng có thể mang sản phẩm đến trực tiếp Hãng để bảo hành mà không cần thông qua LiteraryOasis.com.</p>
+            Hãng, khách hàng có thể mang sản phẩm đến trực tiếp Hãng để bảo hành mà không cần thông qua
+            LiteraryOasis.com.</p>
 
           <p>Bảo hành thông qua LiteraryOasis.com: khách hàng liên hotline 1900636467 hoặc truy cập
             www.LiteraryOasis.com/chinh-sach-bao-hanh-san-pham để được hỗ trợ tư vấn về thực hiện bảo hành.</p>
@@ -618,10 +666,12 @@
 
           <h5>3. Sau bao lâu tôi có thể nhận lại sản phẩm bảo hành?</h5>
 
-          <p>Nếu sản phẩm của quý khách vẫn còn trong thời hạn bảo hành trên team phiếu bảo hành của Hãng, Literary Oasis khuyến
+          <p>Nếu sản phẩm của quý khách vẫn còn trong thời hạn bảo hành trên team phiếu bảo hành của Hãng, Literary
+            Oasis khuyến
             khích quý khách gửi trực tiếp đến trung tâm của Hãng để được hỗ trợ bảo hành trong thời gian nhanh nhất.</p>
 
-          <p>Trường hợp quý khách gửi hàng về LiteraryOasis.com, thời gian bảo hành dự kiến trong vòng 21- 45 ngày tùy thuộc
+          <p>Trường hợp quý khách gửi hàng về LiteraryOasis.com, thời gian bảo hành dự kiến trong vòng 21- 45 ngày tùy
+            thuộc
             vào
             điều kiện sẵn có của linh kiện thay thế từ nhà sản xuất/lỗi sản phẩm (không tính thời gian vận chuyển đi và
             về).</p>
@@ -653,9 +703,11 @@
 
           <p>LiteraryOasis.com rất tiếc hiện chưa hỗ trợ bảo hành quà tặng đi kèm sản phẩm chính.</p>
 
-          <p>Lưu ý: Để đảm bảo quyền lợi khách hàng và LiteraryOasis.com có cơ sở làm việc với các bộ phận liên quan, tất cả
+          <p>Lưu ý: Để đảm bảo quyền lợi khách hàng và LiteraryOasis.com có cơ sở làm việc với các bộ phận liên quan,
+            tất cả
             yêu
-            cầu bảo hành quý khách cần cung cấp hình ảnh/clip sản phẩm lỗi. LiteraryOasis.com xin phép từ chối khi chưa nhận đủ
+            cầu bảo hành quý khách cần cung cấp hình ảnh/clip sản phẩm lỗi. LiteraryOasis.com xin phép từ chối khi chưa
+            nhận đủ
             thông tin hình ảnh từ quý khách.</p>
 
           <p>Chính sách sẽ được áp dụng và có hiệu lực từ ngày01/08/2022</p>
@@ -666,20 +718,25 @@
       <div class="col-md-9 col-12 my-md-2 show-content d-none transition-opacity set-h" id="f-csvc">
         <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>CHÍNH SÁCH VẬN CHUYỂN</span>
-          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
-            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+          <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </button>
         </div>
 
         <div class="col-12 px-md-2" style="text-align: justify;">
 
           <h5>1. Chính sách vận chuyển:</h5>
 
-          <p>LiteraryOasis.com cung cấp dịch vụ giao hàng toàn quốc, gửi hàng tận nơi đến địa chỉ cung cấp của Quý khách. Thời
+          <p>LiteraryOasis.com cung cấp dịch vụ giao hàng toàn quốc, gửi hàng tận nơi đến địa chỉ cung cấp của Quý
+            khách. Thời
             gian giao hàng dự kiến phụ thuộc vào kho có hàng và địa chỉ nhận hàng của Quý khách.</p>
 
-          <p>Với đa phần đơn hàng, LiteraryOasis.com cần vài giờ làm việc để kiểm tra thông tin và đóng gói hàng. Nếu các sản
+          <p>Với đa phần đơn hàng, LiteraryOasis.com cần vài giờ làm việc để kiểm tra thông tin và đóng gói hàng. Nếu
+            các sản
             phẩm
-            đều có sẵn hàng, LiteraryOasis.com sẽ nhanh chóng bàn giao cho đối tác vận chuyển. Nếu đơn hàng có sản phẩm sắp
+            đều có sẵn hàng, LiteraryOasis.com sẽ nhanh chóng bàn giao cho đối tác vận chuyển. Nếu đơn hàng có sản phẩm
+            sắp
             phát
             hành, LiteraryOasis.com sẽ ưu tiên giao những sản phẩm có hàng trước cho Quý khách hàng.</p>
 
@@ -857,13 +914,15 @@
               của
               Quý khách trước khoảng 3 đến 5 phút để xác nhận giao hàng.</li>
 
-            <li>Nếu Quý khách không thể có mặt trong đợt nhận hàng thứ nhất, LiteraryOasis.com sẽ cố gắng liên lạc lại thêm ít
+            <li>Nếu Quý khách không thể có mặt trong đợt nhận hàng thứ nhất, LiteraryOasis.com sẽ cố gắng liên lạc lại
+              thêm ít
               nhất 2
               lần nữa (trong 02 ca giao hàng khác nhau) để sắp xếp thời gian giao hàng, Quý khách vui lòng để ý điện
               thoại
               để liên hệ được với bưu tá giao hàng.</li>
 
-            <li>Nếu qua 3 lần liên hệ giao hàng, LiteraryOasis.com vẫn không thể liên lạc được với Quý khách để giao hàng,
+            <li>Nếu qua 3 lần liên hệ giao hàng, LiteraryOasis.com vẫn không thể liên lạc được với Quý khách để giao
+              hàng,
               LiteraryOasis.com
               sẽ thông báo cho Quý khách về việc hủy đơn hàng. Trong trường hợp Quý khách đã thanh toán trước cho đơn
               hàng,
@@ -872,11 +931,13 @@
               hàng. Số tiền Quý khách nhận lại sẽ trừ lại chi phí vận chuyển phát sinh từ việc giao hàng nhưng Quý khách
               không nhận hàng.</li>
 
-            <li>Trong trường hợp Quý khách không đồng ý nhận hàng với xuất phát nguyên nhân từ hàng hóa của LiteraryOasis.com
+            <li>Trong trường hợp Quý khách không đồng ý nhận hàng với xuất phát nguyên nhân từ hàng hóa của
+              LiteraryOasis.com
               không
               đảm bảo, không đúng như mô tả, giao trễ so với cam kết,... Đơn hàng của Quý khách sẽ được hoàn lại cho
               chúng
-              tôi và được hủy trên hệ thống LiteraryOasis.com. Nếu Quý khách đã thanh toán trước cho đơn hàng, Quý khách sẽ
+              tôi và được hủy trên hệ thống LiteraryOasis.com. Nếu Quý khách đã thanh toán trước cho đơn hàng, Quý khách
+              sẽ
               nhận
               lại tiền vào tài khoản trong vòng 5 - 7 ngày làm việc, phụ thuộc vào tiến độ xử lý của ngân hàng. Số tiền
               Quý
@@ -899,18 +960,21 @@
               lại sẽ
               trừ lại chi phí vận chuyển phát sinh từ việc giao hàng nhưng Quý khách không nhận.</li>
 
-            <li>LiteraryOasis.com sẽ thông báo ngay đến Quý khách nếu có sự chậm chễ về thời gian giao hàng so với thời gian dự
+            <li>LiteraryOasis.com sẽ thông báo ngay đến Quý khách nếu có sự chậm chễ về thời gian giao hàng so với thời
+              gian dự
               kiến
               ở trên. Trong phạm vi pháp luật cho phép, chúng tôi sẽ không chịu trách nhiệm cho bất cứ tổn thất nào, các
               khoản nợ, thiệt hại hoặc chi phí phát sinh từ việc giao hàng trễ. Trường hợp phát sinh chậm trễ trong việc
-              giao hàng, nếu Quý khách không còn nhu cầu nhận hàng, LiteraryOasis.com cam kết sẽ hỗ trợ Quý khách hủy đơn hàng,
+              giao hàng, nếu Quý khách không còn nhu cầu nhận hàng, LiteraryOasis.com cam kết sẽ hỗ trợ Quý khách hủy
+              đơn hàng,
               nếu
               Quý khách đã thanh toán trước cho đơn hàng, Quý khách sẽ nhận lại tiền vào tài khoản trong vòng 5 - 7 ngày
               làm
               việc, phụ thuộc vào tiến độ xử lý của ngân hàng. Số tiền Quý khách nhận lại sẽ là toàn bộ số tiền đã thanh
               toán cho đơn hàng (bao gồm phí vận chuyển).
             </li>
-            <li>Sản phẩm được đóng gói theo tiêu chuẩn đóng gói của LiteraryOasis.com, nếu Quý khách có nhu cầu đóng gói đặc
+            <li>Sản phẩm được đóng gói theo tiêu chuẩn đóng gói của LiteraryOasis.com, nếu Quý khách có nhu cầu đóng gói
+              đặc
               biệt
               khác, vui lòng báo trước cho chúng tôi khi đặt hàng hàng và cho phép chúng tôi được tính thêm phí cho nhu
               cầu
@@ -925,7 +989,8 @@
 
           <h5>4. Tra cứu thông tin vận chuyển đơn hàng:</h5>
 
-          <p>LiteraryOasis.com sử dụng dịch vụ giao hàng của các Đối tác vận chuyển để thực hiện giao đơn hàng đến Quý khách.
+          <p>LiteraryOasis.com sử dụng dịch vụ giao hàng của các Đối tác vận chuyển để thực hiện giao đơn hàng đến Quý
+            khách.
           </p>
 
           <p>Quý khách hoàn toàn có thể tự tra cứu thông tin lộ trình vận chuyển Đơn hàng bằng 02 cách sau đây:</p>
@@ -936,13 +1001,15 @@
               tra
               cứu.</li>
 
-            <li>Quý khách liên hệ với bộ phận chăm sóc khách hàng của LiteraryOasis.com qua hotline 1900636467 để được hỗ trợ
+            <li>Quý khách liên hệ với bộ phận chăm sóc khách hàng của LiteraryOasis.com qua hotline 1900636467 để được
+              hỗ trợ
               tra
               cứu
               tình hình vận chuyển đơn hàng.</li>
           </ul>
 
-          <p>LiteraryOasis.com cung cấp địa chỉ website của các Đối tác vận chuyển để Quý khách tra cứu tình hình vận chuyển
+          <p>LiteraryOasis.com cung cấp địa chỉ website của các Đối tác vận chuyển để Quý khách tra cứu tình hình vận
+            chuyển
             đơn
             hàng:</p>
 
@@ -966,12 +1033,15 @@
       <div class="col-md-9 col-12 my-md-2 show-content d-none transition-opacity set-h" id="f-csks">
         <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>CHÍNH SÁCH KHÁCH SỈ</span>
-          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
-            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+          <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </button>
         </div>
 
         <div class="col-12 px-md-2" style="text-align: justify;">
-          <p>Hiện nay, do mức chiết khấu trên LiteraryOasis.com rất cao, đặc biệt vào các thời điểm chạy chương trình. Do đó
+          <p>Hiện nay, do mức chiết khấu trên LiteraryOasis.com rất cao, đặc biệt vào các thời điểm chạy chương trình.
+            Do đó
             đối
             với mỗi chương trình số lượng sản phẩm giảm sốc có giới hạn nhất định, vì vậy để đảm bảo quyền lợi của từng
             khách hàng, chúng tôi xin thông báo tiêu chí xét “Đơn Hàng Sỉ” và chính sách như sau:</p>
@@ -1002,8 +1072,10 @@
       <div class="col-md-9 col-12 my-md-2 show-content d-none transition-opacity set-h" id="f-ptttvxhd">
         <div class=" col-12 h4 pt-3 pb-3 ps-md-3 text-danger d-flex justify-content-between align-items-center m-0">
           <span>PHƯƠNG THỨC THANH TOÁN VÀ XUẤT HĐ</span>
-          <span id="sidebar-toggle" class="ms-2 py-1 px-2 rounded-2 position-relative bg-white" style="left: 0;"
-            onclick="showSidebar()"><i class="fa-brands fa-servicestack"></i></span>
+          <button class="btn btn-danger d-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="fa-solid fa-book-open-reader"></i>
+          </button>
         </div>
 
         <div class="col-12 px-md-2" style="text-align: justify;">
@@ -1113,7 +1185,8 @@
             <li>
               Khi chuyển tiền, vui lòng ghi rõ Mã số đơn hàng mà bạn thanh toán vào phần ghi chú của lệnh chuyển khoản.
               Sau
-              đó email cho chúng tôi theo địa chỉ literaryoasiscomacc@gmail.com để thông báo việc chuyển tiền và số tài khoản
+              đó email cho chúng tôi theo địa chỉ literaryoasiscomacc@gmail.com để thông báo việc chuyển tiền và số tài
+              khoản
               của bạn để tiện trong việc kiểm tra đồng thời tiến hành giao hàng sớm cho bạn.
             </li>
             <li>
@@ -1156,10 +1229,12 @@
 
           <img src="../IMG/VAT.png" alt="" class="d-block col-md-10 col-12 mx-auto">
 
-          <p>Từ ngày 01/11/2020, Hóa đơn Giá trị gia tăng do Công ty Literary Oasis cung cấp sẽ được xuất dưới dạng Hóa đơn Điện
+          <p>Từ ngày 01/11/2020, Hóa đơn Giá trị gia tăng do Công ty Literary Oasis cung cấp sẽ được xuất dưới dạng Hóa
+            đơn Điện
             tử
             theo đúng nội dung bán hàng và gửi đến Quý khách ngay sau khi đơn hàng được đóng gói thành công và giao đến
-            Quý khách. Công ty Literary Oasis không giải quyết việc xuất lại hóa đơn cho các trường hợp Quý khách không đăng ký
+            Quý khách. Công ty Literary Oasis không giải quyết việc xuất lại hóa đơn cho các trường hợp Quý khách không
+            đăng ký
             thông tin.</p>
 
           <p>Có 2 hình thức nhận hóa đơn điện tử:</p>
@@ -1206,13 +1281,13 @@
   <div class="overlay" id="overlay"></div>
 
   <!-- <script src="../JS/index.js"></script> -->
-  <script src="../JS/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../JS/main.js"></script>
   <script>
     btnGo();
     slideScroll();

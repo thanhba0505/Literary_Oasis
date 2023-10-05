@@ -12,7 +12,7 @@
 }
 
 *::selection {
-  background-color: rgba(52, 152, 219, 0.5); 
+  background-color: rgba(52, 152, 219, 0.5);
   /* color: #333; */
 }
 
@@ -210,11 +210,6 @@ a {
   transition: opacity .3s linear;
 }
 
-.active {
-  color: red;
-  font-weight: 650;
-}
-
 #sidebar {
   box-shadow: 2px 1px 4px 4px rgb(0, 0, 0, 0.2);
   transition: right 0.3s ease-out, opacity 0.3s ease-out;
@@ -263,10 +258,12 @@ a {
 }
 
 [id^="f-"] img {
-  margin-bottom: 16px!important;
+  margin-bottom: 16px !important;
 }
 
 @media (min-width: 768px) {
+
+  
 
   .fs-md-5 {
     font-size: 1.25rem !important;
@@ -321,7 +318,7 @@ a {
   }
 
   .w-md-100 {
-    width:100% !important;
+    width: 100% !important;
   }
 
   #sidebar {
@@ -366,7 +363,7 @@ a {
   }
 
   [id^="f-"] h5 {
-    font-size: 1.15rem!important;
+    font-size: 1.15rem !important;
   }
 
   #sidebar {
@@ -407,4 +404,8 @@ a {
   .dangnhap-dangky {
     height: 380px;
   }
+}
+
+@media (min-width: 768px) {
+  
 }
