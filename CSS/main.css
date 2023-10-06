@@ -159,6 +159,20 @@ a {
   z-index: 1000;
 }
 
+#nav-list .active {
+  color: red!important;
+  transform: translateX(4px); 
+  transition: transform .2s linear;
+}
+
+#nav-list button {
+  transition: transform .2s linear;
+}
+
+#nav-list button:hover {
+  transform: translateX(4px); 
+}
+
 .autoplay .slick-next {
   right: -12px;
 }
