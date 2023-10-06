@@ -286,53 +286,50 @@ function scrollToElement(elementId) {
 function truyenBien() {
   document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
-      const dichvu = document.querySelectorAll(".f-link");
+      const fLink = document.querySelectorAll(".f-link");
 
-      dichvu.forEach(function (element) {
+      fLink.forEach(function (element) {
         element.addEventListener("click", function (event) {
           sessionStorage.setItem("bienX", this.id);
+          // alert("home " + String(sessionStorage.getItem("bienX")));
         });
       });
-    }, 100);
+    }, 1000);
   });
 }
 
 function nhanBien_dichvu() {
-  const x = String(sessionStorage.getItem("bienX"));
-  setTimeout(() => {
-    if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
-      showContent(x);
-      sessionStorage.setItem("bienX", "");
-    }
-  }, 100);
+  let x = String(sessionStorage.getItem("bienX")); alert(x)
+  // Lấy tất cả các button trong danh sách có id là 'nav-list'
+  const buttons = document.querySelectorAll("#nav-list button");
+  const tabPanes = document.querySelectorAll("#tab_content .tab-pane");
 
-  showContent((contentId = "f-dksd"));
-
-  // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-      const dichvu = document.querySelectorAll(".f-link");
+    // Kiểm tra nếu x là null hoặc rỗng thì chọn button đầu tiên và tab pane đầu tiên
+    if (!x) {
+      const firstButton = buttons[0];
+      const firstTabPane = tabPanes[0];
 
-      dichvu.forEach(function (element) {
-        element.addEventListener("click", function (event) {
-          if (
-            this.id == "f-dksd" ||
-            this.id == "f-csbmttcn" ||
-            this.id == "f-csbmtt" ||
-            this.id == "f-gtlo" ||
-            this.id == "f-htttns"
-          ) {
-            event.preventDefault();
-            showContent(this.id);
-            setTimeout(() => {
-              scrollToElement("header");
-            }, 100);
-          } else {
-            sessionStorage.setItem("bienX", this.id);
-          }
-        });
-      });
-    }, 100);
+      firstButton.classList.add("active");
+      firstTabPane.classList.add("show", "active");
+
+      sessionStorage.setItem("bienX", ""); return;
+    }
+
+    buttons.forEach((button) => {
+      // Lấy giá trị của thuộc tính data-bs-target
+      const ariaControls = button.getAttribute("aria-controls");
+      const tabPane = document.getElementById(ariaControls);
+
+      if (x === "f-" + ariaControls) {
+        button.classList.add("active");
+        tabPane.classList.add("show", "active");
+        // sessionStorage.setItem("bienX", "");
+      } else {
+        button.classList.remove("active");
+        tabPane.classList.remove("show", "active");
+      }
+    });
   });
 }
 
@@ -354,6 +351,7 @@ function nhanBien_hotro() {
 
       dichvu.forEach(function (element) {
         element.addEventListener("click", function (event) {
+          alert(x);
           if (
             this.id == "f-csdtht" ||
             this.id == "f-csbhbh" ||
@@ -417,7 +415,6 @@ function nhanBien_taikhoan() {
 }
 
 function slideScroll() {
-
   document.addEventListener("DOMContentLoaded", function () {
     $(".slide-product").slick({
       slidesToShow: 6,
@@ -453,7 +450,7 @@ function slideScroll() {
       ],
     });
   });
-  
+
   document.addEventListener("DOMContentLoaded", function () {
     $(".slide-navbar").slick({
       infinite: false,
