@@ -159,6 +159,14 @@ a {
   z-index: 1000;
 }
 
+.autoplay .slick-next {
+  right: -12px;
+}
+
+.autoplay .slick-prev {
+  left: -12px;
+}
+
 .product-item div>a:nth-child(1) div {
   font-size: .9rem;
 

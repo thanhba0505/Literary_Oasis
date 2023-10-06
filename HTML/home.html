@@ -21,19 +21,30 @@
   <div class="container mt-4" id="container">
 
     <!-- Slick slide -->
-    <div class="row bg-white p-3">
-      <div class="autoplay">
-        <div>
-          <img src="../IMG/FahasaSaleT3_W1_T1023_Banner_Slide_840x320.jpg" alt="">
+    <div class="row bg-white py-3 px-md-3 px-1">
+      <div class="col-md-8 col-12">
+        <div class="autoplay">
+          <div>
+            <a href="#"><img src="../IMG/FahasaSaleT3_W1_T1023_Banner_Slide_840x320.jpg" alt="" class="img-fluid"></a>
+          </div>
+          <div>
+            <a href="#"><img src="../IMG/Notebook_Banner_840x320.jpg" alt="" class="img-fluid"></a>
+          </div>
+          <div>
+            <a href="#"><img src="../IMG/KDKS_Mainbanner_Slide_840x320.jpg" alt="" class="img-fluid"></a>
+          </div>
+          <div>
+            <a href="#"><img src="../IMG/NCCMcBooksT1023_Silver_BannerSlide_840x320.jpg" alt="" class="img-fluid"></a>
+          </div>
         </div>
-        <div>
-          <img src="../IMG/Notebook_Banner_840x320.jpg" alt="">
+      </div>
+
+      <div class="col-md-4 d-md-flex d-none flex-column justify-content-between">
+        <div class="">
+          <a href="#"><img src="../IMG/Notebook_BannerT10_840x320.jpg" alt="" class="img-fluid"></a>
         </div>
-        <div>
-          <img src="../IMG/KDKS_Mainbanner_Slide_840x320.jpg" alt="">
-        </div>
-        <div>
-          <img src="../IMG/NCCMcBooksT1023_Silver_BannerSlide_840x320.jpg" alt="">
+        <div class="">
+          <a href="#"><img src="../IMG/MoMoT10_392x156.jpg" alt="" class="img-fluid"></a>
         </div>
       </div>
     </div>
@@ -151,7 +162,7 @@
     <div class="row bg-white pt-2 pb-4">
       <div class="col-12 d-flex justify-content-center">
         <a href="../HTML/flashsale-shopping.html" class="h-100 d-flex">
-          <span class="bg-price text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+          <span class="bg-warning text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
         </a>
       </div>
     </div>
@@ -245,18 +256,24 @@
     </div>
 
     <div class="row bg-white pt-4">
-      <div class="slide-navbar px-4">
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer active">Xu
-          hướng theo ngày</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Sách HOT -
-          Giảm sốc</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Cũ nhưng
-          chất</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Sách hay
-          hàng đầu</div>
-        <div class="border btn-hover-bg border-danger fs-md-6 fs-7 px-3 py-1 mx-3 rounded-2 cursor-pointer">Phụ kiện giá
-          tốt</div>
-      </div>
+      <ul class="nav nav-pills px-3 slide-navbar" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1 active" data-bs-toggle="tab" data-bs-target="#tab_1"
+            type="button" role="tab" aria-controls="tab_1" aria-selected="true">Xu hướng theo ngày</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_2" type="button"
+            role="tab" aria-controls="tab_2" aria-selected="false">Sách HOT - Giảm sốc</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_3" type="button"
+            role="tab" aria-controls="tab_3" aria-selected="false">Cũ nhưng chất</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_4" type="button"
+            role="tab" aria-controls="tab_4" aria-selected="false">Sách hay hàng đầu</button>
+        </li>
+      </ul>
     </div>
 
     <div class="row bg-white px-3 pb-2 pt-3">
@@ -291,7 +308,183 @@
     <div class="row bg-white pt-2 pb-4">
       <div class="col-12 d-flex justify-content-center">
         <a href="../HTML/flashsale-shopping.html" class="h-100 d-flex">
-          <span class="bg-price text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+          <span class="bg-warning text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Khác -->
+    <!--  -->
+    <div class="row bg-white mt-3 py-3 border-bottom">
+      <ul class="nav nav-pills px-3 slide-navbar" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1 active" data-bs-toggle="tab" data-bs-target="#tab_1"
+            type="button" role="tab" aria-controls="tab_1" aria-selected="true">Sài gòn book</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_2" type="button"
+            role="tab" aria-controls="tab_2" aria-selected="false">Mcboocks</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_3" type="button"
+            role="tab" aria-controls="tab_3" aria-selected="false">Phương Nam book</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_4" type="button"
+            role="tab" aria-controls="tab_4" aria-selected="false">VangLangBook</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row bg-white px-3 pb-2 pt-3">
+      <div class="slide-product">
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+      </div>
+    </div>
+
+    <div class="row bg-white pt-2 pb-4">
+      <div class="col-12 d-flex justify-content-center">
+        <a href="../HTML/flashsale-shopping.html" class="h-100 d-flex">
+          <span class="bg-warning text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+        </a>
+      </div>
+    </div>
+    <!--  -->
+    <div class="row bg-white mt-3 py-3 border-bottom">
+      <ul class="nav nav-pills px-3 slide-navbar" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1 active" data-bs-toggle="tab" data-bs-target="#tab_1"
+            type="button" role="tab" aria-controls="tab_1" aria-selected="true">Manga mới</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_2" type="button"
+            role="tab" aria-controls="tab_2" aria-selected="false">Light Novel</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_3" type="button"
+            role="tab" aria-controls="tab_3" aria-selected="false">Sưu tập phụ kiện anime</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_4" type="button"
+            role="tab" aria-controls="tab_4" aria-selected="false">Cosplay</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row bg-white px-3 pb-2 pt-3">
+      <div class="slide-product">
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+      </div>
+    </div>
+
+    <div class="row bg-white pt-2 pb-4">
+      <div class="col-12 d-flex justify-content-center">
+        <a href="../HTML/flashsale-shopping.html" class="h-100 d-flex">
+          <span class="bg-warning text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
+        </a>
+      </div>
+    </div>
+    <!--  -->
+    <div class="row bg-white mt-3 py-3 border-bottom">
+      <ul class="nav nav-pills px-3 slide-navbar" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1 active" data-bs-toggle="tab" data-bs-target="#tab_1"
+            type="button" role="tab" aria-controls="tab_1" aria-selected="true">Manhua hot</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_2" type="button"
+            role="tab" aria-controls="tab_2" aria-selected="false">Tu tiên - Tiên hiệp</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_3" type="button"
+            role="tab" aria-controls="tab_3" aria-selected="false">Huyền huyễn - Giả tưởng</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="btn btn-outline-warning mx-2 py-1" data-bs-toggle="tab" data-bs-target="#tab_4" type="button"
+            role="tab" aria-controls="tab_4" aria-selected="false">Chuyển sinh - Hệ thống</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row bg-white px-3 pb-2 pt-3">
+      <div class="slide-product">
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+        <div class="product-item col-md-2 col-6 p-2 d-flex flex-column" style="cursor: grab;"></div>
+      </div>
+    </div>
+
+    <div class="row bg-white pt-2 pb-4">
+      <div class="col-12 d-flex justify-content-center">
+        <a href="../HTML/flashsale-shopping.html" class="h-100 d-flex">
+          <span class="bg-warning text-black py-1 px-4 rounded-pill btn-hover">Xem thêm</span>
         </a>
       </div>
     </div>

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   repeatApp();
   addHTML();
-
   // function------
   function repeatApp() {
     const app = document.querySelectorAll(".body");
@@ -418,6 +417,7 @@ function nhanBien_taikhoan() {
 }
 
 function slideScroll() {
+
   document.addEventListener("DOMContentLoaded", function () {
     $(".slide-product").slick({
       slidesToShow: 6,
@@ -437,8 +437,8 @@ function slideScroll() {
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 2,
+            slidesToScroll: 2,
             swipeToSlide: true,
           },
         },
@@ -452,7 +452,9 @@ function slideScroll() {
         },
       ],
     });
-
+  });
+  
+  document.addEventListener("DOMContentLoaded", function () {
     $(".slide-navbar").slick({
       infinite: false,
       speed: 300,
@@ -461,7 +463,8 @@ function slideScroll() {
       variableWidth: true,
       swipeToSlide: true,
     });
-
+  });
+  document.addEventListener("DOMContentLoaded", function () {
     $(".slide-item").slick({
       infinite: false,
       slidesToShow: 3,
@@ -479,13 +482,14 @@ function slideScroll() {
         },
       ],
     });
-
+  });
+  document.addEventListener("DOMContentLoaded", function () {
     $(".slide-menu-card").slick({
       slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
       infinite: false,
-      
+
       responsive: [
         {
           breakpoint: 768,
@@ -496,15 +500,14 @@ function slideScroll() {
           },
         },
       ],
-      
-
     });
-
+  });
+  document.addEventListener("DOMContentLoaded", function () {
     $(".autoplay").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       nextArrow: `<button class="slick-next slick-arrow" aria-label="Next" type="button" style="display: inline-block;"><i class="fa-solid fa-chevron-right"></i></button>`,
       prevArrow: `<button class="slick-prev slick-arrow" aria-label="Prev" type="button" style="display: inline-block;"><i class="fa-solid fa-chevron-left"></i></button>`,
     });
