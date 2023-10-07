@@ -289,31 +289,31 @@ function truyenBien() {
       const fLink = document.querySelectorAll(".f-link");
 
       fLink.forEach(function (element) {
-        element.addEventListener("click", function (event) {
+        element.addEventListener("click", function () {
           sessionStorage.setItem("bienX", this.id);
-          // alert("home " + String(sessionStorage.getItem("bienX")));
         });
       });
-    }, 1000);
+    }, 500);
   });
 }
 
 function nhanBien_dichvu() {
-  let x = String(sessionStorage.getItem("bienX")); alert(x)
+  let x = String(sessionStorage.getItem("bienX"));
   // Lấy tất cả các button trong danh sách có id là 'nav-list'
   const buttons = document.querySelectorAll("#nav-list button");
   const tabPanes = document.querySelectorAll("#tab_content .tab-pane");
 
   document.addEventListener("DOMContentLoaded", function () {
     // Kiểm tra nếu x là null hoặc rỗng thì chọn button đầu tiên và tab pane đầu tiên
-    if (!x) {
+    if (x == null || x == "undefined" || x == "" || x == "null") {
       const firstButton = buttons[0];
       const firstTabPane = tabPanes[0];
 
       firstButton.classList.add("active");
       firstTabPane.classList.add("show", "active");
 
-      sessionStorage.setItem("bienX", ""); return;
+      sessionStorage.setItem("bienX", "");
+      return;
     }
 
     buttons.forEach((button) => {
@@ -321,7 +321,11 @@ function nhanBien_dichvu() {
       const ariaControls = button.getAttribute("aria-controls");
       const tabPane = document.getElementById(ariaControls);
 
-      if (x === "f-" + ariaControls) {
+      button.addEventListener("click", () => {
+        sessionStorage.setItem("bienX", "f-" + ariaControls);
+      });
+
+      if (x == "f-" + ariaControls) {
         button.classList.add("active");
         tabPane.classList.add("show", "active");
         // sessionStorage.setItem("bienX", "");
@@ -330,28 +334,87 @@ function nhanBien_dichvu() {
         tabPane.classList.remove("show", "active");
       }
     });
+
+    setTimeout(() => {
+      const fLink = document.querySelectorAll(".f-link");
+
+      fLink.forEach(function (element) {
+        element.addEventListener("click", function (event) {
+          if (
+            this.id == "f-dksd" ||
+            this.id == "f-csbmttcn" ||
+            this.id == "f-csbmtt" ||
+            this.id == "f-gtlo" ||
+            this.id == "f-htttns"
+          ) {
+            event.preventDefault();
+            buttons.forEach((button) => {
+              const ariaControls = button.getAttribute("aria-controls");
+              const tabPane = document.getElementById(ariaControls);
+              if (this.id == "f-" + ariaControls) {
+                button.classList.add("active");
+                tabPane.classList.add("show", "active");
+                // sessionStorage.setItem("bienX", "");
+              } else {
+                button.classList.remove("active");
+                tabPane.classList.remove("show", "active");
+              }
+            });
+
+            setTimeout(() => {
+              scrollToElement("header");
+            }, 10);
+          }
+          sessionStorage.setItem("bienX", this.id);
+        });
+      });
+    }, 500);
   });
 }
 
 function nhanBien_hotro() {
-  const x = String(sessionStorage.getItem("bienX"));
-  setTimeout(() => {
-    if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
-      showContent(x);
-      sessionStorage.setItem("bienX", "");
-    }
-  }, 100);
+  let x = String(sessionStorage.getItem("bienX"));
+  // Lấy tất cả các button trong danh sách có id là 'nav-list'
+  const buttons = document.querySelectorAll("#nav-list button");
+  const tabPanes = document.querySelectorAll("#tab_content .tab-pane");
 
-  showContent((contentId = "f-csdtht"));
-
-  // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-      const dichvu = document.querySelectorAll(".f-link");
+    // Kiểm tra nếu x là null hoặc rỗng thì chọn button đầu tiên và tab pane đầu tiên
+    if (x == null || x == "undefined" || x == "" || x == "null") {
+      const firstButton = buttons[0];
+      const firstTabPane = tabPanes[0];
 
-      dichvu.forEach(function (element) {
+      firstButton.classList.add("active");
+      firstTabPane.classList.add("show", "active");
+
+      sessionStorage.setItem("bienX", "");
+      return;
+    }
+
+    buttons.forEach((button) => {
+      // Lấy giá trị của thuộc tính data-bs-target
+      const ariaControls = button.getAttribute("aria-controls");
+      const tabPane = document.getElementById(ariaControls);
+
+      button.addEventListener("click", () => {
+        sessionStorage.setItem("bienX", "f-" + ariaControls);
+      });
+
+      if (x == "f-" + ariaControls) {
+        button.classList.add("active");
+        tabPane.classList.add("show", "active");
+        // sessionStorage.setItem("bienX", "");
+      } else {
+        button.classList.remove("active");
+        tabPane.classList.remove("show", "active");
+      }
+    });
+
+    setTimeout(() => {
+      const fLink = document.querySelectorAll(".f-link");
+
+      fLink.forEach(function (element) {
         element.addEventListener("click", function (event) {
-          alert(x);
           if (
             this.id == "f-csdtht" ||
             this.id == "f-csbhbh" ||
@@ -360,36 +423,72 @@ function nhanBien_hotro() {
             this.id == "f-ptttvxhd"
           ) {
             event.preventDefault();
-            showContent(this.id);
+            buttons.forEach((button) => {
+              const ariaControls = button.getAttribute("aria-controls");
+              const tabPane = document.getElementById(ariaControls);
+              if (this.id == "f-" + ariaControls) {
+                button.classList.add("active");
+                tabPane.classList.add("show", "active");
+                // sessionStorage.setItem("bienX", "");
+              } else {
+                button.classList.remove("active");
+                tabPane.classList.remove("show", "active");
+              }
+            });
+
             setTimeout(() => {
               scrollToElement("header");
-            }, 100);
-          } else {
-            sessionStorage.setItem("bienX", this.id);
+            }, 10);
           }
+          sessionStorage.setItem("bienX", this.id);
         });
       });
-    }, 100);
+    }, 500);
   });
 }
 
 function nhanBien_taikhoan() {
-  const x = String(sessionStorage.getItem("bienX"));
-  setTimeout(() => {
-    if (x !== null && x !== "undefined" && x !== "" && x !== "null") {
-      showContent(x);
-      sessionStorage.setItem("bienX", "");
-    }
-  }, 100);
+  let x = String(sessionStorage.getItem("bienX"));
+  // Lấy tất cả các button trong danh sách có id là 'nav-list'
+  const buttons = document.querySelectorAll("#nav-list button");
+  const tabPanes = document.querySelectorAll("#tab_content .tab-pane");
 
-  showContent((contentId = "f-vv"));
-
-  // Sự kiện click
   document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-      const dichvu = document.querySelectorAll(".f-link");
+    // Kiểm tra nếu x là null hoặc rỗng thì chọn button đầu tiên và tab pane đầu tiên
+    if (x == null || x == "undefined" || x == "" || x == "null") {
+      const firstButton = buttons[0];
+      const firstTabPane = tabPanes[0];
 
-      dichvu.forEach(function (element) {
+      firstButton.classList.add("active");
+      firstTabPane.classList.add("show", "active");
+
+      sessionStorage.setItem("bienX", "");
+      return;
+    }
+
+    buttons.forEach((button) => {
+      // Lấy giá trị của thuộc tính data-bs-target
+      const ariaControls = button.getAttribute("aria-controls");
+      const tabPane = document.getElementById(ariaControls);
+
+      button.addEventListener("click", () => {
+        sessionStorage.setItem("bienX", "f-" + ariaControls);
+      });
+
+      if (x == "f-" + ariaControls) {
+        button.classList.add("active");
+        tabPane.classList.add("show", "active");
+        // sessionStorage.setItem("bienX", "");
+      } else {
+        button.classList.remove("active");
+        tabPane.classList.remove("show", "active");
+      }
+    });
+
+    setTimeout(() => {
+      const fLink = document.querySelectorAll(".f-link");
+
+      fLink.forEach(function (element) {
         element.addEventListener("click", function (event) {
           if (
             this.id == "f-bdktk" ||
@@ -401,16 +500,27 @@ function nhanBien_taikhoan() {
             this.id == "f-tb"
           ) {
             event.preventDefault();
-            showContent(this.id);
+            buttons.forEach((button) => {
+              const ariaControls = button.getAttribute("aria-controls");
+              const tabPane = document.getElementById(ariaControls);
+              if (this.id == "f-" + ariaControls) {
+                button.classList.add("active");
+                tabPane.classList.add("show", "active");
+                // sessionStorage.setItem("bienX", "");
+              } else {
+                button.classList.remove("active");
+                tabPane.classList.remove("show", "active");
+              }
+            });
+
             setTimeout(() => {
               scrollToElement("header");
-            }, 100);
-          } else {
-            sessionStorage.setItem("bienX", this.id);
+            }, 10);
           }
+          sessionStorage.setItem("bienX", this.id);
         });
       });
-    }, 100);
+    }, 500);
   });
 }
 
