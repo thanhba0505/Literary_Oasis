@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <title>Custom Modal Position</title>
+
+  <style>
+    .custom-popover {
+      --bs-popover-max-width: 200px;
+      --bs-popover-border-color: var(--bd-violet-bg);
+      --bs-popover-header-bg: var(--bd-violet-bg);
+      --bs-popover-header-color: var(--bs-white);
+      --bs-popover-body-padding-x: 1rem;
+      --bs-popover-body-padding-y: .5rem;
+    }
+  </style>
+</head>
+<body class="bg-danger">
+  <div class="container mt-5">
+    <!-- Button trigger modal -->
+    <div class="">
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="top" data-bs-content="Top popover">
+        Popover on top
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="right" data-bs-content="Right popover">
+        Popover on right
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="bottom" data-bs-content="Bottom popover">
+        Popover on bottom
+      </button>
+      <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="left" data-bs-content="Left popover">
+        Popover on left
+      </button>
+
+
+      <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+        data-bs-title="Dismissible popover"
+        data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>
+
+
+      <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="right"
+        data-bs-custom-class="custom-popover" data-bs-title="Custom popover"
+        data-bs-content="This popover is themed via CSS variables.">
+        Custom popover
+      </button>
+
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script>
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    const popover = new bootstrap.Popover('.popover-dismiss', {
+      trigger: 'focus'
+    })
+  </script>
+</body>
+</html>

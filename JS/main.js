@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addHTML() {
-    fetch("../HTML/--header.html")
-      .then((response) => response.text())
-      .then((data) => {
-        const headerElements = document.querySelectorAll(".header");
-        headerElements.forEach((element) => {
-          element.innerHTML = data;
-        });
-      });
+    // fetch("../HTML/--header.html")
+    //   .then((response) => response.text())
+    //   .then((data) => {
+    //     const headerElements = document.querySelectorAll(".header");
+    //     headerElements.forEach((element) => {
+    //       element.innerHTML = data;
+    //     });
+    //   });
 
     fetch("../HTML/--footer.html")
       .then((response) => response.text())
@@ -51,6 +51,63 @@ document.addEventListener("mousedown", function (e) {
 });
 
 // FUNCTION ----------------------------
+
+function login_register() {
+  let x = String(sessionStorage.getItem("login_register"));
+
+  const buttons = document.querySelectorAll("#nav-login-register button");
+  const tabPanes = document.querySelectorAll("#tab_content .tab-pane");
+
+  if (x == null || x == "undefined" || x == "" || x == "null") {
+    const firstButton = buttons[0];
+    const firstTabPane = tabPanes[0];
+
+    firstButton.classList.add("active");
+    firstTabPane.classList.add("show", "active");
+
+    sessionStorage.setItem("login_register", "");
+    // return;
+  }
+
+  buttons.forEach((button) => {
+    // Lấy giá trị của thuộc tính data-bs-target
+    const ariaControls = button.getAttribute("aria-controls");
+    const tabPane = document.getElementById(ariaControls);
+
+    button.addEventListener("click", () => {
+      sessionStorage.setItem("login_register", ariaControls);
+    });
+
+    if (x == ariaControls) {
+      button.classList.add("active");
+      tabPane.classList.add("show", "active");
+    } else {
+      button.classList.remove("active");
+      tabPane.classList.remove("show", "active");
+    }
+  });
+}
+
+function home() {
+  const btnLogin = document.getElementById("btn_login");
+  const btnRegister = document.getElementById("btn_register");
+
+  btnLogin.addEventListener("click", function () {
+    sessionStorage.setItem("login_register", btnLogin.id);
+    // alert(String(sessionStorage.getItem("login_register")))
+  });
+  btnRegister.addEventListener("click", function () {
+    sessionStorage.setItem("login_register", btnRegister.id);
+    // alert(String(sessionStorage.getItem("login_register")))
+  });
+
+  const btnNotification = document.getElementById("btn_notification");
+
+  btnNotification.addEventListener("click", function () {
+    sessionStorage.setItem("bienX", "f-tb");
+    // alert(String(sessionStorage.getItem("login_register")))
+  });
+}
 
 function setupCounter() {
   document.addEventListener("DOMContentLoaded", function () {
@@ -117,105 +174,6 @@ function updateClock() {
   numSeconds.forEach((element) => {
     element.textContent = seconds;
   });
-}
-
-function acount() {
-  const formButtonsDangnhap = document.querySelectorAll(".dangnhap");
-  const formButtonsDangky = document.querySelectorAll(".dangky");
-  const formGroup = document.querySelectorAll(".dangnhap-dangky");
-
-  formButtonsDangnhap.forEach((button) => {
-    button.addEventListener("click", changeContentDangnhap);
-  });
-
-  formButtonsDangky.forEach((button) => {
-    button.addEventListener("click", changeContentDangky);
-  });
-
-  // Lấy tham số từ URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const action = urlParams.get("action");
-
-  // Nếu tham số action là "login", thực hiện đăng nhập
-  if (action === "login") {
-    changeContentDangnhap();
-  }
-
-  // Nếu tham số action là "register", thực hiện đăng ký
-  else if (action === "register") {
-    changeContentDangky();
-  }
-
-  // Nếu tham số action là null thì mặc định Đăng nhập
-  else if (action === null) {
-    changeContentDangnhap();
-  }
-
-  function changeContentDangnhap() {
-    fetch("../HTML/--login.html")
-      .then((response) => response.text())
-      .then((data) => {
-        formGroup.forEach((element) => {
-          // Thêm lớp "hidden" để ẩn nội dung
-          setTimeout(() => {
-            element.classList.add("transition-opacity");
-          }, 10);
-          element.classList.add("opacity-0");
-
-          // Đặt nội dung mới
-          element.innerHTML = data;
-
-          // Loại bỏ lớp "hidden" để hiển thị nội dung với hiệu ứng mượt
-          setTimeout(() => {
-            element.classList.remove("opacity-0");
-          }, 10);
-          element.classList.remove("transition-opacity");
-        });
-
-        formButtonsDangnhap.forEach((element) => {
-          element.classList.add("form-active");
-          element.classList.remove("form-disabled");
-        });
-
-        formButtonsDangky.forEach((element) => {
-          element.classList.add("form-disabled");
-          element.classList.remove("form-active");
-        });
-      });
-  }
-
-  function changeContentDangky() {
-    fetch("../HTML/--register.html")
-      .then((response) => response.text())
-      .then((data) => {
-        formGroup.forEach((element) => {
-          // Thêm lớp "hidden" để ẩn nội dung
-          setTimeout(() => {
-            element.classList.add("transition-opacity");
-          }, 10);
-          element.classList.add("opacity-0");
-
-          // Đặt nội dung mới
-          element.innerHTML = data;
-
-          // Loại bỏ lớp "hidden" để hiển thị nội dung với hiệu ứng mượt
-          setTimeout(() => {
-            element.classList.remove("opacity-0");
-          }, 10);
-          element.classList.remove("transition-opacity");
-        });
-
-        formButtonsDangky.forEach((element) => {
-          element.classList.add("form-active");
-          element.classList.remove("form-disabled");
-        });
-
-        formButtonsDangnhap.forEach((element) => {
-          element.classList.add("form-disabled");
-          element.classList.remove("form-active");
-        });
-      });
-  }
 }
 
 function showSidebar() {

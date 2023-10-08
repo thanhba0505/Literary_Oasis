@@ -21,17 +21,82 @@
     <div class="row bg-white justify-content-center pt-4 pb-5">
       <div class="col-md-5 col-sm-8 col-12">
 
-        <div class="d-flex mb-md-2 mb-4">
-          <button class="col-6 border-0 bg-white dangnhap">Đăng nhập
-            <hr class="my-1">
-          </button>
-          <button class="col-6 border-0 bg-white dangky">Đăng ký
-            <hr class="my-1">
-          </button>
+        <!-- Nav Tab -->
+        <ul class="nav nav-underline nav-fill" role="tablist" id="nav-login-register">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fs-5 text-danger active" data-bs-toggle="tab" data-bs-target="#btn_login" type="button"
+              role="tab" aria-controls="btn_login">Đăng nhập</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link fs-5 text-danger" data-bs-toggle="tab" data-bs-target="#btn_register" type="button"
+              role="tab" aria-controls="btn_register">Đăng ký</button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="tab_content">
+          <div class="tab-pane fade show active" id="btn_login" role="tabpanel" tabindex="0">
+            <div class="d-flex flex-column mt-3">
+              <form id="loginForm" action="../HTML/account.html">
+                <div class="form-group mb-md-2 mb-4">
+                  <label for="loginEmailPhone" class="pb-1">Số điện thoại/Email</label>
+                  <input type="text" class="form-control" id="loginEmailPhone"
+                    placeholder="Nhập số điện thoại hoặc Email">
+                </div>
+                <div class="form-group mb-md-3 mb-4">
+                  <label for="loginPassword" class="pb-1">Mật khẩu</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="form-group form-check mb-md-2 mb-3">
+                  <a href="#" class="float-end text-danger">Quên mật khẩu?</a>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-outline-danger btn-hover w-100">Đăng nhập</button>
+
+              </form>
+
+              <hr class="mt-md-3 mt-4 mb-md-2 mb-3 flex-1">
+
+              <p class="text-center mb-md-2 mb-3">Hoặc đăng nhập bằng</p>
+              <div class="text-center">
+                <a href="#" class="btn btn-primary btn-hover w-100">Facebook</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="btn_register" role="tabpanel" tabindex="0">
+            <div class="d-flex flex-column mt-3">
+              <form id="registerForm" action="../HTML/account.html">
+                <div class="form-group mb-md-2 mb-4">
+                  <label for="registerPhoneNumber" class="pb-1">Số điện thoại</label>
+                  <input type="text" class="form-control" id="registerPhoneNumber" placeholder="Nhập số điện thoại">
+                </div>
+                <div class="form-group mb-md-2 mb-4">
+                  <label for="registerOTP" class="pb-1">Mã xác nhận OTP</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control me-3" id="registerOTP" placeholder="Nhập mã OTP">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="button">Lấy mã</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="registerNewPassword" class="pb-1">Tạo mật khẩu</label>
+                  <input type="password" class="form-control" id="registerNewPassword" placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="form-check fs-7 mt-4 flex-1">
+                  <input type="checkbox" class="form-check-input" id="agreeCheckbox">
+                  <label class="form-check-label" for="agreeCheckbox">Tôi đã đồng ý với <a href="#">điều khoản dịch
+                      vụ</a> và <a href="#">chính sách bảo mật</a>.</label>
+                </div>
+
+                <button type="submit" class="btn btn-outline-danger btn-hover mt-3 w-100">Đăng ký</button>
+
+              </form>
+            </div>
+          </div>
         </div>
-
-        <div class="dangnhap-dangky d-flex flex-column"></div>
-
       </div>
     </div>
   </div>
@@ -46,7 +111,7 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script>
-    acount();
+    login_register();
   </script>
 </body>
 </html>
