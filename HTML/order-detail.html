@@ -24,8 +24,125 @@
       </div>
     </div>
 
-    <div class="row bg-white">
-      
+    <div class="row bg-white pb-1">
+      <div class="d-flex align-items-center pb-3 ps-md-4 ps-3 pb-md-1 py-2">
+        <i class="fa-solid fa-circle-info"></i>
+        <span class="ms-2 text-nowrap h5 mb-0">THÔNG TIN ĐẶT HÀNG</span>
+      </div>
+
+      <div class="px-md-5 px-3">
+        <table class="table table-borderless mb-0">
+          <tbody>
+            <tr>
+              <td>Mã đơn hàng: </td>
+              <td>LIH73DHKJ</td>
+            </tr>
+            <tr>
+              <td>Ngày mua:</td>
+              <td>01/01/2003</td>
+            </tr>
+            <tr>
+              <td>Địa chỉ giao hàng:</td>
+              <td id="diachi">Lầu 99, số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</td>
+            </tr>
+            <tr>
+              <td>Phương thức vận chuyển:</td>
+              <td id="ptvc">Giao hàng tiêu chuẩn: 19.000đ (3-5 ngày)</td>
+            </tr>
+            <tr>
+              <td>Phương thức thanh toán:</td>
+              <td id="pttt">Ví Moca trên ứng dụng Grap</td>
+            </tr>
+            <tr>
+              <td>Thành viên Literary Oasis</td>
+              <td id="tvlo">
+                <p>Sử dụng L-Point: có<span id="lpoint"></span></p>
+                <p>Sử dụng mã freeship: có<span id="freeship"></span></p>
+              </td>
+            </tr>
+            <tr>
+              <td>Mã khuyến mãi / Quà tặng</td>
+              <td id="makmqt">INHF8W9JKD</td>
+            </tr>
+            <tr>
+              <td>Sản phẩm</td>
+              <td>
+                <p>The Best Of Attack On Titan: In Color Vol. 2 <span>x4</span></p>
+              </td>
+            </tr>
+            <tr>
+              <td>Tính tiền đơn hàng:</td>
+              <td>
+                <p>Thành tiền: <span id="thanhTien">99.000đ</span></p>
+                <p>Phí vận chuyển: <span id="phiVanChuyen">19.000đ</span></p>
+                <p>Tổng tiền: <span id="tongTien"></span>118.000đ</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Thông tin khác</td>
+              <td id="ttk">
+                <p>Ghi chú: <span id="textghichu">ok đây là ghi chú</span></p>
+                <p>Xuất hóa đơn: <span id="gtgt">có</span></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex align-items-center pb-3 ps-md-4 ps-3 pb-md-1 py-3">
+        <span class="text-nowrap h5 mb-0">LỊCH SỬ LIÊN LẠC</span>
+      </div>
+
+      <div class="accordion px-md-5 mb-3" id="accordionExample">
+        <div class="accordion-item my-2">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed input-focus-none py-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Quá trình giao hàng
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="list-unstyled">
+                <li class="border-bottom">
+                  <p class="mb-0 mt-1">Đơn hàng 30601775_401014301 của Quý khách đã được đối tác vận chuyển xác nhận giao
+                    thành công. Cám ơn
+                    Quý khách đã mua hàng tại Fahasa.com.</p>
+                  <p class="fs-7 text-end mb-2">2022-05-21 11:15:26</p>
+                </li>
+                <li class="border-bottom">
+                  <p class="mb-0 mt-1">FAHASA đã cố gắng giao đơn hàng 30601775_401014301 đến Quý khách nhưng không thành
+                    công. Quý khách vui lòng lưu ý nghe máy khi có nhân viên liên hệ giao hàng lại. Cảm ơn Quý khách đã
+                    mua hàng tại FAHASA. Hỗ trợ: 1900636467 - cskh@fahasa.com.vn.</p>
+                  <p class="fs-7 text-end mb-2">2022-05-20 16:03:15</p>
+                </li>
+                <li class="border-bottom">
+                  <p class="mb-0 mt-1">Đh 30601775_401014301 của quý khách đã được bàn giao cho bên vận chuyển. Dự kiến ngày
+                    20-05-2022 đh sẽ được giao đến. Quý khách vui lòng nghe máy khi có NV liên hệ giao hàng.
+                  </p>
+                  <p class="fs-7 text-end mb-2">2022-05-20 11:02:42</p>
+                </li>
+                <li class="border-bottom">
+                  <p class="mb-0 mt-1">Đơn hàng 30601775_401014301 của quý khách đã được đóng gói xong. Đơn hàng sẵn sàng chờ bàn giao cho đối tác vận chuyển.
+
+                    </p>
+                  <p class="fs-7 text-end mb-2">2022-05-20 08:12:48</p>
+                </li>
+                <li class="border-bottom">
+                  <p class="mb-0 mt-1">Đơn hàng 401014301 bao gồm sản phẩm đặt trước: Nhà Có 5 Nàng Dâu - Tập 13, dự kiến có hàng ngày 20-05-2022. Quý khách vui lòng xem chi tiết trong đơn hàng. Cám ơn quý khách đã mua hàng tại Fahasa.com. Hỗ trợ: 1900636467 - cskh@fahasa.com.vn.
+
+                    </p>
+                  <p class="fs-7 text-end mb-2">2022-05-17 08:31:03</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="col-12 py-1 px-md-5 pb-4 d-flex justify-content-end flex-wrap">
+        <a href="../HTML/account.html" class="col-md-3 col-12 d-block text-danger btn btn-light border-2 border" onclick="javascript: setX('f-dhct')">Đơn hàng của tôi</a>
+      </div>
     </div>
   </div>
 

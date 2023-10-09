@@ -375,6 +375,7 @@ function nhanBien_hotro() {
 
 function nhanBien_taikhoan() {
   let x = String(sessionStorage.getItem("bienX"));
+  // alert(x)
   // Lấy tất cả các button trong danh sách có id là 'nav-list'
   const buttons = document.querySelectorAll("#nav-list button");
   const tabPanes = document.querySelectorAll("#tab_content .tab-pane");
