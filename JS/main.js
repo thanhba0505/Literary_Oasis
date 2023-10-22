@@ -659,3 +659,133 @@ function inputCheckText(check, text) {
 function setX(x) {
   sessionStorage.setItem("bienX", x);
 }
+
+$(document).ready(function () {
+  const input1 = $("#loginEmailPhone");
+  const input2 = $("#loginPassword");
+  const btn = $("#dangNhap");
+
+  $(input1).keypress(function (e) {
+    if (e.which === 13) {
+      $(input2).focus();
+    }
+  });
+
+  $(input2).keypress(function (e) {
+    if (e.which === 13) {
+      $(input2).blur();
+      $(btn).click();
+    }
+  });
+
+  btn.click(function (e) {
+    const regexSDTEmail = /^(?:0[0-9]{9,10}|[A-Za-z0-9.]+@gmail\.com)$/;
+    const regexMatKhau = /^[A-Za-z0-9!@#$%^&*()_+]{6,15}$/;
+    let check = 0;
+
+    if (regexSDTEmail.test(input1.val())) {
+      $("#error_dangNhap1").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangNhap1").css("display", "inline-block");
+      e.preventDefault();
+    }
+
+    if (regexMatKhau.test(input2.val())) {
+      $("#error_dangNhap2").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangNhap2").css("display", "inline-block");
+      e.preventDefault();
+    }
+
+    if (check === 2) {
+      setX("f-tttk");
+    }
+  });
+});
+
+$(document).ready(function () {
+  const input1 = $("#registerPhoneNumber");
+  const input2 = $("#registerOTP");
+  const input3 = $("#registerNewPassword");
+  const input4 = $("#registerRepeatPassword");
+  const input5 = $("#agreeCheckbox");
+  const btn = $("#dangKy");
+
+  $(input1).keypress(function (e) {
+    if (e.which === 13) {
+      $(input2).focus();
+    }
+  });
+
+  $(input2).keypress(function (e) {
+    if (e.which === 13) {
+      $(input3).focus();
+    }
+  });
+
+  $(input3).keypress(function (e) {
+    if (e.which === 13) {
+      $(input4).focus();
+    }
+  });
+
+  $(input4).keypress(function (e) {
+    if (e.which === 13) {
+      $(input4).blur();
+      $(btn).click();
+    }
+  });
+
+  btn.click(function (e) {
+    const regexSDT = /^0[0-9]{9,10}$/;
+    const regexOTP = /^[0-9]{6,6}$/;
+    const regexMatKhau = /^[A-Za-z0-9!@#$%^&*()_+]{6,15}$/;
+    let check = 0;
+
+    if (regexSDT.test(input1.val())) {
+      $("#error_dangky1").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangky1").css("display", "inline-block");
+      e.preventDefault();
+    }
+
+    const OTP_test = 123456; // giả sử
+    if (regexOTP.test(input2.val()) && input2.val() == "123456") {
+      $("#error_dangky2").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangky2").css("display", "inline-block");
+      e.preventDefault();
+    }
+
+    if (regexMatKhau.test(input3.val())) {
+      $("#error_dangky3").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangky3").css("display", "inline-block");
+      e.preventDefault();
+    }
+
+    if (regexMatKhau.test(input4.val()) && input3.val() == input4.val()) {
+      $("#error_dangky4").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangky4").css("display", "inline-block");
+      e.preventDefault();
+    }
+
+    if (input5.is(":checked")) {
+      $("#error_dangky5").css("display", "none");
+      check += 1;
+    } else {
+      $("#error_dangky5").css("display", "inline-block");
+      e.preventDefault();
+    }
+    if (check === 5) {
+      setX("f-tttk");
+    }
+  });
+});

@@ -38,21 +38,29 @@
           <div class="tab-pane fade show active" id="tab_login" role="tabpanel" tabindex="0">
             <div class="d-flex flex-column mt-3">
               <form id="loginForm" action="../HTML/account.html">
+
                 <div class="form-group mb-md-2 mb-4">
-                  <label for="loginEmailPhone" class="pb-1">Số điện thoại/Email</label>
+                  <label for="loginEmailPhone" class="pb-1">Số điện thoại/Email
+                    <span class="text-danger text-end ms-2" style="display: none;" id="error_dangNhap1">(Error!)</span>
+                  </label>
                   <input type="text" class="form-control" id="loginEmailPhone"
                     placeholder="Nhập số điện thoại hoặc Email">
                 </div>
+
                 <div class="form-group mb-md-3 mb-4">
-                  <label for="loginPassword" class="pb-1">Mật khẩu</label>
-                  <input type="password" class="form-control" id="loginPassword" placeholder="Nhập mật khẩu">
+                  <label for="loginPassword" class="pb-1">Mật khẩu
+                    <span class="text-danger text-end ms-2" style="display: none;"
+                      id="error_dangNhap2">(Error!)</span></label>
+                  <input type="password" class="form-control" id="loginPassword"
+                    placeholder="Nhập mật khẩu (6-15 ký tự)">
                 </div>
 
                 <div class="form-group form-check mb-md-2 mb-3">
                   <a href="#" class="float-end text-danger">Quên mật khẩu?</a>
                 </div>
 
-                <button type="submit" class="btn btn-block btn-outline-danger btn-hover w-100" onclick="javascrip: setX('f-bdktk');">Đăng nhập</button>
+                <button type="submit" class="btn btn-block btn-outline-danger btn-hover w-100" id="dangNhap">Đăng
+                  nhập</button>
 
               </form>
 
@@ -68,30 +76,51 @@
             <div class="d-flex flex-column mt-3">
               <form id="registerForm" action="../HTML/account.html">
                 <div class="form-group mb-md-2 mb-4">
-                  <label for="registerPhoneNumber" class="pb-1">Số điện thoại</label>
+                  <label for="registerPhoneNumber" class="pb-1">Số điện thoại
+                    <span class="text-danger text-end ms-2" style="display: none;" id="error_dangky1">(Error!)</span>
+                  </label>
                   <input type="text" class="form-control" id="registerPhoneNumber" placeholder="Nhập số điện thoại">
                 </div>
+
                 <div class="form-group mb-md-2 mb-4">
-                  <label for="registerOTP" class="pb-1">Mã xác nhận OTP</label>
+                  <label for="registerOTP" class="pb-1">Mã xác nhận OTP
+                    <span class="text-danger text-end ms-2" style="display: none;" id="error_dangky2">(Error!)</span>
+                  </label>
                   <div class="input-group">
                     <input type="text" class="form-control me-3" id="registerOTP" placeholder="Nhập mã OTP">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">Lấy mã</button>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="popover" 
+                        data-bs-placement="top" data-bs-content="Giả sử OTP: 123456">
+                        Lấy mã
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="registerNewPassword" class="pb-1">Tạo mật khẩu</label>
+
+                <div class="form-group mb-md-2 mb-4">
+                  <label for="registerNewPassword" class="pb-1">Tạo mật khẩu
+                    <span class="text-danger text-end ms-2" style="display: none;" id="error_dangky3">(Error!)</span>
+                  </label>
                   <input type="password" class="form-control" id="registerNewPassword" placeholder="Nhập mật khẩu">
+                </div>
+
+                <div class="form-group">
+                  <label for="registerRepeatPassword" class="pb-1">Xác nhận mật khẩu
+                    <span class="text-danger text-end ms-2" style="display: none;" id="error_dangky4">(Error!)</span>
+                  </label>
+                  <input type="password" class="form-control" id="registerRepeatPassword"
+                    placeholder="Nhập lại mật khẩu">
                 </div>
 
                 <div class="form-check fs-7 mt-4 flex-1">
                   <input type="checkbox" class="form-check-input" id="agreeCheckbox">
                   <label class="form-check-label" for="agreeCheckbox">Tôi đã đồng ý với <a href="#">điều khoản dịch
-                      vụ</a> và <a href="#">chính sách bảo mật</a>.</label>
+                      vụ</a> và <a href="#">chính sách bảo mật</a>.
+                    <span class="text-danger text-end ms-2" style="display: none;" id="error_dangky5">(Error!)</span>
+                  </label>
                 </div>
 
-                <button type="submit" class="btn btn-outline-danger btn-hover mt-3 w-100" onclick="javascrip: setX('f-bdktk');">Đăng ký</button>
+                <button type="submit" class="btn btn-outline-danger btn-hover mt-3 w-100" id="dangKy">Đăng ký</button>
 
               </form>
             </div>
@@ -106,13 +135,15 @@
 
 
   <!-- <script src="../JS/index.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../JS/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <script>
     login_register();
-    
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
   </script>
 </body>
 </html>
