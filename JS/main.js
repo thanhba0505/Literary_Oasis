@@ -790,3 +790,107 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  function name() {
+    function areAllCheckboxesChecked(_class) {
+      let allChecked = true;
+      $(_class).each(function () {
+        if (!$(this).prop("checked")) {
+          allChecked = false;
+          return false; // Dừng việc lặp khi gặp checkbox chưa chọn
+        }
+      });
+      return allChecked;
+    }
+
+    function checkAll() {
+      if (areAllCheckboxesChecked(".check_cart")) {
+        $("#checkAll").prop("checked", true);
+      } else {
+        $("#checkAll").prop("checked", false);
+      }
+    }
+
+    checkAll();
+
+    $(".check_cart").change(function (e) {
+      checkAll();
+      thanhTien();
+    });
+
+    thanhTien();
+
+    $("._btn").each(function (index, element) {
+      const i = parseInt(index / 2) + 1;
+
+      $("#quantity" + i).blur(function (e) {
+        if (/^\d+$/.test($("#quantity" + i).val())) {
+          $("#gia" + i).text(
+            dinhDangSo(
+              locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"
+            )
+          );
+          thanhTien();
+        } else {
+          $("#quantity" + i).val(1);
+        }
+        console.log(i);
+      });
+
+      $(element).click(function (e) {
+        $("#gia" + i).text(
+          dinhDangSo(
+            locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"
+          )
+        );
+        thanhTien();
+      });
+    });
+
+    function thanhTien() {
+      let thanhTien = 0;
+      $(".check_cart").each(function (index, element) {
+        const i = parseInt(index + 1);
+
+        if ($("#check" + i).prop("checked")) {
+          thanhTien += locSO($("#gia" + i).text());
+        }
+      });
+
+      $("#thanhTien").text(dinhDangSo(thanhTien) + "đ");
+
+      $("#tongTien").text(dinhDangSo(parseInt(thanhTien * 1.1)) + "đ");
+
+      return dinhDangSo(thanhTien) + "đ";
+    }
+  }
+
+  name();
+
+  $(".btn_trash").each(function (index, element) {
+    $(this).click(function (e) {
+      const i = index + 1;
+      // $("#check" + i).prop("checked", false);
+      name();
+      $("#cart" + i).remove();
+    });
+  });
+});
+
+function locSO(str) {
+  // Sử dụng biểu thức chính quy để tìm tất cả các số trong chuỗi
+  const numbers = str.match(/\d+/g);
+
+  if (numbers) {
+    // Nếu có số, ghép chúng lại thành một chuỗi và chuyển thành số
+    const combinedNumber = parseInt(numbers.join(""), 10);
+    return combinedNumber;
+  } else {
+    // Nếu không có số, trả về null hoặc một giá trị mặc định khác tùy theo trường hợp
+    return null;
+  }
+}
+
+function dinhDangSo(number) {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
