@@ -791,7 +791,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  function name() {
+  function checkCart() {
     function areAllCheckboxesChecked(_class) {
       let allChecked = true;
       $(_class).each(function () {
@@ -811,7 +811,22 @@ $(document).ready(function () {
       }
     }
 
+    function checkToAll() {
+      $("#checkAll").click(function () {
+        if (areAllCheckboxesChecked(".check_cart")) {
+          $(".check_cart").each(function () {
+            $(this).prop("checked", false);
+          });
+        } else {
+          $(".check_cart").each(function () {
+            $(this).prop("checked", true);
+          });
+        }
+      });
+    }
+
     checkAll();
+    checkToAll();
 
     $(".check_cart").change(function (e) {
       checkAll();
@@ -865,16 +880,7 @@ $(document).ready(function () {
     }
   }
 
-  name();
-
-  $(".btn_trash").each(function (index, element) {
-    $(this).click(function (e) {
-      const i = index + 1;
-      // $("#check" + i).prop("checked", false);
-      name();
-      $("#cart" + i).remove();
-    });
-  });
+  checkCart();
 });
 
 function locSO(str) {
