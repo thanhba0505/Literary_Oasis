@@ -978,5 +978,5 @@ function cart_header() {
         $("#gia_" + i).text(dinhDangSo(locSO($("#donGia_" + i).text()) * $("#quantity_" + i).val() + "đ"));
       });
     });
-  }, 100);
+  }, 500);
 }
