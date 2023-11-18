@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   repeatApp();
   addHTML();
+  cart_header();
+
   // function------
   function repeatApp() {
     const app = document.querySelectorAll(".body");
@@ -91,25 +93,19 @@ function setupCounter() {
       });
     });
 
-    const plusButtons = document.querySelectorAll(
-      ".btn-number[data-type='plus']"
-    );
-    const minusButtons = document.querySelectorAll(
-      ".btn-number[data-type='minus']"
-    );
+    const plusButtons = document.querySelectorAll(".btn-number[data-type='plus']");
+    const minusButtons = document.querySelectorAll(".btn-number[data-type='minus']");
 
     plusButtons.forEach(function (button) {
       button.addEventListener("click", function () {
-        const inputField =
-          this.closest(".input-group").querySelector(".input-number");
+        const inputField = this.closest(".input-group").querySelector(".input-number");
         inputField.value = parseInt(inputField.value) + 1;
       });
     });
 
     minusButtons.forEach(function (button) {
       button.addEventListener("click", function () {
-        const inputField =
-          this.closest(".input-group").querySelector(".input-number");
+        const inputField = this.closest(".input-group").querySelector(".input-number");
         const value = parseInt(inputField.value);
         if (value > 0) {
           inputField.value = value - 1;
@@ -266,13 +262,7 @@ function nhanBien_dichvu() {
 
       fLink.forEach(function (element) {
         element.addEventListener("click", function (event) {
-          if (
-            this.id == "f-dksd" ||
-            this.id == "f-csbmttcn" ||
-            this.id == "f-csbmtt" ||
-            this.id == "f-gtlo" ||
-            this.id == "f-htttns"
-          ) {
+          if (this.id == "f-dksd" || this.id == "f-csbmttcn" || this.id == "f-csbmtt" || this.id == "f-gtlo" || this.id == "f-htttns") {
             event.preventDefault();
             buttons.forEach((button) => {
               const ariaControls = button.getAttribute("aria-controls");
@@ -341,13 +331,7 @@ function nhanBien_hotro() {
 
       fLink.forEach(function (element) {
         element.addEventListener("click", function (event) {
-          if (
-            this.id == "f-csdtht" ||
-            this.id == "f-csbhbh" ||
-            this.id == "f-csvc" ||
-            this.id == "f-csks" ||
-            this.id == "f-ptttvxhd"
-          ) {
+          if (this.id == "f-csdtht" || this.id == "f-csbhbh" || this.id == "f-csvc" || this.id == "f-csks" || this.id == "f-ptttvxhd") {
             event.preventDefault();
             buttons.forEach((button) => {
               const ariaControls = button.getAttribute("aria-controls");
@@ -417,15 +401,7 @@ function nhanBien_taikhoan() {
 
       fLink.forEach(function (element) {
         element.addEventListener("click", function (event) {
-          if (
-            this.id == "f-bdktk" ||
-            this.id == "f-tttk" ||
-            this.id == "f-sdc" ||
-            this.id == "f-dhct" ||
-            this.id == "f-vv" ||
-            this.id == "f-tkl" ||
-            this.id == "f-tb"
-          ) {
+          if (this.id == "f-bdktk" || this.id == "f-tttk" || this.id == "f-sdc" || this.id == "f-dhct" || this.id == "f-vv" || this.id == "f-tkl" || this.id == "f-tb") {
             event.preventDefault();
             buttons.forEach((button) => {
               const ariaControls = button.getAttribute("aria-controls");
@@ -484,6 +460,136 @@ function login_register() {
       } else {
         button.classList.remove("active");
         tabPane.classList.remove("show", "active");
+      }
+    });
+  });
+
+  $(document).ready(function () {
+    const input1 = $("#loginEmailPhone");
+    const input2 = $("#loginPassword");
+    const btn = $("#dangNhap");
+
+    $(input1).keypress(function (e) {
+      if (e.which === 13) {
+        $(input2).focus();
+      }
+    });
+
+    $(input2).keypress(function (e) {
+      if (e.which === 13) {
+        $(input2).blur();
+        $(btn).click();
+      }
+    });
+
+    btn.click(function (e) {
+      const regexSDTEmail = /^(?:0[0-9]{9,10}|[A-Za-z0-9.]+@gmail\.com)$/;
+      const regexMatKhau = /^[A-Za-z0-9!@#$%^&*()_+]{6,15}$/;
+      let check = 0;
+
+      if (regexSDTEmail.test(input1.val())) {
+        $("#error_dangNhap1").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangNhap1").css("display", "inline-block");
+        e.preventDefault();
+      }
+
+      if (regexMatKhau.test(input2.val())) {
+        $("#error_dangNhap2").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangNhap2").css("display", "inline-block");
+        e.preventDefault();
+      }
+
+      if (check === 2) {
+        setX("f-tttk");
+      }
+    });
+  });
+
+  $(document).ready(function () {
+    const input1 = $("#registerPhoneNumber");
+    const input2 = $("#registerOTP");
+    const input3 = $("#registerNewPassword");
+    const input4 = $("#registerRepeatPassword");
+    const input5 = $("#agreeCheckbox");
+    const btn = $("#dangKy");
+
+    $(input1).keypress(function (e) {
+      if (e.which === 13) {
+        $(input2).focus();
+      }
+    });
+
+    $(input2).keypress(function (e) {
+      if (e.which === 13) {
+        $(input3).focus();
+      }
+    });
+
+    $(input3).keypress(function (e) {
+      if (e.which === 13) {
+        $(input4).focus();
+      }
+    });
+
+    $(input4).keypress(function (e) {
+      if (e.which === 13) {
+        $(input4).blur();
+        $(btn).click();
+      }
+    });
+
+    btn.click(function (e) {
+      const regexSDT = /^0[0-9]{9,10}$/;
+      const regexOTP = /^[0-9]{6,6}$/;
+      const regexMatKhau = /^[A-Za-z0-9!@#$%^&*()_+]{6,15}$/;
+      let check = 0;
+
+      if (regexSDT.test(input1.val())) {
+        $("#error_dangky1").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangky1").css("display", "inline-block");
+        e.preventDefault();
+      }
+
+      const OTP_test = 123456; // giả sử
+      if (regexOTP.test(input2.val()) && input2.val() == "123456") {
+        $("#error_dangky2").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangky2").css("display", "inline-block");
+        e.preventDefault();
+      }
+
+      if (regexMatKhau.test(input3.val())) {
+        $("#error_dangky3").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangky3").css("display", "inline-block");
+        e.preventDefault();
+      }
+
+      if (regexMatKhau.test(input4.val()) && input3.val() == input4.val()) {
+        $("#error_dangky4").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangky4").css("display", "inline-block");
+        e.preventDefault();
+      }
+
+      if (input5.is(":checked")) {
+        $("#error_dangky5").css("display", "none");
+        check += 1;
+      } else {
+        $("#error_dangky5").css("display", "inline-block");
+        e.preventDefault();
+      }
+      if (check === 5) {
+        setX("f-tttk");
       }
     });
   });
@@ -621,7 +727,7 @@ function btnGo() {
       timeoutId = setTimeout(() => {
         backToTopBtn.style.opacity = "0";
         isHidden = true;
-      }, 1000); // Thời gian ẩn sau 3 giây (3000ms)
+      }, 2000); // Thời gian ẩn sau 3 giây (3000ms)
     } else {
       backToTopBtn.style.opacity = "0";
       isHidden = true;
@@ -660,229 +766,6 @@ function setX(x) {
   sessionStorage.setItem("bienX", x);
 }
 
-$(document).ready(function () {
-  const input1 = $("#loginEmailPhone");
-  const input2 = $("#loginPassword");
-  const btn = $("#dangNhap");
-
-  $(input1).keypress(function (e) {
-    if (e.which === 13) {
-      $(input2).focus();
-    }
-  });
-
-  $(input2).keypress(function (e) {
-    if (e.which === 13) {
-      $(input2).blur();
-      $(btn).click();
-    }
-  });
-
-  btn.click(function (e) {
-    const regexSDTEmail = /^(?:0[0-9]{9,10}|[A-Za-z0-9.]+@gmail\.com)$/;
-    const regexMatKhau = /^[A-Za-z0-9!@#$%^&*()_+]{6,15}$/;
-    let check = 0;
-
-    if (regexSDTEmail.test(input1.val())) {
-      $("#error_dangNhap1").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangNhap1").css("display", "inline-block");
-      e.preventDefault();
-    }
-
-    if (regexMatKhau.test(input2.val())) {
-      $("#error_dangNhap2").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangNhap2").css("display", "inline-block");
-      e.preventDefault();
-    }
-
-    if (check === 2) {
-      setX("f-tttk");
-    }
-  });
-});
-
-$(document).ready(function () {
-  const input1 = $("#registerPhoneNumber");
-  const input2 = $("#registerOTP");
-  const input3 = $("#registerNewPassword");
-  const input4 = $("#registerRepeatPassword");
-  const input5 = $("#agreeCheckbox");
-  const btn = $("#dangKy");
-
-  $(input1).keypress(function (e) {
-    if (e.which === 13) {
-      $(input2).focus();
-    }
-  });
-
-  $(input2).keypress(function (e) {
-    if (e.which === 13) {
-      $(input3).focus();
-    }
-  });
-
-  $(input3).keypress(function (e) {
-    if (e.which === 13) {
-      $(input4).focus();
-    }
-  });
-
-  $(input4).keypress(function (e) {
-    if (e.which === 13) {
-      $(input4).blur();
-      $(btn).click();
-    }
-  });
-
-  btn.click(function (e) {
-    const regexSDT = /^0[0-9]{9,10}$/;
-    const regexOTP = /^[0-9]{6,6}$/;
-    const regexMatKhau = /^[A-Za-z0-9!@#$%^&*()_+]{6,15}$/;
-    let check = 0;
-
-    if (regexSDT.test(input1.val())) {
-      $("#error_dangky1").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangky1").css("display", "inline-block");
-      e.preventDefault();
-    }
-
-    const OTP_test = 123456; // giả sử
-    if (regexOTP.test(input2.val()) && input2.val() == "123456") {
-      $("#error_dangky2").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangky2").css("display", "inline-block");
-      e.preventDefault();
-    }
-
-    if (regexMatKhau.test(input3.val())) {
-      $("#error_dangky3").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangky3").css("display", "inline-block");
-      e.preventDefault();
-    }
-
-    if (regexMatKhau.test(input4.val()) && input3.val() == input4.val()) {
-      $("#error_dangky4").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangky4").css("display", "inline-block");
-      e.preventDefault();
-    }
-
-    if (input5.is(":checked")) {
-      $("#error_dangky5").css("display", "none");
-      check += 1;
-    } else {
-      $("#error_dangky5").css("display", "inline-block");
-      e.preventDefault();
-    }
-    if (check === 5) {
-      setX("f-tttk");
-    }
-  });
-});
-
-$(document).ready(function () {
-  function checkCart() {
-    function areAllCheckboxesChecked(_class) {
-      let allChecked = true;
-      $(_class).each(function () {
-        if (!$(this).prop("checked")) {
-          allChecked = false;
-          return false; // Dừng việc lặp khi gặp checkbox chưa chọn
-        }
-      });
-      return allChecked;
-    }
-
-    function checkAll() {
-      if (areAllCheckboxesChecked(".check_cart")) {
-        $("#checkAll").prop("checked", true);
-      } else {
-        $("#checkAll").prop("checked", false);
-      }
-    }
-
-    function checkToAll() {
-      $("#checkAll").click(function () {
-        if (areAllCheckboxesChecked(".check_cart")) {
-          $(".check_cart").each(function () {
-            $(this).prop("checked", false);
-          });
-        } else {
-          $(".check_cart").each(function () {
-            $(this).prop("checked", true);
-          });
-        }
-      });
-    }
-
-    checkAll();
-    checkToAll();
-
-    $(".check_cart").change(function (e) {
-      checkAll();
-      thanhTien();
-    });
-
-    thanhTien();
-
-    $("._btn").each(function (index, element) {
-      const i = parseInt(index / 2) + 1;
-
-      $("#quantity" + i).blur(function (e) {
-        if (/^\d+$/.test($("#quantity" + i).val())) {
-          $("#gia" + i).text(
-            dinhDangSo(
-              locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"
-            )
-          );
-          thanhTien();
-        } else {
-          $("#quantity" + i).val(1);
-        }
-        console.log(i);
-      });
-
-      $(element).click(function (e) {
-        $("#gia" + i).text(
-          dinhDangSo(
-            locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"
-          )
-        );
-        thanhTien();
-      });
-    });
-
-    function thanhTien() {
-      let thanhTien = 0;
-      $(".check_cart").each(function (index, element) {
-        const i = parseInt(index + 1);
-
-        if ($("#check" + i).prop("checked")) {
-          thanhTien += locSO($("#gia" + i).text());
-        }
-      });
-
-      $("#thanhTien").text(dinhDangSo(thanhTien) + "đ");
-
-      $("#tongTien").text(dinhDangSo(parseInt(thanhTien * 1.1)) + "đ");
-
-      return dinhDangSo(thanhTien) + "đ";
-    }
-  }
-
-  checkCart();
-});
-
 function locSO(str) {
   // Sử dụng biểu thức chính quy để tìm tất cả các số trong chuỗi
   const numbers = str.match(/\d+/g);
@@ -899,4 +782,201 @@ function locSO(str) {
 
 function dinhDangSo(number) {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+function cart() {
+  $(document).ready(function () {
+    function checkCart() {
+      function areAllCheckboxesChecked(_class) {
+        let allChecked = true;
+        $(_class).each(function () {
+          if (!$(this).prop("checked")) {
+            allChecked = false;
+            return false; // Dừng việc lặp khi gặp checkbox chưa chọn
+          }
+        });
+        return allChecked;
+      }
+
+      function checkAll() {
+        if (areAllCheckboxesChecked(".check_cart")) {
+          $("#checkAll").prop("checked", true);
+        } else {
+          $("#checkAll").prop("checked", false);
+        }
+      }
+
+      function checkToAll() {
+        $("#checkAll").click(function () {
+          if (areAllCheckboxesChecked(".check_cart")) {
+            $(".check_cart").each(function () {
+              $(this).prop("checked", false);
+            });
+          } else {
+            $(".check_cart").each(function () {
+              $(this).prop("checked", true);
+            });
+          }
+        });
+      }
+
+      checkAll();
+      checkToAll();
+
+      $(".check_cart").change(function (e) {
+        checkAll();
+        thanhTien();
+      });
+
+      thanhTien();
+
+      $("._btn").each(function (index, element) {
+        const i = parseInt(index / 2) + 1;
+
+        $("#quantity" + i).blur(function (e) {
+          if (/^\d+$/.test($("#quantity" + i).val())) {
+            $("#gia" + i).text(dinhDangSo(locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"));
+            thanhTien();
+          } else {
+            $("#quantity" + i).val(1);
+          }
+          console.log(i);
+        });
+
+        $(element).click(function (e) {
+          $("#gia" + i).text(dinhDangSo(locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"));
+          thanhTien();
+        });
+      });
+
+      function thanhTien() {
+        let thanhTien = 0;
+        $(".check_cart").each(function (index, element) {
+          const i = parseInt(index + 1);
+
+          if ($("#check" + i).prop("checked")) {
+            thanhTien += locSO($("#gia" + i).text());
+          }
+        });
+
+        $("#thanhTien").text(dinhDangSo(thanhTien) + "đ");
+
+        $("#tongTien").text(dinhDangSo(parseInt(thanhTien * 1.1)) + "đ");
+
+        return dinhDangSo(thanhTien) + "đ";
+      }
+    }
+
+    checkCart();
+  });
+}
+
+function pay() {
+  $(document).ready(function () {
+    $("._btn").each(function (index, element) {
+      const i = parseInt(index / 2) + 1;
+
+      $("#quantity" + i).blur(function (e) {
+        if (/^\d+$/.test($("#quantity" + i).val())) {
+          $("#gia" + i).text(dinhDangSo(locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"));
+          thanhTien();
+        } else {
+          $("#quantity" + i).val(1);
+        }
+      });
+
+      $(element).click(function (e) {
+        $("#gia" + i).text(dinhDangSo(locSO($("#donGia" + i).text()) * $("#quantity" + i).val() + "đ"));
+        thanhTien();
+      });
+    });
+
+    thanhTien();
+
+    function thanhTien() {
+      let thanhTien = 0;
+      $(".check_cart").each(function (index, element) {
+        const i = parseInt(index + 1);
+
+        if ($("#check" + i).prop("checked")) {
+          thanhTien += locSO($("#gia" + i).text());
+        }
+      });
+
+      $("#thanhTien").val(dinhDangSo(thanhTien) + "đ");
+
+      $("#tongTien").val(dinhDangSo(parseInt(thanhTien * 1.1 + locSO($("#phiVanChuyen").val()))) + "đ");
+
+      return dinhDangSo(thanhTien) + "đ";
+    }
+
+    $(".check_cart").change(function (e) {
+      thanhTien();
+    });
+
+    $("[name='ptvc']").change(function (e) {
+      const ptvc = $(this).attr("id");
+      let ptvc_gia;
+
+      if (ptvc == "ghtk") {
+        ptvc_gia = 4000;
+        $("#phiVanChuyen_lable").text("Phí vận chuyển (Giao hàng tiết kiệm)");
+      } else if (ptvc == "ghtc") {
+        ptvc_gia = 19000;
+        $("#phiVanChuyen_lable").text("Phí vận chuyển (Giao hàng tiêu chuẩn)");
+      } else {
+        ptvc_gia = 36000;
+        $("#phiVanChuyen_lable").text("Phí vận chuyển (Giao hàng nhanh)");
+      }
+
+      $("#phiVanChuyen").val(dinhDangSo(ptvc_gia) + "đ");
+
+      thanhTien();
+    });
+  });
+}
+
+function cart_header() {
+  setTimeout(() => {
+    $(".h_btn").each(function (index, element) {
+      const i = parseInt(index / 2) + 1;
+      $(element).click(function (e) {
+        if (index == 0 && $("#quantity_1").val() > 0) {
+          tru(1);
+        } else if (index == 1) {
+          cong(1);
+        } else if (index == 2 && $("#quantity_2").val() > 0) {
+          tru(2);
+        } else if (index == 3) {
+          cong(2);
+        } else if (index == 4 && $("#quantity_3").val() > 0) {
+          tru(3);
+        } else if (index == 5) {
+          cong(3);
+        } else {
+          console.log("loi");
+        }
+      });
+
+      function cong(u) {
+        $("#quantity_" + u).val(parseInt($("#quantity_" + u).val()) + 1);
+      }
+
+      function tru(u) {
+        $("#quantity_" + u).val(parseInt($("#quantity_" + u).val()) - 1);
+      }
+
+      $("#quantity_" + i).blur(function (e) {
+        if (/^\d+$/.test($("#quantity_" + i).val())) {
+          $("#gia_" + i).text(dinhDangSo(locSO($("#donGia_" + i).text()) * $("#quantity_" + i).val() + "đ"));
+        } else {
+          $("#quantity_" + i).val(1);
+        }
+      });
+
+      $(element).click(function (e) {
+        $("#gia_" + i).text(dinhDangSo(locSO($("#donGia_" + i).text()) * $("#quantity_" + i).val() + "đ"));
+      });
+    });
+  }, 100);
 }
